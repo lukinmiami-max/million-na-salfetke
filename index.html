@@ -1032,24 +1032,108 @@
     color: var(--gold);
   }
 
-  /* ── АДАПТИВ ── */
+  /* ── АДАПТИВ 900px ── */
   @media (max-width: 900px) {
-    nav { padding: 16px 24px; }
-    .hero { padding: 0 24px 64px; }
-    .concept, .mechanics, .napkin-moment, .council, .casting, .format, .production, .status, .footer { padding: 72px 24px; }
-    .concept-grid, .council-header, .production-grid, .status-grid, .format-grid { grid-template-columns: 1fr; gap: 48px; }
+    nav { padding: 16px 20px; }
+    .hero { padding: 0 20px 56px; }
+    .concept, .mechanics, .napkin-moment, .council, .casting, .format, .production, .status, .footer { padding: 64px 20px; }
+    .concept-grid, .council-header, .production-grid, .status-grid, .format-grid { grid-template-columns: 1fr; gap: 40px; }
     .council-members { grid-template-columns: 1fr 1fr; }
     .acts { grid-template-columns: 1fr; }
     .candidates { grid-template-columns: 1fr; }
     .concept-right { padding-top: 0; }
-    .hero { background-position: center center; }
     .napkin-steps { gap: 8px; }
     .napkin-arrow { display: none; }
     .casting-note { text-align: left; }
+    .mechanics-header { flex-direction: column; align-items: flex-start; }
+    .casting-header { flex-direction: column; align-items: flex-start; }
   }
 
+  /* ── АДАПТИВ 600px (мобильный) ── */
   @media (max-width: 600px) {
+    /* Навигация */
+    nav {
+      padding: 14px 16px;
+    }
+    .nav-title { display: none; }
+    .nav-divider { display: none; }
+    .nav-city { display: none; }
+    .nav-forbes { font-size: 20px; }
+
+    /* Герой — изображение landscape на портрете */
+    .hero {
+      min-height: 100svh;
+      padding: 0 16px 48px;
+      background-position: 60% center;
+      background-size: cover;
+    }
+    .hero::before {
+      background: linear-gradient(
+        to bottom,
+        rgba(12,12,12,0.45) 0%,
+        rgba(12,12,12,0.25) 30%,
+        rgba(12,12,12,0.75) 65%,
+        rgba(12,12,12,0.97) 100%
+      );
+    }
+    .hero-line { margin-bottom: 20px; }
+    .hero-label { margin-bottom: 16px; }
+
+    /* Мета-блок: сетка 2 колонки, без вертикальных разделителей */
+    .hero-meta {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px 12px;
+    }
+    .hero-meta-sep { display: none; }
+    .hero-meta-item { gap: 4px; }
+    .hero-meta-value { font-size: 13px; }
+    .hero-meta-key { font-size: 9px; }
+
+    /* Секции */
+    .concept, .mechanics, .napkin-moment, .council, .casting,
+    .format, .production, .status, .footer { padding: 56px 16px; }
+
+    .concept-grid, .council-header, .production-grid,
+    .status-grid, .format-grid { gap: 32px; }
+
     .council-members { grid-template-columns: 1fr; }
+
+    /* Акты шоу */
+    .act { padding: 32px 24px; }
+    .act-number { font-size: 56px; }
+
+    /* Кандидаты */
+    .candidates { grid-template-columns: 1fr; }
+    .candidate { padding: 36px 24px; }
+
+    /* Члены совета */
+    .member { padding: 28px 20px; }
+
+    /* Статус */
+    .status-col { padding: 28px 20px; }
+
+    /* Бюджет */
+    .budget-box { padding: 28px 20px; }
+
+    /* Команда */
+    .team-item { gap: 12px; }
+
+    /* Шаги салфетки */
+    .napkin-steps { flex-direction: column; align-items: center; }
+    .napkin-step { max-width: 280px; padding: 16px 8px; }
+    .napkin-final { padding: 28px 20px; }
+
+    /* Формат */
+    .format-card { padding: 32px 20px; }
+
+    /* Футер */
+    .footer-inner { flex-direction: column; align-items: flex-start; gap: 24px; }
+    .footer-right { text-align: left; }
+    .footer-title { font-size: 40px; }
+
+    /* Скролл-индикатор */
+    .hero-scroll { right: 16px; bottom: 20px; }
   }
 </style>
 </head>
