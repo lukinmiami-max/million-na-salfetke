@@ -649,7 +649,7 @@
 
   .candidates {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 2px;
     background: var(--border-dark);
     margin-bottom: 24px;
@@ -663,7 +663,12 @@
     transition: background 0.3s ease;
     display: flex;
     flex-direction: column;
+    grid-column: span 2;
   }
+
+  /* Последние 2 карточки из 5 — центрируем */
+  .candidate:nth-child(4) { grid-column: 2 / 4; }
+  .candidate:nth-child(5) { grid-column: 4 / 6; }
 
   .candidate:hover { background: #1f1f1f; }
 
@@ -1452,7 +1457,7 @@
     <div class="casting-header reveal">
       <div>
         <span class="label" style="display:block;margin-bottom:20px;">Кастинг · Пилот · Казань</span>
-        <h2 class="casting-headline">Четыре героя<br>первого выпуска</h2>
+        <h2 class="casting-headline">Герои<br>первого выпуска</h2>
       </div>
       <p class="casting-note">Критерии отбора: интересная история, нестандартная идея, реальные цифры. Фокус пилота — Казань.</p>
     </div>
@@ -1511,6 +1516,26 @@
         </div>
       </div>
     </div>
+      <div class="candidate">
+        <div class="candidate-photo-placeholder">
+          <span class="candidate-placeholder-icon">⚙️</span>
+          <span class="candidate-placeholder-label">Набережные Челны · Татарстан</span>
+        </div>
+        <div class="candidate-body">
+          <span class="candidate-priority">#5 кандидат</span>
+          <div class="candidate-rank">05</div>
+          <div class="candidate-name">Рамиль Измайлов</div>
+          <div class="candidate-project">Пружинный проект</div>
+          <p class="candidate-desc">Завод пружин и пружинных изделий для бытовой техники, промышленности, сельхозтехники и автомобилей. Набережные Челны. Действующее производство, стабильные B2B-контракты.</p>
+          <p class="candidate-why">Прозрачный B2B-бизнес с фиксированными заказами. Единственное тяжёлое производство в выпуске — даёт совету сложный выбор. Новые сегменты: энергетика, робототехника, спецтехника.</p>
+          <div class="candidate-invest-tags">
+            <span class="candidate-invest-tag">Equity</span>
+            <span class="candidate-invest-tag">Автоматизация</span>
+            <span class="candidate-invest-tag">Новые сегменты</span>
+            <span class="candidate-invest-tag">Расширение мощностей</span>
+          </div>
+        </div>
+      </div>
     <p class="reserve-note">Резерв: Антон Мустафин / AXL Custom Garage (кастом-мотоциклы) — сильный визуал, ремесленный бизнес · Zero-waste ресторан — нужен конкретный основатель с цифрами</p>
   </div>
 </section>
