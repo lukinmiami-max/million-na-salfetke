@@ -1068,8 +1068,9 @@
 
   /* ── АДАПТИВ 600px (мобильный) ── */
   @media (max-width: 600px) {
-    /* Навигация */
+    /* Навигация — на мобильном статичная, не фиксированная */
     nav {
+      position: relative;
       padding: 14px 16px;
     }
     .nav-title { display: none; }
@@ -1095,9 +1096,10 @@
     .hero::before { display: none; }
     .hero-content {
       background: var(--black);
-      padding: 32px 16px 48px;
+      padding: 28px 16px 40px;
+      position: static;
     }
-    .hero-line { margin-bottom: 16px; }
+    .hero-line { margin-bottom: 14px; }
     .hero-label { margin-bottom: 12px; }
 
     /* Мета-блок: сетка 2 колонки, без вертикальных разделителей */
