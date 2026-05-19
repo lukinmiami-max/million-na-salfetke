@@ -657,35 +657,55 @@
 
   .candidate {
     background: var(--card-dark);
-    padding: 48px 36px;
+    padding: 0;
     position: relative;
     overflow: hidden;
     transition: background 0.3s ease;
+    display: flex;
+    flex-direction: column;
   }
 
   .candidate:hover { background: #1f1f1f; }
 
+  .candidate-photo {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    filter: grayscale(20%);
+    transition: filter 0.4s ease;
+  }
+
+  .candidate:hover .candidate-photo { filter: grayscale(0%); }
+
+  .candidate-body {
+    padding: 32px 28px 36px;
+    flex: 1;
+    position: relative;
+  }
+
   .candidate-priority {
     position: absolute;
-    top: 24px;
-    right: 24px;
+    top: -14px;
+    right: 20px;
     font-size: 10px;
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
     color: var(--gold);
-    background: var(--gold-dim);
-    border: 1px solid rgba(200, 168, 75, 0.2);
+    background: var(--card-dark);
+    border: 1px solid rgba(200, 168, 75, 0.3);
     padding: 4px 10px;
   }
 
   .candidate-rank {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 64px;
+    font-size: 48px;
     font-weight: 700;
-    color: rgba(200, 168, 75, 0.08);
+    color: rgba(200, 168, 75, 0.1);
     line-height: 1;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
   }
 
   .candidate-name {
@@ -1381,28 +1401,37 @@
     </div>
     <div class="candidates reveal">
       <div class="candidate">
-        <span class="candidate-priority">#1 приоритет</span>
-        <div class="candidate-rank">01</div>
-        <div class="candidate-name">Alena Timoshenko</div>
-        <div class="candidate-project">Chef's Dog</div>
-        <p class="candidate-desc">Натуральный корм для питомцев ручного приготовления. Понятный рынок, высокая маржа, сильная личная история.</p>
-        <p class="candidate-why">Простейшая идея для салфетки. Понятный рынок. Высокая маржа. Эмоциональный продукт — питомцы работают на камеру.</p>
+        <img class="candidate-photo" src="Алена Тимошенко.jpg" alt="Alena Timoshenko">
+        <div class="candidate-body">
+          <span class="candidate-priority">#1 приоритет</span>
+          <div class="candidate-rank">01</div>
+          <div class="candidate-name">Alena Timoshenko</div>
+          <div class="candidate-project">Chef's Dog</div>
+          <p class="candidate-desc">Натуральный корм для питомцев ручного приготовления. Понятный рынок, высокая маржа, сильная личная история.</p>
+          <p class="candidate-why">Простейшая идея для салфетки. Понятный рынок. Высокая маржа. Эмоциональный продукт — питомцы работают на камеру.</p>
+        </div>
       </div>
       <div class="candidate">
-        <span class="candidate-priority">#2 приоритет</span>
-        <div class="candidate-rank">02</div>
-        <div class="candidate-name">Лилия Юсупова</div>
-        <div class="candidate-project">КультТорг</div>
-        <p class="candidate-desc">Фестиваль разумного потребления. Экотренд, масштабируемость в 10 городов. Формат с потенциалом франшизы.</p>
-        <p class="candidate-why">Масштабируемость — ключевой аргумент для инвесторов. Острые вопросы совету про монетизацию создадут конфликт в кадре.</p>
+        <img class="candidate-photo" src="Лилия Юсупова.jpg" alt="Лилия Юсупова">
+        <div class="candidate-body">
+          <span class="candidate-priority">#2 приоритет</span>
+          <div class="candidate-rank">02</div>
+          <div class="candidate-name">Лилия Юсупова</div>
+          <div class="candidate-project">КультТорг</div>
+          <p class="candidate-desc">Фестиваль разумного потребления. Экотренд, масштабируемость в 10 городов. Формат с потенциалом франшизы.</p>
+          <p class="candidate-why">Масштабируемость — ключевой аргумент для инвесторов. Острые вопросы совету про монетизацию создадут конфликт в кадре.</p>
+        </div>
       </div>
       <div class="candidate">
-        <span class="candidate-priority">#3 приоритет</span>
-        <div class="candidate-rank">03</div>
-        <div class="candidate-name">Ленар Шарафутдинов</div>
-        <div class="candidate-project">SmartyKids</div>
-        <p class="candidate-desc">Сеть детских образовательных центров + edtech-платформа. Реальный действующий бизнес, горячая ниша для инвесторов.</p>
-        <p class="candidate-why">Реальный бизнес с цифрами. Edtech — горячая тема. Уверенность основателя создаёт интересный контраст с другими героями.</p>
+        <img class="candidate-photo" src="Ленар Шарафутдинов.jpg" alt="Ленар Шарафутдинов">
+        <div class="candidate-body">
+          <span class="candidate-priority">#3 приоритет</span>
+          <div class="candidate-rank">03</div>
+          <div class="candidate-name">Ленар Шарафутдинов</div>
+          <div class="candidate-project">SmartyKids</div>
+          <p class="candidate-desc">Сеть детских образовательных центров + edtech-платформа. Реальный действующий бизнес, горячая ниша для инвесторов.</p>
+          <p class="candidate-why">Реальный бизнес с цифрами. Edtech — горячая тема. Уверенность основателя создаёт интересный контраст с другими героями.</p>
+        </div>
       </div>
     </div>
     <p class="reserve-note">Резерв: Антон Мустафин / AXL Custom Garage (кастом-мотоциклы) — сильный визуал, ремесленный бизнес · Zero-waste ресторан — нужен конкретный основатель с цифрами</p>
