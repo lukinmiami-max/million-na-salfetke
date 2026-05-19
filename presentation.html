@@ -649,7 +649,7 @@
 
   .candidates {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2px;
     background: var(--border-dark);
     margin-bottom: 24px;
@@ -666,6 +666,63 @@
   }
 
   .candidate:hover { background: #1f1f1f; }
+
+  .candidate-photo-placeholder {
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    background: linear-gradient(160deg, #1a1a1a 0%, #111 60%, #0c0c0c 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .candidate-photo-placeholder::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 80%, rgba(200,168,75,0.08) 0%, transparent 70%);
+  }
+
+  .candidate-placeholder-icon {
+    font-size: 64px;
+    line-height: 1;
+    position: relative;
+    z-index: 1;
+  }
+
+  .candidate-placeholder-label {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 13px;
+    letter-spacing: 4px;
+    color: var(--gold);
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .candidate-invest-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 12px;
+  }
+
+  .candidate-invest-tag {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid rgba(200,168,75,0.25);
+    padding: 4px 8px;
+    background: var(--gold-dim);
+  }
 
   .candidate-photo {
     width: 100%;
@@ -1148,7 +1205,7 @@
 
     /* Кандидаты */
     .candidates { grid-template-columns: 1fr; }
-    .candidate { padding: 36px 24px; }
+    .candidate { padding: 0; }
 
     /* Члены совета */
     .member { padding: 28px 20px; }
@@ -1395,7 +1452,7 @@
     <div class="casting-header reveal">
       <div>
         <span class="label" style="display:block;margin-bottom:20px;">Кастинг · Пилот · Казань</span>
-        <h2 class="casting-headline">Три героя<br>первого выпуска</h2>
+        <h2 class="casting-headline">Четыре героя<br>первого выпуска</h2>
       </div>
       <p class="casting-note">Критерии отбора: интересная история, нестандартная идея, реальные цифры. Фокус пилота — Казань.</p>
     </div>
@@ -1431,6 +1488,26 @@
           <div class="candidate-project">SmartyKids</div>
           <p class="candidate-desc">Сеть детских образовательных центров + edtech-платформа. Реальный действующий бизнес, горячая ниша для инвесторов.</p>
           <p class="candidate-why">Реальный бизнес с цифрами. Edtech — горячая тема. Уверенность основателя создаёт интересный контраст с другими героями.</p>
+        </div>
+      </div>
+      <div class="candidate">
+        <div class="candidate-photo-placeholder">
+          <span class="candidate-placeholder-icon">⛵</span>
+          <span class="candidate-placeholder-label">Чистополь · Татарстан</span>
+        </div>
+        <div class="candidate-body">
+          <span class="candidate-priority">#4 кандидат</span>
+          <div class="candidate-rank">04</div>
+          <div class="candidate-name">Searene Yachts</div>
+          <div class="candidate-project">Верфь каютных катеров</div>
+          <p class="candidate-desc">Производство стеклопластиковых каютных катеров для отдыха, охоты, рыбалки и водного туризма. Чистополь, Татарстан. Работающее производство с модельным рядом, продажами и дилерской сетью.</p>
+          <p class="candidate-why">Понятный физический продукт с высокой маржой. Растущий рынок водного туризма. Реальные продажи. Единственный производственный бизнес в выпуске — сильный контраст с tech-проектами.</p>
+          <div class="candidate-invest-tags">
+            <span class="candidate-invest-tag">Equity</span>
+            <span class="candidate-invest-tag">Новые модели</span>
+            <span class="candidate-invest-tag">Модернизация цеха</span>
+            <span class="candidate-invest-tag">Федеральный рынок</span>
+          </div>
         </div>
       </div>
     </div>
