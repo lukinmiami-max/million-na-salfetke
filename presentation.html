@@ -805,13 +805,30 @@
 
   .format-inner { max-width: 1100px; margin: 0 auto; }
 
+  .format-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+    margin-bottom: 72px;
+  }
+
+  .format-header-left { flex: 1; }
+
+  .format-napkin {
+    width: 260px;
+    height: auto;
+    flex-shrink: 0;
+    filter: drop-shadow(0 8px 40px rgba(200,168,75,0.2));
+  }
+
   .format-headline {
     font-family: 'Bebas Neue', sans-serif;
     font-size: clamp(36px, 4.5vw, 56px);
     font-weight: 300;
     line-height: 1.05;
     letter-spacing: 1px;
-    margin-bottom: 72px;
+    margin-bottom: 0;
   }
 
   .format-grid {
@@ -1218,6 +1235,8 @@
 
     /* Формат */
     .format-card { padding: 32px 20px; }
+    .format-header { flex-direction: column; align-items: flex-start; gap: 28px; }
+    .format-napkin { width: 180px; }
 
     /* Футер */
     .footer-inner { flex-direction: column; align-items: flex-start; gap: 24px; }
@@ -1672,7 +1691,9 @@
         </div>
       </div>
       <div class="candidate">
-        <div class="candidate-photo-placeholder"></div>
+        <div class="candidate-photo-placeholder" style="display:flex;align-items:center;justify-content:center;">
+          <span style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#444;text-align:center;padding:16px;">Здесь скоро будет<br>фото кандидата</span>
+        </div>
         <div class="candidate-body">
           <span class="candidate-priority">#14 кандидат</span>
           <div class="candidate-rank">14</div>
@@ -1684,7 +1705,9 @@
         </div>
       </div>
       <div class="candidate">
-        <div class="candidate-photo-placeholder"></div>
+        <div class="candidate-photo-placeholder" style="display:flex;align-items:center;justify-content:center;">
+          <span style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#444;text-align:center;padding:16px;">Здесь скоро будет<br>фото кандидата</span>
+        </div>
         <div class="candidate-body">
           <span class="candidate-priority">#15 кандидат</span>
           <div class="candidate-rank">15</div>
@@ -1702,9 +1725,12 @@
 <!-- ФОРМАТ -->
 <section class="format">
   <div class="format-inner">
-    <div class="reveal">
-      <span class="label" style="display:block;margin-bottom:20px;">Формат дистрибуции</span>
-      <h2 class="format-headline">Снимаем один раз —<br>выходим везде</h2>
+    <div class="format-header reveal">
+      <div class="format-header-left">
+        <span class="label" style="display:block;margin-bottom:20px;">Формат дистрибуции</span>
+        <h2 class="format-headline">Снимаем один раз —<br>выходим везде</h2>
+      </div>
+      <img class="format-napkin" src="салфетка 3.png" alt="Салфетка с миллионом">
     </div>
     <div class="format-grid reveal">
       <div class="format-card">
