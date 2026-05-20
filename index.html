@@ -1860,9 +1860,14 @@
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: 0, rootMargin: '0px 0px 0px 0px' });
 
   reveals.forEach(el => observer.observe(el));
+
+  // Fallback: ensure everything is visible after 800ms regardless
+  setTimeout(() => {
+    reveals.forEach(el => el.classList.add('visible'));
+  }, 800);
 </script>
 
 </body>
