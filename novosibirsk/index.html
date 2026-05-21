@@ -1,0 +1,1894 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Миллион на салфетке Forbes — Новосибирск</title>
+<meta name="description" content="Питч-шоу Forbes. Три предпринимателя. Один совет. Реальные инвестиции от 1 000 000 рублей. Новосибирск, 2026.">
+<meta property="og:title" content="Миллион на салфетке — Forbes">
+<meta property="og:description" content="Питч-шоу Forbes. Три предпринимателя. Один совет. Реальные инвестиции от 1 000 000 рублей. Новосибирск, 2026.">
+<meta property="og:image" content="https://lukinmiami-max.github.io/million-na-salfetke/novosibirsk.htmlog-preview.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="1024">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lukinmiami-max.github.io/million-na-salfetke/novosibirsk.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Миллион на салфетке — Forbes">
+<meta name="twitter:description" content="Питч-шоу Forbes. Три предпринимателя. Один совет. Реальные инвестиции от 1 000 000 рублей. Новосибирск, 2026.">
+<meta name="twitter:image" content="https://lukinmiami-max.github.io/million-na-salfetke/novosibirsk.htmlog-preview.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --black: #0c0c0c;
+    --dark: #141414;
+    --card-dark: #1a1a1a;
+    --white: #ffffff;
+    --off-white: #f5f2ec;
+    --warm-gray: #e8e4dc;
+    --text-muted: #888880;
+    --text-body: #3a3a38;
+    --gold: #c8a84b;
+    --gold-light: #e2c87a;
+    --gold-dim: rgba(200, 168, 75, 0.15);
+    --border-dark: rgba(255,255,255,0.08);
+    --border-light: rgba(0,0,0,0.1);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Manrope', sans-serif;
+    background: var(--black);
+    color: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* ── УТИЛИТЫ ── */
+  .label {
+    font-family: 'Manrope', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  .label-light { color: var(--text-muted); }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── НАВИГАЦИЯ ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 48px;
+    background: rgba(12,12,12,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-dark);
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .nav-forbes {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    color: var(--gold);
+    text-transform: uppercase;
+  }
+
+  .nav-divider {
+    width: 1px;
+    height: 20px;
+    background: var(--border-dark);
+  }
+
+  .nav-title {
+    font-family: 'Manrope', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .nav-city {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--white);
+    opacity: 0.5;
+  }
+
+  /* ── ГЕРОЙ ── */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 48px 80px;
+    position: relative;
+    overflow: hidden;
+    background: var(--black);
+  }
+
+  .hero picture {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    display: block;
+  }
+
+  .hero-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    z-index: 0;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(12,12,12,0.25) 0%,
+      rgba(12,12,12,0.15) 40%,
+      rgba(12,12,12,0.7) 70%,
+      rgba(12,12,12,0.95) 100%
+    );
+    z-index: 1;
+  }
+
+  .hero > *:not(.hero-img):not(picture) { position: relative; z-index: 2; }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+    inset: 0;
+    padding: 0 48px 80px;
+    z-index: 2;
+  }
+
+  .hero-line {
+    width: 60px;
+    height: 1px;
+    background: var(--gold);
+    margin-bottom: 32px;
+  }
+
+  .hero-label {
+    margin-bottom: 24px;
+  }
+
+  .hero-meta {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .hero-meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .hero-meta-value {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--white);
+    letter-spacing: 1px;
+  }
+
+  .hero-meta-key {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .hero-meta-sep {
+    width: 1px;
+    height: 32px;
+    background: rgba(255,255,255,0.15);
+  }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 40px;
+    right: 48px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    z-index: 1;
+  }
+
+  .hero-scroll-line {
+    width: 40px;
+    height: 1px;
+    background: rgba(255,255,255,0.3);
+  }
+
+  /* ── РАЗДЕЛ: КОНЦЕПЦИЯ ── */
+  .concept {
+    background: var(--off-white);
+    color: var(--black);
+    padding: 100px 48px;
+  }
+
+  .concept-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: start;
+  }
+
+  .concept-left {}
+
+  .concept-right {
+    padding-top: 60px;
+  }
+
+  .section-label {
+    margin-bottom: 32px;
+  }
+
+  .concept-headline {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(36px, 4.5vw, 60px);
+    font-weight: 300;
+    line-height: 1.05;
+    letter-spacing: 1px;
+    color: var(--black);
+    margin-bottom: 32px;
+  }
+
+  .concept-body {
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--text-body);
+    margin-bottom: 24px;
+  }
+
+  .concept-quote {
+    border-left: 2px solid var(--gold);
+    padding-left: 24px;
+    margin: 40px 0;
+  }
+
+  .concept-quote p {
+    font-family: 'Manrope', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--text-body);
+  }
+
+  .stat-row {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 40px;
+  }
+
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .stat-item:last-child {
+    border-bottom: none;
+  }
+
+  .stat-number {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 64px;
+    font-weight: 400;
+    color: var(--black);
+    line-height: 1;
+    letter-spacing: 2px;
+  }
+
+  .stat-desc {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-body);
+    letter-spacing: 0.5px;
+    max-width: 220px;
+    line-height: 1.5;
+  }
+
+  /* ── МЕХАНИКА (тёмный блок) ── */
+  .mechanics {
+    background: var(--dark);
+    padding: 100px 48px;
+  }
+
+  .mechanics-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .mechanics-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 72px;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .mechanics-headline {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(36px, 4.5vw, 56px);
+    font-weight: 300;
+    line-height: 1.05;
+    letter-spacing: 1px;
+    max-width: 480px;
+  }
+
+  .mechanics-sub {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    max-width: 320px;
+  }
+
+  .acts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    background: var(--border-dark);
+  }
+
+  .act {
+    background: var(--card-dark);
+    padding: 48px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .act::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+  }
+
+  .act:hover::before { transform: scaleX(1); }
+
+  .act-number {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 80px;
+    font-weight: 700;
+    color: rgba(200, 168, 75, 0.12);
+    line-height: 1;
+    margin-bottom: 24px;
+    display: block;
+  }
+
+  .act-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+
+  .act-time {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 24px;
+  }
+
+  .act-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .act-list li {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    padding-left: 16px;
+    position: relative;
+  }
+
+  .act-list li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 12px;
+  }
+
+  /* ── САЛФЕТКА МОМЕНТ ── */
+  .napkin-moment {
+    background: var(--black);
+    padding: 100px 48px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .napkin-moment::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(200, 168, 75, 0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .napkin-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .napkin-label { margin-bottom: 40px; }
+
+  .napkin-headline {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(44px, 6.5vw, 84px);
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: 2px;
+    margin-bottom: 80px;
+  }
+
+  .napkin-steps {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0;
+    position: relative;
+    flex-wrap: wrap;
+  }
+
+  .napkin-step {
+    flex: 1;
+    min-width: 160px;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+    padding: 32px 16px;
+  }
+
+  .napkin-step-num {
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--gold);
+  }
+
+  .napkin-step-text {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--text-muted);
+    text-align: center;
+  }
+
+  .napkin-arrow {
+    align-self: center;
+    padding-bottom: 30px;
+    color: rgba(200, 168, 75, 0.3);
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+
+  .napkin-final {
+    background: var(--gold-dim);
+    border: 1px solid var(--gold);
+    padding: 48px;
+    max-width: 560px;
+    margin: 64px auto 0;
+    text-align: center;
+  }
+
+  .napkin-final-img {
+    width: 220px;
+    height: auto;
+    display: block;
+    margin: 0 auto 32px;
+    filter: drop-shadow(0 8px 32px rgba(200,168,75,0.25));
+  }
+
+  .napkin-final-text {
+    font-family: 'Manrope', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.6;
+    color: var(--gold-light);
+  }
+
+  /* ── СОВЕТ FORBES ── */
+  .council {
+    background: var(--off-white);
+    color: var(--black);
+    padding: 100px 48px;
+  }
+
+  .council-inner { max-width: 1100px; margin: 0 auto; }
+
+  .council-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    margin-bottom: 72px;
+    align-items: end;
+  }
+
+  .council-headline {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(36px, 4.5vw, 56px);
+    font-weight: 300;
+    line-height: 1.05;
+    letter-spacing: 1px;
+    color: var(--black);
+  }
+
+  .council-desc {
+    font-size: 15px;
+    line-height: 1.75;
+    color: var(--text-body);
+  }
+
+  .council-members {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    background: var(--border-light);
+  }
+
+  .member {
+    background: var(--white);
+    padding: 40px 32px;
+    position: relative;
+  }
+
+  .member-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: rgba(0,0,0,0.05);
+    line-height: 1;
+    margin-bottom: 24px;
+  }
+
+  .member-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--black);
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+
+  .member-org {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+
+  .member-role {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* ── КАСТИНГ ── */
+  .casting {
+    background: var(--dark);
+    padding: 100px 48px;
+  }
+
+  .casting-inner { max-width: 1100px; margin: 0 auto; }
+
+  .casting-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 64px;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .casting-headline {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(36px, 4.5vw, 56px);
+    font-weight: 300;
+    line-height: 1.05;
+    letter-spacing: 1px;
+  }
+
+  .casting-note {
+    font-size: 13px;
+    color: var(--text-muted);
+    max-width: 260px;
+    line-height: 1.7;
+    text-align: right;
+  }
+
+  .candidates {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    background: var(--border-dark);
+    margin-bottom: 24px;
+  }
+
+  .candidate {
+    background: var(--card-dark);
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .candidate:hover { background: #1f1f1f; }
+
+  .candidate-photo-placeholder {
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    background: #111;
+    display: block;
+    position: relative;
+  }
+
+  .candidate-placeholder-icon,
+  .candidate-placeholder-label { display: none; }
+
+  .candidate-invest-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 12px;
+  }
+
+  .candidate-invest-tag {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid rgba(200,168,75,0.25);
+    padding: 4px 8px;
+    background: var(--gold-dim);
+  }
+
+
+  .candidate-source {
+    display: inline-block;
+    margin-top: 16px;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #0a0a0a;
+    background: #ffffff;
+    text-decoration: none;
+    padding: 5px 10px;
+    font-weight: 600;
+    transition: background 0.2s, color 0.2s;
+  }
+  .candidate-source:hover { background: var(--gold); color: #0a0a0a; }
+  .candidate-source::before { content: '↗ '; }
+  .candidate-photo {
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    filter: grayscale(20%);
+    transition: filter 0.4s ease;
+  }
+
+  .candidate:hover .candidate-photo { filter: grayscale(0%); }
+
+  .candidate-body {
+    padding: 32px 28px 36px;
+    flex: 1;
+    position: relative;
+  }
+
+  .candidate-priority {
+    position: absolute;
+    top: -14px;
+    right: 20px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    background: var(--card-dark);
+    border: 1px solid rgba(200, 168, 75, 0.3);
+    padding: 4px 10px;
+  }
+
+  .candidate-rank {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: rgba(200, 168, 75, 0.1);
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+
+  .candidate-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 6px;
+    line-height: 1.2;
+  }
+
+  .candidate-project {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+
+  .candidate-desc {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.65;
+    margin-bottom: 24px;
+  }
+
+  .candidate-why {
+    font-size: 12px;
+    color: rgba(200, 168, 75, 0.6);
+    line-height: 1.5;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-dark);
+  }
+
+  .reserve-note {
+    font-size: 12px;
+    color: var(--text-muted);
+    padding: 20px 0;
+    border-top: 1px solid var(--border-dark);
+  }
+
+  /* ── ФОРМАТ ── */
+  .format {
+    background: var(--black);
+    padding: 100px 48px;
+  }
+
+  .format-inner { max-width: 1100px; margin: 0 auto; }
+
+  .format-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+    margin-bottom: 72px;
+  }
+
+  .format-header-left { flex: 1; }
+
+  .format-napkin {
+    width: 260px;
+    height: auto;
+    flex-shrink: 0;
+    filter: drop-shadow(0 8px 40px rgba(200,168,75,0.2));
+  }
+
+  .format-headline {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(36px, 4.5vw, 56px);
+    font-weight: 300;
+    line-height: 1.05;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+  }
+
+  .format-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    background: var(--border-dark);
+  }
+
+  .format-card {
+    background: var(--dark);
+    padding: 48px 40px;
+  }
+
+  .format-icon {
+    font-size: 32px;
+    margin-bottom: 24px;
+    display: block;
+  }
+
+  .format-card-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+
+  .format-card-sub {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 24px;
+  }
+
+  .format-card-body {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+
+  /* ── ПРОИЗВОДСТВО ── */
+  .production {
+    background: var(--off-white);
+    color: var(--black);
+    padding: 100px 48px;
+  }
+
+  .production-inner { max-width: 1100px; margin: 0 auto; }
+
+  .production-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    margin-top: 64px;
+    align-items: start;
+  }
+
+  .production-headline {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(34px, 4vw, 48px);
+    font-weight: 300;
+    line-height: 1.05;
+    letter-spacing: 1px;
+    color: var(--black);
+    margin-bottom: 0;
+  }
+
+  .team-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .team-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .team-item:first-child { padding-top: 0; }
+
+  .team-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--gold);
+    flex-shrink: 0;
+    width: 24px;
+    padding-top: 2px;
+  }
+
+  .team-info {}
+
+  .team-role {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 4px;
+  }
+
+  .team-desc {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  /* ── БЮДЖЕТ ── */
+  .budget-box {
+    margin-top: 48px;
+    background: var(--black);
+    padding: 40px;
+  }
+
+  .budget-title {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 32px;
+  }
+
+  .budget-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .budget-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border-dark);
+  }
+
+  .budget-row:last-child { border-bottom: none; }
+
+  .budget-row.total {
+    padding-top: 20px;
+    margin-top: 8px;
+    border-top: 1px solid var(--gold);
+    border-bottom: none;
+  }
+
+  .budget-item-name {
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+
+  .budget-item-sum {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--white);
+  }
+
+  .budget-row.total .budget-item-name {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  .budget-row.total .budget-item-sum {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--gold);
+  }
+
+  /* ── СТАТУС ── */
+  .status {
+    background: var(--dark);
+    padding: 100px 48px;
+  }
+
+  .status-inner { max-width: 1100px; margin: 0 auto; }
+
+  .status-headline {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(36px, 4.5vw, 56px);
+    font-weight: 300;
+    line-height: 1.05;
+    letter-spacing: 1px;
+    margin-bottom: 64px;
+  }
+
+  .status-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    background: var(--border-dark);
+  }
+
+  .status-col {
+    background: var(--card-dark);
+    padding: 40px;
+  }
+
+  .status-col-title {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+
+  .status-col-title.done { color: #6db36d; }
+  .status-col-title.todo { color: var(--gold); }
+
+  .status-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .status-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .status-item.done { color: rgba(255,255,255,0.7); }
+  .status-item.todo { color: var(--text-muted); }
+
+  .status-check {
+    width: 16px;
+    height: 16px;
+    border: 1px solid;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
+    margin-top: 2px;
+  }
+
+  .status-item.done .status-check {
+    border-color: #6db36d;
+    color: #6db36d;
+  }
+
+  .status-item.todo .status-check {
+    border-color: rgba(200, 168, 75, 0.4);
+    color: transparent;
+  }
+
+  /* ── ФУТЕР ── */
+  .footer {
+    background: var(--black);
+    padding: 80px 48px 48px;
+    border-top: 1px solid var(--border-dark);
+  }
+
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .footer-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 52px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    color: var(--white);
+    margin-bottom: 8px;
+    line-height: 1.1;
+  }
+
+  .footer-sub {
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .footer-right {
+    text-align: right;
+  }
+
+  .footer-location {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+
+  .footer-contact {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  /* ── АДАПТИВ 900px ── */
+  @media (max-width: 900px) {
+    nav { padding: 16px 20px; }
+    .hero { padding: 0 20px 56px; }
+    .concept, .mechanics, .napkin-moment, .council, .casting, .format, .production, .status, .footer { padding: 64px 20px; }
+    .concept-grid, .council-header, .production-grid, .status-grid, .format-grid { grid-template-columns: 1fr; gap: 40px; }
+    .council-members { grid-template-columns: 1fr 1fr; }
+    .acts { grid-template-columns: 1fr; }
+    .candidates { grid-template-columns: 1fr; }
+    .concept-right { padding-top: 0; }
+    .napkin-steps { gap: 8px; }
+    .napkin-arrow { display: none; }
+    .casting-note { text-align: left; }
+    .mechanics-header { flex-direction: column; align-items: flex-start; }
+    .casting-header { flex-direction: column; align-items: flex-start; }
+  }
+
+  /* ── АДАПТИВ 600px (мобильный) ── */
+  @media (max-width: 600px) {
+    /* Навигация — на мобильном статичная, не фиксированная */
+    nav {
+      position: relative;
+      padding: 14px 16px;
+    }
+    .nav-title { display: none; }
+    .nav-divider { display: none; }
+    .nav-city { display: block; opacity: 1; font-size: 13px; }
+    .nav-forbes { font-size: 20px; }
+
+    /* Герой на мобильном — изображение сверху, контент снизу */
+    .hero {
+      min-height: 0;
+      display: block;
+      padding: 0;
+    }
+    .hero picture {
+      position: relative;
+      inset: auto;
+      display: block;
+      width: 100%;
+    }
+    .hero-img {
+      position: relative;
+      inset: auto;
+      width: 100%;
+      height: 100vw;
+      object-fit: cover;
+      object-position: center center;
+      display: block;
+    }
+    .hero::before { display: none; }
+    .hero-content {
+      background: var(--black);
+      padding: 28px 16px 40px;
+      position: static;
+    }
+    .hero-line { margin-bottom: 14px; }
+    .hero-label { margin-bottom: 12px; }
+
+    /* Мета-блок: сетка 2 колонки, без вертикальных разделителей */
+    .hero-meta {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px 12px;
+    }
+    .hero-meta-sep { display: none; }
+    .hero-meta-item { gap: 4px; }
+    .hero-meta-value { font-size: 13px; }
+    .hero-meta-key { font-size: 9px; }
+
+    /* Секции */
+    .concept, .mechanics, .napkin-moment, .council, .casting,
+    .format, .production, .status, .footer { padding: 56px 16px; }
+
+    .concept-grid, .council-header, .production-grid,
+    .status-grid, .format-grid { gap: 32px; }
+
+    .council-members { grid-template-columns: 1fr; }
+
+    /* Акты шоу */
+    .act { padding: 32px 24px; }
+    .act-number { font-size: 56px; }
+
+    /* Кандидаты */
+    .candidates { grid-template-columns: 1fr; }
+    .candidate { padding: 0; }
+
+    /* Члены совета */
+    .member { padding: 28px 20px; }
+
+    /* Статус */
+    .status-col { padding: 28px 20px; }
+
+    /* Бюджет */
+    .budget-box { padding: 28px 20px; }
+
+    /* Команда */
+    .team-item { gap: 12px; }
+
+    /* Шаги салфетки */
+    .napkin-steps { flex-direction: column; align-items: center; }
+    .napkin-step { max-width: 280px; padding: 16px 8px; }
+    .napkin-final { padding: 28px 20px; }
+
+    /* Формат */
+    .format-card { padding: 32px 20px; }
+    .format-header { flex-direction: column; align-items: flex-start; gap: 28px; }
+    .format-napkin { width: 180px; }
+
+    /* Футер */
+    .footer-inner { flex-direction: column; align-items: flex-start; gap: 24px; }
+    .footer-right { text-align: left; }
+    .footer-title { font-size: 40px; }
+
+    /* Скролл-индикатор */
+    .hero-scroll { position: static; margin-top: 24px; align-self: flex-end; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <span class="nav-forbes">Forbes</span>
+    <div class="nav-divider"></div>
+    <span class="nav-title">Миллион на салфетке</span>
+  </div>
+  <span class="nav-city">Новосибирск 2026</span>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <picture>
+    <source media="(max-width: 600px)" srcset="hero-new-mobile.jpg">
+    <img class="hero-img" src="hero-new-novosibirsk.jpg" alt="Миллион на салфетке — питч-шоу Forbes · Новосибирск">
+  </picture>
+  <div class="hero-content">
+    <div class="hero-line"></div>
+    <p class="label hero-label">Питч-шоу Forbes · Новосибирск · 2026</p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <span class="hero-meta-value">3 предпринимателя</span>
+        <span class="hero-meta-key">Один выпуск</span>
+      </div>
+      <div class="hero-meta-sep"></div>
+      <div class="hero-meta-item">
+        <span class="hero-meta-value">от 1 000 000 ₽</span>
+        <span class="hero-meta-key">Реальные инвестиции</span>
+      </div>
+      <div class="hero-meta-sep"></div>
+      <div class="hero-meta-item">
+        <span class="hero-meta-value">25–30 минут</span>
+        <span class="hero-meta-key">Основной выпуск</span>
+      </div>
+      <div class="hero-meta-sep"></div>
+      <div class="hero-meta-item">
+        <span class="hero-meta-value">Академпарк Новосибирск</span>
+        <span class="hero-meta-key">Локация пилота</span>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="hero-scroll-line"></div>
+      Листать
+    </div>
+  </div>
+</section>
+
+<!-- КОНЦЕПЦИЯ -->
+<section class="concept">
+  <div class="concept-grid">
+    <div class="concept-left reveal">
+      <div class="section-label">
+        <span class="label label-light">Концепция</span>
+      </div>
+      <h2 class="concept-headline">Простая идея,<br>которая меняет<br>всё</h2>
+      <p class="concept-body">Короткое питч-шоу, где предприниматели из регионов России выходят перед советом Forbes с одной идеей — написанной на салфетке.</p>
+      <p class="concept-body">Никаких презентаций. Никакой подготовленной речи. Только суть — и решение прямо здесь.</p>
+      <div class="concept-quote">
+        <p>Великие бизнесы начинались на салфетке в кафе. Мы возвращаем это к истокам.</p>
+      </div>
+    </div>
+    <div class="concept-right reveal">
+      <div class="stat-row">
+        <div class="stat-item">
+          <span class="stat-number">3</span>
+          <span class="stat-desc">предпринимателя в каждом выпуске борются за инвестиции</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">1M+</span>
+          <span class="stat-desc">рублей — минимальный размер инвестиций для победителя</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">60"</span>
+          <span class="stat-desc">версия для Reels и Shorts — один момент, один исход</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">4</span>
+          <span class="stat-desc">члена совета Forbes принимают решение коллегиально</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- МЕХАНИКА -->
+<section class="mechanics">
+  <div class="mechanics-inner">
+    <div class="mechanics-header reveal">
+      <div>
+        <span class="label" style="display:block;margin-bottom:20px;">Механика шоу</span>
+        <h2 class="mechanics-headline">Три акта. Один финал. Никаких гарантий.</h2>
+      </div>
+      <p class="mechanics-sub">Исход непредсказуем: совет может одобрить одного, двух, всех троих — или никого. Интрига держится до последнего кадра с салфеткой.</p>
+    </div>
+    <div class="acts reveal">
+      <div class="act">
+        <span class="act-number">01</span>
+        <div class="act-title">Питчи</div>
+        <div class="act-time">~15 минут</div>
+        <ul class="act-list">
+          <li>Три предпринимателя по очереди</li>
+          <li>Каждый получает чистую салфетку</li>
+          <li>Пишет или рисует свою идею</li>
+          <li>4–5 минут питча + вопросы совета</li>
+          <li>После — садится обратно в зал</li>
+        </ul>
+      </div>
+      <div class="act">
+        <span class="act-number">02</span>
+        <div class="act-title">Ожидание</div>
+        <div class="act-time">~10 минут</div>
+        <ul class="act-list">
+          <li>Совет совещается</li>
+          <li>Все три героя ждут вместе в зале</li>
+          <li>Камера фиксирует эмоции и напряжение</li>
+          <li>Переглядывания, молчание, жесты</li>
+          <li>Главный драматический момент выпуска</li>
+        </ul>
+      </div>
+      <div class="act">
+        <span class="act-number">03</span>
+        <div class="act-title">Решение</div>
+        <div class="act-time">~5 минут</div>
+        <ul class="act-list">
+          <li>Совет объявляет решение по каждому</li>
+          <li>Одобренным — руководитель пишет сумму</li>
+          <li>Прямо на салфетке. Крупный план</li>
+          <li>Лицо получившего — главная эмоция</li>
+          <li>Отказ без объяснений — тоже работает</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- САЛФЕТКА -->
+<section class="napkin-moment">
+  <div class="napkin-inner">
+    <div class="napkin-label">
+      <span class="label">Ключевой визуальный момент</span>
+    </div>
+    <h2 class="napkin-headline reveal">Один кадр —<br><span style="color:var(--gold-light);">и всё понятно</span></h2>
+    <div class="napkin-steps reveal">
+      <div class="napkin-step">
+        <div class="napkin-step-num">1</div>
+        <p class="napkin-step-text">Предприниматель получает чистую салфетку</p>
+      </div>
+      <div class="napkin-arrow">→</div>
+      <div class="napkin-step">
+        <div class="napkin-step-num">2</div>
+        <p class="napkin-step-text">Рисует или пишет свою идею прямо сейчас</p>
+      </div>
+      <div class="napkin-arrow">→</div>
+      <div class="napkin-step">
+        <div class="napkin-step-num">3</div>
+        <p class="napkin-step-text">Питчует перед советом Forbes</p>
+      </div>
+      <div class="napkin-arrow">→</div>
+      <div class="napkin-step">
+        <div class="napkin-step-num">4</div>
+        <p class="napkin-step-text">Совет берёт салфетку в руки</p>
+      </div>
+      <div class="napkin-arrow">→</div>
+      <div class="napkin-step">
+        <div class="napkin-step-num">5</div>
+        <p class="napkin-step-text">Руководитель пишет сумму и возвращает</p>
+      </div>
+    </div>
+    <div class="napkin-final reveal">
+      <img class="napkin-final-img" src="салфетка 3.png" alt="Салфетка с суммой инвестиций">
+      <p class="napkin-final-text">«Простая идея → быстрое решение → реальные деньги»</p>
+    </div>
+  </div>
+</section>
+
+<!-- СОВЕТ FORBES -->
+<section class="council">
+  <div class="council-inner">
+    <div class="council-header reveal">
+      <h2 class="council-headline">Совет Forbes</h2>
+      <p class="council-desc">Четыре человека принимают коллегиальное решение. Forbes выступает распорядителем фонда — не инвестирует сам, но отбирает и решает. Инвестиции реальные, от 1 000 000 рублей.</p>
+    </div>
+    <div class="council-members reveal">
+      <div class="member">
+        <div class="member-num">01</div>
+        <div class="member-name">Дмитрий Озман</div>
+        <div class="member-org">Forbes Russia</div>
+        <div class="member-role">Руководитель совета. Пишет сумму инвестиций на салфетке победителя.</div>
+      </div>
+      <div class="member">
+        <div class="member-num">02</div>
+        <div class="member-name">Никита Лапов</div>
+        <div class="member-org">Forbes Russia</div>
+        <div class="member-role">Член совета. Представляет редакционную экспертизу Forbes.</div>
+      </div>
+      <div class="member">
+        <div class="member-num">03</div>
+        <div class="member-name">TBD</div>
+        <div class="member-org">Новосибирская область</div>
+        <div class="member-role">Крупный предприниматель Новосибирской области. Локальный авторитет и знание рынка региона.</div>
+      </div>
+      <div class="member">
+        <div class="member-num">04</div>
+        <div class="member-name">TBD</div>
+        <div class="member-org">Омбудсмен</div>
+        <div class="member-role">Бизнес-омбудсмен Новосибирской области. Защитник бизнеса — между властью и предпринимателями.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- КАСТИНГ -->
+<section class="casting">
+  <div class="casting-inner">
+    <div class="casting-header reveal">
+      <div>
+        <span class="label" style="display:block;margin-bottom:20px;">Кастинг · Пилот · Новосибирск</span>
+        <h2 class="casting-headline">Герои<br>первого выпуска</h2>
+      </div>
+      <p class="casting-note">Критерии отбора: интересная история, нестандартная идея, реальные цифры. Фокус пилота — Новосибирск.</p>
+    </div>
+    <div class="candidates reveal">
+      <div class="candidate">
+        <img class="candidate-photo" src="novosibirsk-candidate-1.jpg" alt="Дмитрий Сигов" loading="lazy">
+        <div class="candidate-body">
+          <span class="candidate-priority">#01 кандидат</span>
+          <div class="candidate-rank">01</div>
+          <div class="candidate-name">Дмитрий Сигов</div>
+          <div class="candidate-project">Keygo</div>
+          <p class="candidate-desc">Автоматизированный сервис краткосрочной аренды жилья. Выпускник НГУ, работал в «Яндекс Go» и Sber International. Основал Keygo в 2023 году. Выручка $2.7 млн. Привлёк два раунда: 50 млн руб., затем 150 млн руб. от фонда Hive («Билайн»). Общий объём инвестиций — 400 млн руб. Forbes «30 до 30» — 2026.</p>
+          <p class="candidate-why">Сотрудник Яндекса бросил корпорат и пошёл конкурировать с Airbnb — без агрегаторов, с автоматизацией. Доказанная модель, сильные инвесторы. Инвестиции нужны на выход в новые города России.</p>
+          <div class="candidate-invest-tags">
+            <span class="candidate-invest-tag">PropTech</span>
+            <span class="candidate-invest-tag">Краткосрочная аренда</span>
+            <span class="candidate-invest-tag">Масштабирование</span>
+            <span class="candidate-invest-tag">Equity</span>
+
+          <a class="candidate-source" href="https://nsk.rbc.ru/nsk/28/04/2026/69f038b59a79479930d941c9" target="_blank" rel="noopener">РБК · Forbes 30 до 30 · 2026</a>
+          </div>
+        </div>
+      </div>
+      <div class="candidate">
+        <div class="candidate-photo-placeholder" style="display:flex;align-items:center;justify-content:center;"><span style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#444;text-align:center;padding:16px;">Здесь скоро будет<br>фото кандидата</span></div>
+        <div class="candidate-body">
+          <span class="candidate-priority">#02 кандидат</span>
+          <div class="candidate-rank">02</div>
+          <div class="candidate-name">Мария Малых</div>
+          <div class="candidate-project">TaxNova</div>
+          <p class="candidate-desc">ИИ-платформа автоматизации налоговых льгот для R&amp;D компаний. Физфак НГУ → Институт ядерной физики им. Будкера → Criteo. В 2025 году запустила TaxNova в Великобритании. ИИ собирает данные и генерирует документы на налоговые льготы. В 2026 привлекла $1 млн от фондов. Forbes «30 до 30» — 2026.</p>
+          <p class="candidate-why">Физик-ядерщик из Академгородка строит финтех в Лондоне — редкая история. B2B SaaS с понятной монетизацией. Инвестиции нужны на масштабирование в Европе и выход в США.</p>
+          <div class="candidate-invest-tags">
+            <span class="candidate-invest-tag">FinTech / AI</span>
+            <span class="candidate-invest-tag">SaaS</span>
+            <span class="candidate-invest-tag">UK / EU</span>
+            <span class="candidate-invest-tag">Масштабирование</span>
+
+          <a class="candidate-source" href="https://www.forbes.ru/svoi-biznes/559060-10-perspektivnyh-rossijskih-predprinimatelej-moloze-30-let-2026" target="_blank" rel="noopener">Forbes · 10 предпринимателей до 30 · 2026</a>
+          </div>
+        </div>
+      </div>
+      <div class="candidate">
+        <div class="candidate-photo-placeholder" style="display:flex;align-items:center;justify-content:center;"><span style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#444;text-align:center;padding:16px;">Здесь скоро будет<br>фото кандидата</span></div>
+        <div class="candidate-body">
+          <span class="candidate-priority">#03 кандидат</span>
+          <div class="candidate-rank">03</div>
+          <div class="candidate-name">Анастасия Королёва</div>
+          <div class="candidate-project">Тут поймут</div>
+          <p class="candidate-desc">Сеть подростковых центров психологической помощи. Новосибирский медицинский университет. Пять лет руководит сетью — 3 центра в Новосибирске, бесплатная поддержка подростков в сложных ситуациях. Входит в фонд «Солнечный город». Forbes «30 до 30» — 2026.</p>
+          <p class="candidate-why">Социальное предпринимательство с масштабируемой моделью и реальным спросом. Острый вопрос для совета: как монетизировать «бесплатное»? Самый нестандартный питч выпуска — и самый эмоциональный.</p>
+          <div class="candidate-invest-tags">
+            <span class="candidate-invest-tag">Соцпредпринимательство</span>
+            <span class="candidate-invest-tag">MedTech</span>
+            <span class="candidate-invest-tag">Франшиза</span>
+            <span class="candidate-invest-tag">Новые города</span>
+
+          <a class="candidate-source" href="https://nsk.rbc.ru/nsk/28/04/2026/69f038b59a79479930d941c9" target="_blank" rel="noopener">Forbes · 30 до 30 · 2026</a>
+          </div>
+        </div>
+      </div>
+      <div class="candidate">
+        <div class="candidate-photo-placeholder" style="display:flex;align-items:center;justify-content:center;"><span style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#444;text-align:center;padding:16px;">Здесь скоро будет<br>фото кандидата</span></div>
+        <div class="candidate-body">
+          <span class="candidate-priority">#04 кандидат</span>
+          <div class="candidate-rank">04</div>
+          <div class="candidate-name">Антон Ганченков</div>
+          <div class="candidate-project">Родные масла</div>
+          <p class="candidate-desc">Производство автомобильных масел, федеральная сеть. Новосибирск. Химик по образованию — пришёл в отрасль через науку. Критикует архаичность российского авторынка и видит в этом возможность. После ухода Shell, Castrol и Mobil — окно для отечественного производителя.</p>
+          <p class="candidate-why">Учёный-химик, который пошёл в производство — сильная история. Импортозамещение в авто актуальнее некуда. Понятный продукт, понятный рынок, понятная боль каждого автовладельца страны.</p>
+          <div class="candidate-invest-tags">
+            <span class="candidate-invest-tag">Производство</span>
+            <span class="candidate-invest-tag">Импортозамещение</span>
+            <span class="candidate-invest-tag">Автопром</span>
+            <span class="candidate-invest-tag">Федеральный рынок</span>
+
+          <a class="candidate-source" href="https://nsk.plus.rbc.ru/news/5fe075067a8aa9af2aa5efc7" target="_blank" rel="noopener">РБК+ · Интервью «Родные масла»</a>
+          </div>
+        </div>
+      </div>
+      <div class="candidate">
+        <div class="candidate-photo-placeholder" style="display:flex;align-items:center;justify-content:center;"><span style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#444;text-align:center;padding:16px;">Здесь скоро будет<br>фото кандидата</span></div>
+        <div class="candidate-body">
+          <span class="candidate-priority">#05 кандидат</span>
+          <div class="candidate-rank">05</div>
+          <div class="candidate-name">Андрей Топоров</div>
+          <div class="candidate-project">Cuboro Russia</div>
+          <p class="candidate-desc">Эксклюзивный дистрибьютор швейцарского конструктора из буковых кубиков Cuboro. Новосибирск. Увеличил долю России в мировых продажах в 260 раз. Поставляет в 12 регионов. Проводит чемпионаты по всей стране — включая Чукотку.</p>
+          <p class="candidate-why">Один человек взял непонятный продукт и создал из него рынок. Ниша без конкурентов. Следующий шаг — образовательные учреждения, маркетплейсы, экспорт в Азию. Самый неожиданный питч выпуска.</p>
+          <div class="candidate-invest-tags">
+            <span class="candidate-invest-tag">Дистрибьюция</span>
+            <span class="candidate-invest-tag">EdTech</span>
+            <span class="candidate-invest-tag">Маркетплейсы</span>
+            <span class="candidate-invest-tag">Экспорт</span>
+
+          <a class="candidate-source" href="https://nsk.plus.rbc.ru/news/5f8d15707a8aa9f4de699384" target="_blank" rel="noopener">РБК · История про кубики Cuboro</a>
+          </div>
+        </div>
+      </div>
+      <div class="candidate">
+        <div class="candidate-photo-placeholder" style="display:flex;align-items:center;justify-content:center;"><span style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#444;text-align:center;padding:16px;">Здесь скоро будет<br>фото кандидата</span></div>
+        <div class="candidate-body">
+          <span class="candidate-priority">#06 кандидат</span>
+          <div class="candidate-rank">06</div>
+          <div class="candidate-name">Роман Рыбаков</div>
+          <div class="candidate-project">Over Grower</div>
+          <p class="candidate-desc">Умная гидропонная система — выращивай зелень и овощи дома или в офисе, управляя со смартфона. 8 датчиков, без грязи и ухода. Резидент Академпарка. Экспорт в Великобританию, Нидерланды, Саудовскую Аравию, Норвегию.</p>
+          <p class="candidate-why">Маркетолог, который стал инженером и сибирским фермером. Грант 2 млн от Фонда содействия инновациям. Победитель конкурса мэра Новосибирска. Растущий глобальный рынок AgriTech — нужен масштаб производства.</p>
+          <div class="candidate-invest-tags">
+            <span class="candidate-invest-tag">AgriTech</span>
+            <span class="candidate-invest-tag">Академпарк</span>
+            <span class="candidate-invest-tag">Экспорт</span>
+            <span class="candidate-invest-tag">Масштабирование</span>
+
+          <a class="candidate-source" href="https://academpark.com/media/smi/24790/" target="_blank" rel="noopener">Академпарк · Гидропоника в Англию и Саудовскую Аравию</a>
+          </div>
+        </div>
+      </div>
+      <div class="candidate">
+        <div class="candidate-photo-placeholder" style="display:flex;align-items:center;justify-content:center;"><span style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#444;text-align:center;padding:16px;">Здесь скоро будет<br>фото кандидата</span></div>
+        <div class="candidate-body">
+          <span class="candidate-priority">#07 кандидат</span>
+          <div class="candidate-rank">07</div>
+          <div class="candidate-name">Иван Малахов</div>
+          <div class="candidate-project">NeuroLumber</div>
+          <p class="candidate-desc">ИИ-сканеры для деревообрабатывающих производств. Нейросеть распознаёт дефекты древесины в реальном времени и автоматизирует сортировку и раскрой. Резидент Академпарка, участник Сколково. На демо-дне SberStudent получил инвестпредложение 13,6 млн руб.</p>
+          <p class="candidate-why">Студент физфака НГУ — идею подсказал отец-деревообработчик. После ухода западных аналогов NeuroLumber остался одним из немногих игроков в РФ. Следующий шаг — крупные лесопромышленные холдинги и экспорт в Азию.</p>
+          <div class="candidate-invest-tags">
+            <span class="candidate-invest-tag">Industrial AI</span>
+            <span class="candidate-invest-tag">Деревообработка</span>
+            <span class="candidate-invest-tag">Академпарк</span>
+            <span class="candidate-invest-tag">Импортозамещение</span>
+          </div>
+          <a class="candidate-source" href="https://academpark.com/media/news/26640/" target="_blank" rel="noopener">Академпарк · ИИ-сканер для деревообработки</a>
+        </div>
+      </div>
+      <div class="candidate">
+        <div class="candidate-photo-placeholder" style="display:flex;align-items:center;justify-content:center;"><span style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#444;text-align:center;padding:16px;">Здесь скоро будет<br>фото кандидата</span></div>
+        <div class="candidate-body">
+          <span class="candidate-priority">#08 кандидат</span>
+          <div class="candidate-rank">08</div>
+          <div class="candidate-name">Татьяна Шутова</div>
+          <div class="candidate-project">4HANDS</div>
+          <p class="candidate-desc">Федеральная сеть маникюрных студий «4 руки» — маникюр и педикюр делают одновременно два мастера. 200+ студий в России, Казахстане и США. Оборот сети — 2,8 млрд руб.</p>
+          <p class="candidate-why">Юрист, которая стала клиентом студии, купила франшизу и построила одну из крупнейших beauty-франшиз России. Сейчас активный выход в США и Казахстан — инвестиции нужны под международную экспансию.</p>
+          <div class="candidate-invest-tags">
+            <span class="candidate-invest-tag">Beauty Franchise</span>
+            <span class="candidate-invest-tag">Франшиза</span>
+            <span class="candidate-invest-tag">Международный рынок</span>
+            <span class="candidate-invest-tag">FMCG</span>
+          </div>
+          <a class="candidate-source" href="https://24smi.org/celebrity/440312-tatiana-shutova.html" target="_blank" rel="noopener">Forbes · История Татьяны Шутовой и 4HANDS</a>
+        </div>
+      </div>
+      <div class="candidate">
+        <div class="candidate-photo-placeholder" style="display:flex;align-items:center;justify-content:center;"><span style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#444;text-align:center;padding:16px;">Здесь скоро будет<br>фото кандидата</span></div>
+        <div class="candidate-body">
+          <span class="candidate-priority">#09 кандидат</span>
+          <div class="candidate-rank">09</div>
+          <div class="candidate-name">Юрий Сафонов</div>
+          <div class="candidate-project">Bean Roast</div>
+          <p class="candidate-desc">Specialty coffee — обжарка, кофейни и B2B-поставки для HoReCa. Открыл обжарочное производство на Бали — прямой доступ к сырью из Индонезии. Призёр Russian Coffee Roaster of the Year 2018.</p>
+          <p class="candidate-why">Сибирский предприниматель с физическим продуктом и глобальными амбициями — не IT, не технологии. Specialty coffee — быстрорастущий сегмент в России и Азии. Инвестиции нужны на масштабирование B2B-поставок и новые точки.</p>
+          <div class="candidate-invest-tags">
+            <span class="candidate-invest-tag">FMCG</span>
+            <span class="candidate-invest-tag">Производство</span>
+            <span class="candidate-invest-tag">Экспорт</span>
+            <span class="candidate-invest-tag">HoReCa</span>
+          </div>
+          <a class="candidate-source" href="https://ngs.ru/text/business/2022/06/30/71441915/" target="_blank" rel="noopener">НГС · Новосибирские бренды выходят на Бали</a>
+        </div>
+      </div>
+      <div class="candidate">
+        <div class="candidate-photo-placeholder" style="display:flex;align-items:center;justify-content:center;"><span style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#444;text-align:center;padding:16px;">Здесь скоро будет<br>фото кандидата</span></div>
+        <div class="candidate-body">
+          <span class="candidate-priority">#10 кандидат</span>
+          <div class="candidate-rank">10</div>
+          <div class="candidate-name">Дмитрий Шестаков</div>
+          <div class="candidate-project">КБ Optiplane</div>
+          <p class="candidate-desc">Промышленные дроны для 3D-картографирования карьеров и горных выработок. Аренда от 40 000 руб./мес., комплекс от 2 млн руб. Победители Криптонит Startup Challenge. Участники выставки «Армия-2024».</p>
+          <p class="candidate-why">После ухода западных компаний — один из немногих игроков в РФ в нише промышленного дронирования карьеров. Вся компонентная база из России и дружественных стран. Рынок — все горнодобывающие холдинги Сибири.</p>
+          <div class="candidate-invest-tags">
+            <span class="candidate-invest-tag">DrohnTech</span>
+            <span class="candidate-invest-tag">Промышленность</span>
+            <span class="candidate-invest-tag">Импортозамещение</span>
+            <span class="candidate-invest-tag">B2B</span>
+          </div>
+          <a class="candidate-source" href="https://infopro54.ru/news/novosibircy-nauchili-drony-issledovat-karery/" target="_blank" rel="noopener">Infopro54 · Дроны для карьеров из Новосибирска</a>
+        </div>
+      </div>
+      <div class="candidate">
+        <div class="candidate-photo-placeholder" style="display:flex;align-items:center;justify-content:center;"><span style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#444;text-align:center;padding:16px;">Здесь скоро будет<br>фото кандидата</span></div>
+        <div class="candidate-body">
+          <span class="candidate-priority">#11 кандидат</span>
+          <div class="candidate-rank">11</div>
+          <div class="candidate-name">—</div>
+          <div class="candidate-project">—</div>
+          <p class="candidate-desc"></p>
+          <p class="candidate-why"></p>
+          <div class="candidate-invest-tags"></div>
+        </div>
+      </div>
+      <div class="candidate">
+        <div class="candidate-photo-placeholder" style="display:flex;align-items:center;justify-content:center;"><span style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#444;text-align:center;padding:16px;">Здесь скоро будет<br>фото кандидата</span></div>
+        <div class="candidate-body">
+          <span class="candidate-priority">#12 кандидат</span>
+          <div class="candidate-rank">12</div>
+          <div class="candidate-name">—</div>
+          <div class="candidate-project">—</div>
+          <p class="candidate-desc"></p>
+          <p class="candidate-why"></p>
+          <div class="candidate-invest-tags"></div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- ФОРМАТ -->
+<section class="format">
+  <div class="format-inner">
+    <div class="format-header reveal">
+      <div class="format-header-left">
+        <span class="label" style="display:block;margin-bottom:20px;">Формат дистрибуции</span>
+        <h2 class="format-headline">Снимаем один раз —<br>выходим везде</h2>
+      </div>
+      <img class="format-napkin" src="салфетка 3.png" alt="Салфетка с миллионом">
+    </div>
+    <div class="format-grid reveal">
+      <div class="format-card">
+        <span class="format-icon">▶</span>
+        <div class="format-card-title">Основной выпуск</div>
+        <div class="format-card-sub">YouTube · 25–30 минут</div>
+        <p class="format-card-body">Три питча, совещание, объявление решений. Полный нарратив с эмоцией ожидания. Флагманский формат шоу — здесь живёт драма.</p>
+      </div>
+      <div class="format-card">
+        <span class="format-icon">↯</span>
+        <div class="format-card-title">Короткий формат</div>
+        <div class="format-card-sub">Reels / Shorts · ~60 секунд</div>
+        <p class="format-card-body">Один момент — один питч — один драматический исход. Нарезки лучших моментов: ритуал салфетки, острые вопросы, рука пишет сумму, лицо победителя.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ПРОИЗВОДСТВО -->
+<section class="production">
+  <div class="production-inner">
+    <span class="label label-light">Команда и бюджет</span>
+    <div class="production-grid">
+      <div class="reveal">
+        <h2 class="production-headline">Минимальная команда.<br>Максимальный<br>результат.</h2>
+        <div class="budget-box">
+          <div class="budget-title">Бюджет пилота</div>
+          <div class="budget-rows">
+            <div class="budget-row">
+              <span class="budget-item-name">Режиссёр-оператор</span>
+              <span class="budget-item-sum">30–50 тыс. ₽</span>
+            </div>
+            <div class="budget-row">
+              <span class="budget-item-name">Второй оператор</span>
+              <span class="budget-item-sum">15–25 тыс. ₽</span>
+            </div>
+            <div class="budget-row">
+              <span class="budget-item-name">Аренда зала IT-парк</span>
+              <span class="budget-item-sum">уточнить</span>
+            </div>
+            <div class="budget-row">
+              <span class="budget-item-name">Свет и оборудование</span>
+              <span class="budget-item-sum">10–15 тыс. ₽</span>
+            </div>
+            <div class="budget-row">
+              <span class="budget-item-name">Монтаж выпуска + 5 Reels</span>
+              <span class="budget-item-sum">30–50 тыс. ₽</span>
+            </div>
+            <div class="budget-row total">
+              <span class="budget-item-name">Итого</span>
+              <span class="budget-item-sum">~100–150 тыс. ₽</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="team-list">
+          <div class="team-item">
+            <span class="team-num">01</span>
+            <div class="team-info">
+              <div class="team-role">Режиссёр-оператор</div>
+              <div class="team-desc">Съёмка, кадр, управление процессом на площадке</div>
+            </div>
+          </div>
+          <div class="team-item">
+            <span class="team-num">02</span>
+            <div class="team-info">
+              <div class="team-role">Второй оператор</div>
+              <div class="team-desc">Крупные планы лиц, реакции, детали — руки, салфетка</div>
+            </div>
+          </div>
+          <div class="team-item">
+            <span class="team-num">03</span>
+            <div class="team-info">
+              <div class="team-role">Монтажёр</div>
+              <div class="team-desc">Полный выпуск + нарезка Reels и Shorts (удалённо)</div>
+            </div>
+          </div>
+          <div class="team-item">
+            <span class="team-num">04</span>
+            <div class="team-info">
+              <div class="team-role">Продюсер — Команда группы №36 Школы Продюсирования Николая Картозия</div>
+              <div class="team-desc">Кастинг, Forbes, локация, организация съёмочного дня</div>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:40px;padding:24px;background:var(--warm-gray);">
+          <p class="label label-light" style="margin-bottom:16px;display:block;">Оборудование</p>
+          <p style="font-size:13px;color:var(--text-body);line-height:1.7;">Петличные микрофоны — минимум 6 шт (4 совет + 3 героя) · 2 камеры (основная + вторая) · Свет — 2–3 прибора (аренда в Казани)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- СТАТУС -->
+<section class="status">
+  <div class="status-inner">
+    <div class="reveal">
+      <span class="label" style="display:block;margin-bottom:20px;">Текущий статус</span>
+      <h2 class="status-headline">Что сделано.<br>Что впереди.</h2>
+    </div>
+    <div class="status-grid reveal">
+      <div class="status-col">
+        <div class="status-col-title done">Готово</div>
+        <ul class="status-list">
+          <li class="status-item done"><span class="status-check">✓</span>Концепция утверждена Forbes</li>
+          <li class="status-item done"><span class="status-check">✓</span>Формат выпуска определён</li>
+          <li class="status-item done"><span class="status-check">✓</span>Состав совета Forbes определён</li>
+          <li class="status-item done"><span class="status-check">✓</span>Пилотный город — Новосибирск</li>
+          <li class="status-item done"><span class="status-check">✓</span>Локация: Академпарк Новосибирск, пр. Академика Лаврентьева, 6</li>
+          <li class="status-item done"><span class="status-check">✓</span>Шорт-лист предпринимателей для пилота</li>
+        </ul>
+      </div>
+      <div class="status-col">
+        <div class="status-col-title todo">В работе</div>
+        <ul class="status-list">
+          <li class="status-item todo"><span class="status-check"></span>Кастинг участников (3 предпринимателя)</li>
+          <li class="status-item todo"><span class="status-check"></span>Сценарий эпизода</li>
+          <li class="status-item todo"><span class="status-check"></span>Бронирование зала в IT-парке</li>
+          <li class="status-item todo"><span class="status-check"></span>Бизнес-омбудсмен Новосибирской области — согласование</li>
+          <li class="status-item todo"><span class="status-check"></span>Кандидатура предпринимателя Казани в совет</li>
+          <li class="status-item todo"><span class="status-check"></span>Команда производства</li>
+          <li class="status-item todo"><span class="status-check"></span>Дата съёмок пилота</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-title">Миллион<br><span style="color:var(--gold);">на салфетке</span></div>
+      <div class="footer-sub">Forbes · Питч-шоу · Новосибирск · Пилот 2026</div>
+    </div>
+    <div class="footer-right">
+      <div class="footer-location">Академпарк Новосибирск · пр. Академика Лаврентьева, 6</div>
+      <div class="footer-contact">Команда группы №36 Школы Продюсирования Николая Картозия</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, i * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0, rootMargin: '0px 0px 0px 0px' });
+
+  reveals.forEach(el => observer.observe(el));
+
+  // Fallback: ensure everything is visible after 800ms regardless
+  setTimeout(() => {
+    reveals.forEach(el => el.classList.add('visible'));
+  }, 800);
+</script>
+
+</body>
+</html>
