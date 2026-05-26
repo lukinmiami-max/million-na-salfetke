@@ -1330,6 +1330,14 @@
     .timeline-steps { grid-template-columns: 1fr; }
   }
 
+
+  /* ── МОБИЛЬНАЯ АДАПТАЦИЯ: СТАРТ ШОУ + ХРОНОЛОГИЯ ── */
+  .show-opts { display:grid; grid-template-columns:1fr 1fr; gap:2px; margin-bottom:64px; }
+  .timeline-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:2px; }
+  @media (max-width:640px) {
+    .show-opts { grid-template-columns:1fr; }
+    .timeline-grid { grid-template-columns:repeat(2,1fr); }
+  }
 </style>
 </head>
 <body>
@@ -1427,7 +1435,7 @@
       <div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,6vw,80px);letter-spacing:3px;color:var(--white);line-height:1;">Старт шоу</div>
     </div>
 
-    <div class="reveal" style="display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-bottom:64px;">
+    <div class="reveal" class="show-opts reveal">
       <div style="background:var(--dark);border:1px solid var(--border-dark);padding:40px;">
         <div style="display:inline-block;font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);border:1px solid rgba(200,168,75,0.35);padding:5px 12px;margin-bottom:24px;">Вариант А</div>
         <div style="font-family:'Bebas Neue',sans-serif;font-size:56px;color:var(--gold);line-height:1;margin-bottom:12px;">A</div>
@@ -1444,7 +1452,7 @@
 
     <div class="reveal" style="border-top:1px solid var(--border-dark);padding-top:48px;">
       <div style="font-size:10px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--text-muted);margin-bottom:32px;">Хронология выпуска · 8 актов</div>
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;">
+      <div class="timeline-grid">
 
         <div style="background:var(--dark);border:1px solid var(--border-dark);padding:24px 20px;">
           <div style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--gold);opacity:0.25;line-height:1;margin-bottom:12px;">01</div>
