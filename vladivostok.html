@@ -1297,6 +1297,24 @@
     .heroes-preview { padding: 64px 20px; }
     .heroes-preview-grid { grid-template-columns: 1fr; }
   }
+
+  /* ── ХРОНОЛОГИЯ ── */
+  .timeline { margin-top: 64px; border-top: 1px solid var(--border-dark); padding-top: 48px; }
+  .timeline-label { font-size: 10px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 32px; }
+  .timeline-steps { display: grid; grid-template-columns: repeat(4,1fr); gap: 2px; }
+  .timeline-step { background: var(--card-dark); border: 1px solid var(--border-dark); padding: 24px 20px; position: relative; }
+  .timeline-step-num { font-family: 'Bebas Neue', sans-serif; font-size: 48px; color: var(--gold); opacity: 0.25; line-height: 1; margin-bottom: 12px; }
+  .timeline-step-text { font-size: 13px; color: var(--white); line-height: 1.6; }
+  .timeline-step-icon { font-size: 20px; margin-bottom: 10px; }
+  .timeline-step.highlight { border-color: rgba(200,168,75,0.4); }
+  .timeline-step.highlight .timeline-step-num { opacity: 0.6; }
+  @media (max-width: 768px) {
+    .timeline-steps { grid-template-columns: repeat(2,1fr); }
+  }
+  @media (max-width: 480px) {
+    .timeline-steps { grid-template-columns: 1fr; }
+  }
+
 </style>
 </head>
 <body>
