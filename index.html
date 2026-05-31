@@ -1164,7 +1164,7 @@
     .hero { padding: 0 20px 56px; }
     .concept, .mechanics, .napkin-moment, .council, .casting, .format, .production, .status, .footer { padding: 64px 20px; }
     .concept-grid, .council-header, .production-grid, .status-grid, .format-grid { grid-template-columns: 1fr; gap: 40px; }
-    .council-members { grid-template-columns: 1fr 1fr; }
+    .council-members { grid-template-columns: 1fr 1fr !important; }
     .acts { grid-template-columns: 1fr; }
     .candidates { grid-template-columns: 1fr; }
     .concept-right { padding-top: 0; }
@@ -1236,7 +1236,7 @@
     .concept-grid, .council-header, .production-grid,
     .status-grid, .format-grid { gap: 32px; }
 
-    .council-members { grid-template-columns: 1fr; }
+    .council-members { grid-template-columns: 1fr !important; }
 
     /* Акты шоу */
     .act { padding: 32px 24px; }
@@ -1338,6 +1338,44 @@
     .show-opts { grid-template-columns:1fr; }
     .timeline-grid { grid-template-columns:repeat(2,1fr); }
   }
+
+  /* ── СЛОТЫ ДЛЯ ФОТО ── */
+  .photo-slot {
+    margin-top: 20px;
+    border: 1px dashed rgba(200,168,75,0.25);
+    background: rgba(200,168,75,0.03);
+    padding: 16px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 6px;
+    aspect-ratio: 16 / 9;
+  }
+  .photo-slot-label {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(200,168,75,0.45);
+  }
+  .photo-slot-desc {
+    font-size: 11px;
+    line-height: 1.5;
+    color: rgba(255,255,255,0.22);
+  }
+  @media (max-width:640px) {
+    .outcomes-grid { grid-template-columns: 1fr !important; }
+    .pitch-grid-top { grid-template-columns: 1fr !important; }
+    .pitch-grid-bottom { grid-template-columns: 1fr !important; }
+    .intro-grid { grid-template-columns: 1fr !important; }
+    .shark-compare-row { grid-template-columns: 1fr !important; }
+    .shark-compare-header { grid-template-columns: 1fr !important; }
+    .shark-info-grid { grid-template-columns: 1fr !important; }
+    .shark-top-grid { grid-template-columns: 1fr !important; }
+    .shark-investors-grid { grid-template-columns: 1fr 1fr !important; }
+  }
 </style>
 </head>
 <body>
@@ -1355,8 +1393,8 @@
 <!-- HERO -->
 <section class="hero">
   <picture>
-    <source media="(max-width: 600px)" srcset="hero-new-mobile.jpg">
-    <img class="hero-img" src="hero-new.jpg" alt="Миллион на салфетке — питч-шоу Forbes">
+    <source media="(max-width: 600px)" srcset="mobile Hero New 2.jpg">
+    <img class="hero-img" src="hero New 2.jpg" alt="Миллион на салфетке — питч-шоу Forbes">
   </picture>
   <div class="hero-content">
     <div class="hero-line"></div>
@@ -1373,7 +1411,7 @@
       </div>
       <div class="hero-meta-sep"></div>
       <div class="hero-meta-item">
-        <span class="hero-meta-value">25–30 минут</span>
+        <span class="hero-meta-value">40–60 минут</span>
         <span class="hero-meta-key">Основной выпуск</span>
       </div>
       <div class="hero-meta-sep"></div>
@@ -1419,7 +1457,7 @@
         </div>
         <div class="stat-item">
           <span class="stat-number">4</span>
-          <span class="stat-desc">члена совета Forbes принимают решение коллегиально</span>
+          <span class="stat-desc">инвестора в совете — каждый делает оффер или говорит «Я пас»</span>
         </div>
       </div>
     </div>
@@ -1431,73 +1469,113 @@
   <div style="max-width:1100px;margin:0 auto;">
 
     <div class="reveal" style="margin-bottom:48px;">
-      <p class="label" style="color:var(--gold);letter-spacing:4px;margin-bottom:16px;">Формат открытия</p>
-      <div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,6vw,80px);letter-spacing:3px;color:var(--white);line-height:1;">Старт шоу</div>
+      <p class="label" style="color:var(--gold);letter-spacing:4px;margin-bottom:16px;">Формат шоу</p>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,6vw,80px);letter-spacing:3px;color:var(--white);line-height:1;">Как устроен выпуск</div>
     </div>
 
-    <div class="reveal" class="show-opts reveal">
+    <!-- Варианты открытия -->
+    <div class="reveal show-opts" style="margin-bottom:72px;">
       <div style="background:var(--dark);border:1px solid var(--border-dark);padding:40px;">
         <div style="display:inline-block;font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);border:1px solid rgba(200,168,75,0.35);padding:5px 12px;margin-bottom:24px;">Вариант А</div>
         <div style="font-family:'Bebas Neue',sans-serif;font-size:56px;color:var(--gold);line-height:1;margin-bottom:12px;">A</div>
         <div style="font-size:20px;font-weight:700;color:var(--white);margin-bottom:16px;">Спикер в кадре</div>
-        <div style="font-size:15px;color:var(--text-muted);line-height:1.7;">Ведущий или представитель Forbes выходит перед камерой и представляет шоу. Рассказывает о концепции, городе, трёх участниках. Создаёт личный контакт с аудиторией с первых секунд.</div>
+        <div style="font-size:15px;color:var(--text-muted);line-height:1.7;">Ведущий или представитель Forbes выходит перед камерой. Представляет шоу, состав совета — 5 участников: глава совета, три инвестора и бизнес-омбудсмен региона. Создаёт личный контакт с аудиторией с первых секунд.</div>
       </div>
       <div style="background:var(--dark);border:1px solid var(--border-dark);padding:40px;">
         <div style="display:inline-block;font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);border:1px solid rgba(200,168,75,0.35);padding:5px 12px;margin-bottom:24px;background:rgba(200,168,75,0.1);">Вариант Б · Выбор Forbes</div>
         <div style="font-family:'Bebas Neue',sans-serif;font-size:56px;color:var(--gold);line-height:1;margin-bottom:12px;">Б</div>
         <div style="font-size:20px;font-weight:700;color:var(--white);margin-bottom:16px;">Закадровый голос</div>
-        <div style="font-size:15px;color:var(--text-muted);line-height:1.7;">Закадровый голос объясняет формат шоу поверх визуального ряда — города, площадки, героев. Монтажный темп выше, входишь сразу в атмосферу без лишних слов в кадре.</div>
+        <div style="font-size:15px;color:var(--text-muted);line-height:1.7;">Закадровый голос объясняет формат поверх визуального ряда — города, площадки, героев. Монтажный темп выше, входишь сразу в атмосферу без лишних слов в кадре.</div>
       </div>
     </div>
 
-    <div class="reveal" style="border-top:1px solid var(--border-dark);padding-top:48px;">
-      <div style="font-size:10px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--text-muted);margin-bottom:32px;">Хронология выпуска · 8 актов</div>
-      <div class="timeline-grid">
+    <!-- ВСТУПЛЕНИЕ -->
+    <div class="reveal" style="border-top:1px solid var(--border-dark);padding-top:48px;margin-bottom:64px;">
+      <div style="font-size:10px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:32px;">Вступление · ~5 минут</div>
+      <div class="intro-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;">
 
         <div style="background:var(--dark);border:1px solid var(--border-dark);padding:24px 20px;">
           <div style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--gold);opacity:0.25;line-height:1;margin-bottom:12px;">01</div>
-          <div style="font-size:13px;color:var(--white);line-height:1.6;">Представление проекта — ведущий или закадровый голос открывает шоу</div>
+          <div style="font-size:13px;color:var(--white);line-height:1.6;">Представление шоу, формата и правил. Ведущий или закадровый голос открывает выпуск.</div>
+          <img src="Дмитрий Озман.jpg" alt="Дмитрий Озман — ведущий" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;margin-top:20px;">
         </div>
 
         <div style="background:var(--dark);border:1px solid var(--border-dark);padding:24px 20px;">
           <div style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--gold);opacity:0.25;line-height:1;margin-bottom:12px;">02</div>
-          <div style="font-size:13px;color:var(--white);line-height:1.6;">Представление трёх кандидатов — кто они, откуда, за чем пришли</div>
+          <div style="font-size:13px;color:var(--white);line-height:1.6;">Представление совета Forbes — ведущий или закадровый голос коротко рассказывает о каждом инвесторе. У каждого своя салфетка на столе.</div>
+          <img src="Совет Форбс.jpg" alt="Совет Forbes" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;margin-top:20px;">
         </div>
 
         <div style="background:var(--dark);border:1px solid var(--border-dark);padding:24px 20px;">
           <div style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--gold);opacity:0.25;line-height:1;margin-bottom:12px;">03</div>
-          <div style="font-size:13px;color:var(--white);line-height:1.6;">Каждый кандидат берёт салфетку и пишет название своего проекта — по очереди питчит идею совету</div>
-        </div>
-
-        <div style="background:var(--dark);border:1px solid var(--border-dark);padding:24px 20px;">
-          <div style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--gold);opacity:0.25;line-height:1;margin-bottom:12px;">04</div>
-          <div style="font-size:13px;color:var(--white);line-height:1.6;">После питча кандидат кладёт свою салфетку на стол — и ждёт</div>
-        </div>
-
-        <div style="background:var(--dark);border:1px solid var(--border-dark);padding:24px 20px;">
-          <div style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--gold);opacity:0.25;line-height:1;margin-bottom:12px;">05</div>
-          <div style="font-size:13px;color:var(--white);line-height:1.6;">Совет берёт паузу — 10 минут закрытого обсуждения без кандидатов</div>
-        </div>
-
-        <div style="background:var(--dark);border:1px solid var(--border-dark);padding:24px 20px;">
-          <div style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--gold);opacity:0.25;line-height:1;margin-bottom:12px;">06</div>
-          <div style="font-size:13px;color:var(--white);line-height:1.6;">Если есть вопросы — совет возвращается и задаёт их кандидатам напрямую</div>
-        </div>
-
-        <div style="background:var(--dark);border:1px solid rgba(200,168,75,0.4);padding:24px 20px;">
-          <div style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--gold);opacity:0.6;line-height:1;margin-bottom:12px;">07</div>
-          <div style="font-size:13px;color:var(--white);line-height:1.6;">Вердикт: совет поднимает вверх салфетку победителя с надписью <strong style="color:var(--gold);">«1 миллион»</strong></div>
-        </div>
-
-        <div style="background:var(--dark);border:1px solid rgba(200,168,75,0.4);padding:24px 20px;">
-          <div style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--gold);opacity:0.6;line-height:1;margin-bottom:12px;">08</div>
-          <div style="font-size:13px;color:var(--white);line-height:1.6;">Эмоции победителя, реакция тех, кто не получил инвестиции, и отклик зала</div>
+          <div style="font-size:13px;color:var(--white);line-height:1.6;">Представление трёх предпринимателей. Каждый получает чистую салфетку и пишет на ней название своего проекта.</div>
+          <img src="кандидат пишет на салфетке.jpg" alt="Кандидат пишет на салфетке" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;margin-top:20px;">
         </div>
 
       </div>
+    </div>
+
+    <!-- СХЕМА ОДНОГО ПИТЧА -->
+    <div class="reveal" style="border-top:1px solid var(--border-dark);padding-top:48px;">
+      <div style="font-size:10px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Схема одного питча · ~10–15 минут · повторяется трижды</div>
+      <div style="font-size:14px;color:var(--text-muted);margin-bottom:32px;line-height:1.7;">Каждый предприниматель проходит полный цикл — от питча до решения — прежде чем слово берёт следующий.</div>
+
+      <div class="pitch-grid-top" style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-bottom:2px;">
+
+        <div style="background:var(--dark);border:1px solid var(--border-dark);padding:24px 20px;display:flex;flex-direction:column;">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--gold);opacity:0.25;line-height:1;margin-bottom:12px;">01</div>
+          <div style="font-size:13px;color:var(--white);line-height:1.6;min-height:64px;">Предприниматель питчит проект — 5–10 минут. Называет сумму инвестиций и долю, которую готов отдать.</div>
+          <img src="Кандидат питчит идею.jpg" alt="Кандидат питчит идею" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;margin-top:auto;padding-top:20px;">
+        </div>
+
+        <div style="background:var(--dark);border:1px solid var(--border-dark);padding:24px 20px;display:flex;flex-direction:column;">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--gold);opacity:0.25;line-height:1;margin-bottom:12px;">02</div>
+          <div style="font-size:13px;color:var(--white);line-height:1.6;min-height:64px;">Инвесторы по очереди задают вопросы в микрофон и называют свои условия. Каждый делает оффер или говорит: «Я пас».</div>
+          <img src="Инвесторы задают вопросы.jpg" alt="Инвестор задаёт вопрос" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;margin-top:auto;padding-top:20px;">
+        </div>
+
+        <div style="background:var(--dark);border:1px solid var(--border-dark);padding:24px 20px;display:flex;flex-direction:column;">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--gold);opacity:0.25;line-height:1;margin-bottom:12px;">03</div>
+          <div style="font-size:13px;color:var(--white);line-height:1.6;min-height:64px;">Торг. Предприниматель и заинтересованные инвесторы договариваются о сумме и доле. Инвестор может выйти из переговоров в любой момент.</div>
+          <img src="Переговоры.jpg" alt="Переговоры" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;margin-top:auto;padding-top:20px;">
+        </div>
+
+      </div>
+      <div class="pitch-grid-bottom" style="display:grid;grid-template-columns:repeat(2,1fr);gap:2px;">
+
+        <div style="background:var(--dark);border:1px solid rgba(200,168,75,0.4);padding:24px 20px;">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--gold);opacity:0.6;line-height:1;margin-bottom:12px;">04</div>
+          <div style="font-size:13px;color:var(--white);line-height:1.6;">Момент выбора. Предприниматель называет одного инвестора — или уходит ни с чем, если ни один оффер не устроил.</div>
+          <img src="момент выбора.jpg" alt="Момент выбора" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;margin-top:20px;">
+        </div>
+
+        <div style="background:var(--dark);border:1px solid rgba(200,168,75,0.4);padding:24px 20px;">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--gold);opacity:0.6;line-height:1;margin-bottom:12px;">05</div>
+          <div style="font-size:13px;color:var(--white);line-height:1.6;">Передача салфетки. Предприниматель отдаёт салфетку с названием проекта выбранному инвестору. Инвестор пишет итоговую сумму и долю — <strong style="color:var(--gold);">сделка оформлена</strong>.</div>
+          <img src="Финальный кадр.jpg" alt="Финальный кадр" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;margin-top:20px;">
+        </div>
+
+      </div>
+
+      <!-- Возможные исходы -->
+      <div class="outcomes-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:32px;">
+        <div style="background:rgba(109,179,109,0.08);border-top:2px solid #6db36d;padding:20px 24px;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#6db36d;margin-bottom:10px;">Исход 1 · Сделка</div>
+          <div style="font-size:13px;color:rgba(255,255,255,0.7);line-height:1.6;">Предприниматель и инвестор договорились. Салфетка передана, сумма написана.</div>
+        </div>
+        <div style="background:rgba(200,168,75,0.04);border-top:2px solid rgba(200,168,75,0.4);padding:20px 24px;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:10px;">Исход 2 · Разрыв</div>
+          <div style="font-size:13px;color:rgba(255,255,255,0.5);line-height:1.6;">Оффер был, но условия не устроили. Предприниматель отказался от всех предложений.</div>
+        </div>
+        <div style="background:rgba(180,80,80,0.06);border-top:2px solid rgba(180,80,80,0.5);padding:20px 24px;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#e06060;margin-bottom:10px;">Исход 3 · Отказ</div>
+          <div style="font-size:13px;color:rgba(255,255,255,0.5);line-height:1.6;">Никто не сделал оффер. Все сказали «Я пас». Предприниматель уходит ни с чем.</div>
+        </div>
+      </div>
+
       <div style="margin-top:24px;padding:24px 32px;border:1px solid rgba(200,168,75,0.5);background:rgba(200,168,75,0.07);display:flex;align-items:flex-start;gap:20px;">
         <span style="font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--black);background:var(--gold);padding:5px 10px;white-space:nowrap;flex-shrink:0;margin-top:2px;">Важно</span>
-        <span style="font-size:15px;font-weight:500;color:var(--white);line-height:1.7;">«1 миллион» — символ шоу, не фиксированная сумма. Реальный размер инвестиций определяется советом Forbes индивидуально и может быть значительно выше.</span>
+        <span style="font-size:15px;font-weight:500;color:var(--white);line-height:1.7;">«1 миллион» — символ шоу, не фиксированная сумма. Реальный размер инвестиций определяется по итогам переговоров каждого питча.</span>
       </div>
     </div>
 
@@ -1510,46 +1588,50 @@
     <div class="mechanics-header reveal">
       <div>
         <span class="label" style="display:block;margin-bottom:20px;">Механика шоу</span>
-        <h2 class="mechanics-headline">Три акта. Один финал. Никаких гарантий.</h2>
+        <h2 class="mechanics-headline">Три питча. Три финала. Никаких гарантий.</h2>
       </div>
-      <p class="mechanics-sub">Исход непредсказуем: совет может одобрить одного, двух, всех троих — или никого. Интрига держится до последнего кадра с салфеткой.</p>
+      <p class="mechanics-sub">Каждый питч — отдельная история с непредсказуемым исходом. Инвесторы торгуются, соперничают друг с другом. Предприниматель может уйти ни с чем.</p>
     </div>
     <div class="acts reveal">
       <div class="act">
         <span class="act-number">01</span>
-        <div class="act-title">Питчи</div>
-        <div class="act-time">~15 минут</div>
+        <div class="act-title">Вступление</div>
+        <div class="act-time">~5 минут</div>
         <ul class="act-list">
-          <li>Три предпринимателя по очереди</li>
-          <li>Каждый получает чистую салфетку</li>
-          <li>Пишет или рисует свою идею</li>
-          <li>4–5 минут питча + вопросы совета</li>
-          <li>После — садится обратно в зал</li>
+          <li>Представление шоу и формата</li>
+          <li>Представление совета Forbes</li>
+          <li>Три предпринимателя получают салфетки</li>
+          <li>Каждый пишет название своего проекта</li>
+          <li>У каждого инвестора — своя салфетка на столе</li>
         </ul>
+        <img src="Дмитрий Озман.jpg" alt="Дмитрий Озман — ведущий" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;margin-top:24px;">
       </div>
       <div class="act">
         <span class="act-number">02</span>
-        <div class="act-title">Ожидание</div>
-        <div class="act-time">~10 минут</div>
+        <div class="act-title">Три питча</div>
+        <div class="act-time">×3 · ~10–15 мин каждый</div>
         <ul class="act-list">
-          <li>Совет совещается</li>
-          <li>Все три героя ждут вместе в зале</li>
-          <li>Камера фиксирует эмоции и напряжение</li>
-          <li>Переглядывания, молчание, жесты</li>
-          <li>Главный драматический момент выпуска</li>
+          <li>Питч 5–10 мин + сумма и доля</li>
+          <li>Инвесторы задают вопросы в микрофон</li>
+          <li>Каждый делает оффер или «Я пас»</li>
+          <li>Торг: сумма и доля обсуждаются вживую</li>
+          <li>Предприниматель выбирает инвестора</li>
+          <li>Передача салфетки → сумма на салфетке</li>
         </ul>
+        <img src="Кандидат питчит идею.jpg" alt="Кандидат питчит идею" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;margin-top:24px;">
       </div>
       <div class="act">
         <span class="act-number">03</span>
-        <div class="act-title">Решение</div>
+        <div class="act-title">Итог</div>
         <div class="act-time">~5 минут</div>
         <ul class="act-list">
-          <li>Совет объявляет решение по каждому</li>
-          <li>Одобренным — руководитель пишет сумму</li>
-          <li>Прямо на салфетке. Крупный план</li>
-          <li>Лицо получившего — главная эмоция</li>
-          <li>Отказ без объяснений — тоже работает</li>
+          <li>Финальные эмоции всех трёх героев</li>
+          <li>Краткое обсуждение следующих шагов</li>
+          <li>Те, кто не получил инвестиции — тоже в кадре</li>
+          <li>Главная эмоция: лица людей, узнавших исход</li>
+          <li>Эпилог — что будет после шоу</li>
         </ul>
+        <img src="Финальный кадр.jpg" alt="Финальный кадр" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;margin-top:24px;">
       </div>
     </div>
   </div>
@@ -1570,27 +1652,173 @@
       <div class="napkin-arrow">→</div>
       <div class="napkin-step">
         <div class="napkin-step-num">2</div>
-        <p class="napkin-step-text">Пишет название своего проекта на салфетке</p>
+        <p class="napkin-step-text">Пишет название своего проекта своей рукой</p>
       </div>
       <div class="napkin-arrow">→</div>
       <div class="napkin-step">
         <div class="napkin-step-num">3</div>
-        <p class="napkin-step-text">Питчит перед советом Forbes</p>
+        <p class="napkin-step-text">Питчит идею. Называет сумму и долю</p>
       </div>
       <div class="napkin-arrow">→</div>
       <div class="napkin-step">
         <div class="napkin-step-num">4</div>
-        <p class="napkin-step-text">Кладёт свою салфетку на стол совета Forbes</p>
+        <p class="napkin-step-text">Инвесторы делают офферы — или говорят «Я пас»</p>
       </div>
       <div class="napkin-arrow">→</div>
       <div class="napkin-step">
         <div class="napkin-step-num">5</div>
-        <p class="napkin-step-text">Крупный план: салфетка победителя с суммой</p>
+        <p class="napkin-step-text">Предприниматель передаёт салфетку выбранному инвестору</p>
+      </div>
+      <div class="napkin-arrow">→</div>
+      <div class="napkin-step">
+        <div class="napkin-step-num">6</div>
+        <p class="napkin-step-text" style="color:var(--gold-light);font-weight:500;">Инвестор пишет итоговую сумму и долю — сделка</p>
       </div>
     </div>
     <div class="napkin-final reveal">
       <img class="napkin-final-img" src="салфетка 3.png" alt="Салфетка с суммой инвестиций">
-      <p class="napkin-final-text">«Простая идея → быстрое решение → реальные деньги»</p>
+      <p class="napkin-final-text">«Простая идея → переговоры → рука пишет сумму на салфетке»</p>
+    </div>
+  </div>
+</section>
+
+<!-- РЕФЕРЕНС: SHARK TANK -->
+<section style="background:var(--off-white);color:var(--black);padding:100px 48px;">
+  <div style="max-width:1100px;margin:0 auto;">
+
+    <div class="reveal" style="margin-bottom:64px;">
+      <span class="label label-light" style="display:block;margin-bottom:20px;">Мировой референс</span>
+      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,4.5vw,56px);font-weight:300;line-height:1.05;letter-spacing:1px;color:var(--black);margin-bottom:24px;">Формат,<br>который работает</h2>
+      <p style="font-size:16px;line-height:1.75;color:var(--text-body);max-width:640px;">Shark Tank — один из самых успешных форматов бизнес-реалити в мире. «Миллион на салфетке» строится на той же механике, адаптированной под Forbes и российский контекст.</p>
+      <p style="font-size:16px;line-height:1.75;color:var(--text-body);max-width:640px;margin-top:16px;">Но у нас есть то, чего нет у Shark Tank: <strong style="color:var(--black);">визуальный хук — салфетка.</strong> Рука пишет сумму прямо сейчас, прямо в кадре. Один кадр — и всё понятно без слов. Это сильнее любой сделки на словах. Салфетка даёт шоу мгновенную узнаваемость — зритель запоминает её с первых секунд и возвращается снова.</p>
+    </div>
+
+    <!-- Слот для фото Shark Tank -->
+    <div class="reveal" style="margin-bottom:64px;">
+      <img src="Shark Tank 2.jpg" alt="Shark Tank" style="width:100%;aspect-ratio:16/9;object-fit:cover;object-position:center top;display:block;">
+    </div>
+
+    <!-- Таблица параллелей -->
+    <div class="reveal" style="margin-bottom:64px;">
+      <div style="font-size:10px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--text-muted);margin-bottom:24px;">Shark Tank ↔ Миллион на салфетке</div>
+      <div style="border:1px solid var(--border-light);overflow:hidden;">
+        <div class="shark-compare-header" style="display:grid;grid-template-columns:1fr 1fr;background:var(--black);">
+          <div style="padding:14px 24px;font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);">Shark Tank</div>
+          <div style="padding:14px 24px;font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);border-left:1px solid var(--border-dark);">Миллион на салфетке</div>
+        </div>
+        <div class="shark-compare-row" style="display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--border-light);">
+          <div style="padding:14px 24px;font-size:14px;color:var(--text-body);">«Акулы» — постоянные инвесторы</div>
+          <div style="padding:14px 24px;font-size:14px;color:var(--text-body);border-left:1px solid var(--border-light);">Совет Forbes — 5 участников. В каждом городе свои инвесторы.</div>
+        </div>
+        <div class="shark-compare-row" style="display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--border-light);background:rgba(0,0,0,0.02);">
+          <div style="padding:14px 24px;font-size:14px;color:var(--text-body);">Питч + запрос суммы и доли</div>
+          <div style="padding:14px 24px;font-size:14px;color:var(--text-body);border-left:1px solid var(--border-light);">Тот же формат</div>
+        </div>
+        <div class="shark-compare-row" style="display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--border-light);">
+          <div style="padding:14px 24px;font-size:14px;color:var(--text-body);">Акулы делают офферы или выходят</div>
+          <div style="padding:14px 24px;font-size:14px;color:var(--text-body);border-left:1px solid var(--border-light);">Инвесторы делают офферы или «Я пас»</div>
+        </div>
+        <div class="shark-compare-row" style="display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--border-light);background:rgba(0,0,0,0.02);">
+          <div style="padding:14px 24px;font-size:14px;color:var(--text-body);">Предприниматель выбирает акулу</div>
+          <div style="padding:14px 24px;font-size:14px;color:var(--text-body);border-left:1px solid var(--border-light);">Предприниматель выбирает инвестора</div>
+        </div>
+        <div class="shark-compare-row" style="display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--border-light);">
+          <div style="padding:14px 24px;font-size:14px;color:var(--text-body);">Сделка обсуждается на месте</div>
+          <div style="padding:14px 24px;font-size:14px;color:var(--text-body);border-left:1px solid var(--border-light);">Инвестор пишет условия на салфетке</div>
+        </div>
+        <div class="shark-compare-row" style="display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--border-light);background:rgba(0,0,0,0.02);">
+          <div style="padding:14px 24px;font-size:14px;color:var(--text-body);">Можно уйти без сделки</div>
+          <div style="padding:14px 24px;font-size:14px;color:var(--text-body);border-left:1px solid var(--border-light);">Можно уйти ни с чем — дополнительная драма</div>
+        </div>
+        <div class="shark-compare-row" style="display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--border-light);">
+          <div style="padding:14px 24px;font-size:14px;color:var(--text-body);">Студийные съёмки · 40–60 мин</div>
+          <div style="padding:14px 24px;font-size:14px;color:var(--text-body);border-left:1px solid var(--border-light);">Студийные съёмки · 40–60 мин</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Полный разбор -->
+    <div class="reveal">
+      <div style="font-size:10px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--text-muted);margin-bottom:40px;">Детальный разбор Shark Tank</div>
+
+      <div class="shark-top-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--border-light);margin-bottom:2px;">
+        <div style="background:var(--white);padding:36px 32px;">
+          <div style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">Хуки</div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
+            <li style="font-size:14px;color:var(--text-body);line-height:1.6;padding-left:16px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">—</span>Эмоциональная вовлечённость</li>
+            <li style="font-size:14px;color:var(--text-body);line-height:1.6;padding-left:16px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">—</span>Конфликт и напряжённость</li>
+            <li style="font-size:14px;color:var(--text-body);line-height:1.6;padding-left:16px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">—</span>Неопределённость</li>
+            <li style="font-size:14px;color:var(--text-body);line-height:1.6;padding-left:16px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">—</span>Динамика переговоров</li>
+          </ul>
+        </div>
+        <div style="background:var(--white);padding:36px 32px;">
+          <div style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">Технические параметры</div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
+            <li style="font-size:14px;color:var(--text-body);line-height:1.6;padding-left:16px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">—</span>Съёмка в студии</li>
+            <li style="font-size:14px;color:var(--text-body);line-height:1.6;padding-left:16px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">—</span>Хронометраж эпизода: 40–60 минут</li>
+            <li style="font-size:14px;color:var(--text-body);line-height:1.6;padding-left:16px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">—</span>Несколько предпринимателей в каждом эпизоде</li>
+            <li style="font-size:14px;color:var(--text-body);line-height:1.6;padding-left:16px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">—</span>Постоянные инвесторы (акулы) — 6 человек</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="shark-info-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border-light);margin-bottom:2px;">
+        <div style="background:var(--white);padding:36px 32px;">
+          <div style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">Структура эпизода</div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;">
+            <li style="font-size:13px;color:var(--text-body);line-height:1.6;padding-left:14px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">1.</span>Введение — шоу и инвесторы</li>
+            <li style="font-size:13px;color:var(--text-body);line-height:1.6;padding-left:14px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">2.</span>Представление предпринимателей</li>
+            <li style="font-size:13px;color:var(--text-body);line-height:1.6;padding-left:14px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">3.</span>Запрос инвестиций (сумма + доля)</li>
+            <li style="font-size:13px;color:var(--text-body);line-height:1.6;padding-left:14px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">4.</span>Демонстрация продукта</li>
+            <li style="font-size:13px;color:var(--text-body);line-height:1.6;padding-left:14px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">5.</span>Вопросы и ответы</li>
+            <li style="font-size:13px;color:var(--text-body);line-height:1.6;padding-left:14px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">6.</span>Обсуждение и переговоры</li>
+            <li style="font-size:13px;color:var(--text-body);line-height:1.6;padding-left:14px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">7.</span>Заключение сделок</li>
+            <li style="font-size:13px;color:var(--text-body);line-height:1.6;padding-left:14px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">8.</span>Эпилог — результаты после шоу</li>
+          </ul>
+        </div>
+        <div style="background:var(--white);padding:36px 32px;">
+          <div style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">Тайминг внутри эпизода</div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;">
+            <li style="font-size:13px;color:var(--text-body);line-height:1.6;display:flex;justify-content:space-between;gap:8px;padding-bottom:8px;border-bottom:1px solid var(--border-light);">
+              <span>Введение + знакомство</span><span style="color:var(--gold);font-weight:600;white-space:nowrap;">2–3 мин</span>
+            </li>
+            <li style="font-size:13px;color:var(--text-body);line-height:1.6;display:flex;justify-content:space-between;gap:8px;padding-bottom:8px;border-bottom:1px solid var(--border-light);">
+              <span>Презентация бизнес-идеи</span><span style="color:var(--gold);font-weight:600;white-space:nowrap;">5–10 мин</span>
+            </li>
+            <li style="font-size:13px;color:var(--text-body);line-height:1.6;display:flex;justify-content:space-between;gap:8px;padding-bottom:8px;border-bottom:1px solid var(--border-light);">
+              <span>Вопросы и обсуждение</span><span style="color:var(--gold);font-weight:600;white-space:nowrap;">10–15 мин</span>
+            </li>
+            <li style="font-size:13px;color:var(--text-body);line-height:1.6;display:flex;justify-content:space-between;gap:8px;">
+              <span>Сделка или отказ</span><span style="color:var(--gold);font-weight:600;white-space:nowrap;">2–3 мин</span>
+            </li>
+          </ul>
+        </div>
+        <div style="background:var(--white);padding:36px 32px;">
+          <div style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">Форматные элементы</div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;">
+            <li style="font-size:13px;color:var(--text-body);line-height:1.6;padding-left:14px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">—</span>Структурированное представление</li>
+            <li style="font-size:13px;color:var(--text-body);line-height:1.6;padding-left:14px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">—</span>Визуальные элементы и демонстрация</li>
+            <li style="font-size:13px;color:var(--text-body);line-height:1.6;padding-left:14px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">—</span>Разнообразие форматов бизнеса</li>
+            <li style="font-size:13px;color:var(--text-body);line-height:1.6;padding-left:14px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">—</span>Акцент на экспертности инвесторов</li>
+            <li style="font-size:13px;color:var(--text-body);line-height:1.6;padding-left:14px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">—</span>Эпилог — жизнь после шоу</li>
+            <li style="font-size:13px;color:var(--text-body);line-height:1.6;padding-left:14px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">—</span>Интерактивность — обсуждение в соцсетях</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Инвесторы Shark Tank -->
+      <div style="background:var(--white);padding:36px 32px;border:1px solid var(--border-light);">
+        <div style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:24px;">Постоянные инвесторы («акулы»)</div>
+        <div class="shark-investors-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px 32px;">
+          <div><div style="font-size:14px;font-weight:700;color:var(--black);margin-bottom:4px;">Марк Кьюбан</div><div style="font-size:12px;color:var(--text-muted);">Предприниматель, владелец «Даллас Маверикс»</div></div>
+          <div><div style="font-size:14px;font-weight:700;color:var(--black);margin-bottom:4px;">Лори Грейнер</div><div style="font-size:12px;color:var(--text-muted);">Изобретательница, потребительские товары</div></div>
+          <div><div style="font-size:14px;font-weight:700;color:var(--black);margin-bottom:4px;">Роберт Херявек</div><div style="font-size:12px;color:var(--text-muted);">Предприниматель в сфере технологий</div></div>
+          <div><div style="font-size:14px;font-weight:700;color:var(--black);margin-bottom:4px;">Деймон Джон</div><div style="font-size:12px;color:var(--text-muted);">Основатель FUBU, эксперт в маркетинге</div></div>
+          <div><div style="font-size:14px;font-weight:700;color:var(--black);margin-bottom:4px;">Барбара Коркоран</div><div style="font-size:12px;color:var(--text-muted);">Инвестор, специалист по недвижимости</div></div>
+          <div><div style="font-size:14px;font-weight:700;color:var(--black);margin-bottom:4px;">Кевин О'Лири</div><div style="font-size:12px;color:var(--text-muted);">«Mr. Wonderful» — прямолинейный инвестор</div></div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -1600,32 +1828,40 @@
   <div class="council-inner">
     <div class="council-header reveal">
       <h2 class="council-headline">Совет Forbes</h2>
-      <p class="council-desc">Четыре человека принимают коллегиальное решение. Forbes выступает распорядителем фонда — не инвестирует сам, но отбирает и решает. Инвестиции реальные, от 1 000 000 рублей.</p>
+      <p class="council-desc">Совет Forbes — 5 участников. В каждом городе свои инвесторы.</p>
     </div>
-    <div class="council-members reveal">
+    <div class="council-members reveal" style="grid-template-columns:repeat(5,1fr);">
       <div class="member">
         <div class="member-num">01</div>
-        <div class="member-name">Дмитрий Озман</div>
+        <div class="member-name">Глава совета</div>
         <div class="member-org">Forbes Russia</div>
-        <div class="member-role">Руководитель совета. Пишет сумму инвестиций на салфетке победителя.</div>
+        <div class="member-role" style="font-weight:600;color:var(--gold);">Представитель FORBES, глава совета</div>
+        <div class="member-role" style="margin-top:8px;">Ведёт шоу, задаёт вопросы, объявляет итоги каждого питча. Сам не инвестирует.</div>
       </div>
       <div class="member">
         <div class="member-num">02</div>
-        <div class="member-name">Никита Лапов</div>
-        <div class="member-org">Forbes Russia</div>
-        <div class="member-role">Член совета. Представляет редакционную экспертизу Forbes.</div>
+        <div class="member-name">Инвестор 1</div>
+        <div class="member-org">Инвестор</div>
+        <div class="member-role" style="margin-top:8px;">Делает оффер или говорит «Я пас».</div>
       </div>
       <div class="member">
         <div class="member-num">03</div>
-        <div class="member-name">TBD</div>
-        <div class="member-org">Татарстан</div>
-        <div class="member-role">Крупный предприниматель Татарстана. Локальный авторитет и знание рынка региона.</div>
+        <div class="member-name">Инвестор 2</div>
+        <div class="member-org">Инвестор</div>
+        <div class="member-role" style="margin-top:8px;">Делает оффер или говорит «Я пас».</div>
       </div>
       <div class="member">
         <div class="member-num">04</div>
-        <div class="member-name">TBD</div>
-        <div class="member-org">Омбудсмен</div>
-        <div class="member-role">Бизнес-омбудсмен Республики Татарстан. Защитник бизнеса — между властью и предпринимателями.</div>
+        <div class="member-name">Инвестор 3</div>
+        <div class="member-org">Инвестор</div>
+        <div class="member-role" style="margin-top:8px;">Делает оффер или говорит «Я пас».</div>
+      </div>
+      <div class="member" style="border-left:2px dashed rgba(0,0,0,0.08);">
+        <div class="member-num">05</div>
+        <div class="member-name">Омбудсмен</div>
+        <div class="member-org">Регион</div>
+        <div class="member-role" style="font-weight:600;color:var(--text-muted);">Бизнес-омбудсмен региона</div>
+        <div class="member-role" style="margin-top:8px;">Наблюдатель. Не инвестирует — комментирует: чем власть и государство могут поддержать проект.</div>
       </div>
     </div>
   </div>
@@ -1935,7 +2171,7 @@
       <div class="format-card">
         <span class="format-icon">▶</span>
         <div class="format-card-title">Основной выпуск</div>
-        <div class="format-card-sub">YouTube · 25–30 минут</div>
+        <div class="format-card-sub">YouTube · 40–60 минут</div>
         <p class="format-card-body">Три питча, совещание, объявление решений. Полный нарратив с эмоцией ожидания. Флагманский формат шоу — здесь живёт драма.</p>
       </div>
       <div class="format-card">
