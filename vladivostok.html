@@ -1322,6 +1322,9 @@
   @media (max-width:640px) {
     .show-opts { grid-template-columns:1fr; }
     .timeline-grid { grid-template-columns:repeat(2,1fr); }
+    .casting-steps-grid { grid-template-columns: 1fr !important; }
+    .casting-cta { flex-direction: column !important; align-items: flex-start !important; }
+    .napkin-stories-grid { grid-template-columns: 1fr !important; }
   }
 </style>
 </head>
@@ -1408,6 +1411,107 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- БИЗНЕСЫ НА САЛФЕТКЕ -->
+<section style="background:var(--black);padding:100px 48px;">
+  <div style="max-width:1100px;margin:0 auto;">
+
+    <div class="reveal" style="margin-bottom:64px;">
+      <p class="label" style="color:var(--gold);letter-spacing:4px;margin-bottom:20px;">Идея меняет всё</p>
+      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,5vw,72px);letter-spacing:3px;color:var(--white);line-height:1;margin-bottom:24px;">Великие бизнесы начинались на салфетке</h2>
+      <p style="font-size:16px;color:var(--text-muted);line-height:1.75;max-width:600px;">Не в офисе. Не в PowerPoint. За столиком в баре, в аэропорту, на студенческой лекции. Одна идея — и всё изменилось.</p>
+    </div>
+
+    <div class="reveal napkin-stories-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:var(--border-dark);">
+
+      <div style="background:var(--card-dark);padding:48px 40px;border-top:2px solid var(--gold);">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--gold);line-height:1;margin-bottom:16px;">Southwest Airlines</div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--text-muted);margin-bottom:24px;">1966 · Бар в Сан-Антонио</div>
+        <p style="font-size:14px;color:var(--text-muted);line-height:1.7;">Херб Келлехер и Роллин Кинг нарисовали маршруты будущей авиакомпании на коктейльной салфетке. Треугольник между тремя городами Техаса. Сегодня — крупнейший лоукостер США.</p>
+      </div>
+
+      <div style="background:var(--card-dark);padding:48px 40px;border-top:2px solid rgba(200,168,75,0.3);">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--gold);line-height:1;margin-bottom:16px;">Lionel Messi</div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--text-muted);margin-bottom:24px;">2000 · За обедом в Барселоне</div>
+        <p style="font-size:14px;color:var(--text-muted);line-height:1.7;">Директор «Барселоны» Карлес Рексач подписал контракт с 13-летним Месси прямо на бумажной салфетке за обедом — семья устала ждать официального решения клуба. В 2024 году эта салфетка продана на аукционе Bonhams за $968 000.</p>
+      </div>
+
+      <div style="background:var(--card-dark);padding:48px 40px;border-top:2px solid rgba(200,168,75,0.3);">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--gold);line-height:1;margin-bottom:16px;">Compaq</div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--text-muted);margin-bottom:24px;">1981 · Ресторан в Техасе</div>
+        <p style="font-size:14px;color:var(--text-muted);line-height:1.7;">Род Кэньон и двое партнёров набросали схему первого IBM-совместимого компьютера на салфетке за ужином. Через несколько лет Compaq стал одним из крупнейших производителей ПК в мире.</p>
+      </div>
+
+      <div style="background:var(--card-dark);padding:48px 40px;border-top:2px solid rgba(200,168,75,0.3);">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--gold);line-height:1;margin-bottom:16px;">Pixar</div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--text-muted);margin-bottom:24px;">1994 · Кафе Hidden City, Калифорния</div>
+        <p style="font-size:14px;color:var(--text-muted);line-height:1.7;">Джон Лассетер, Эндрю Стэнтон и Пит Доктер набросали на салфетках за обедом концепции четырёх фильмов: «Жизнь жуков», «Корпорация монстров», «В поисках Немо» и «ВАЛЛ-И». Суммарные сборы этих фильмов — больше $3 млрд.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- КОРОТКИЙ ФОРМАТ: ОТБОР НАЧИНАЕТСЯ ЗДЕСЬ -->
+<section style="background:var(--dark);padding:100px 48px;">
+  <div style="max-width:1100px;margin:0 auto;">
+
+    <div class="reveal" style="margin-bottom:56px;">
+      <p class="label" style="color:var(--gold);letter-spacing:4px;margin-bottom:20px;">Короткий формат</p>
+      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,5vw,72px);letter-spacing:3px;color:var(--white);line-height:1;margin-bottom:24px;">Отбор начинается здесь</h2>
+      <p style="font-size:16px;color:var(--text-muted);line-height:1.75;max-width:640px;">До большого шоу Forbes объявляет кастинг. Предприниматели из регионов снимают 60-секундную видео-заявку по простой структуре, публикуют у себя с хэштегом и отмечают Forbes. Лучшие заявки выходят в аккаунте Forbes — это и есть первый шанс попасть на шоу.</p>
+    </div>
+
+    <!-- Три колонки: структура видео-заявки -->
+    <div class="reveal casting-steps-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border-dark);margin-bottom:32px;">
+
+      <div style="background:var(--card-dark);padding:48px 40px 0;position:relative;overflow:hidden;display:flex;flex-direction:column;">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:80px;color:rgba(200,168,75,0.1);line-height:1;margin-bottom:24px;">01</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--white);margin-bottom:8px;">60 секунд</div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:24px;">Кто ты</div>
+        <p style="font-size:14px;color:var(--text-muted);line-height:1.7;margin-bottom:32px;">Скажи, кто ты и что создаёшь. Предприниматель, стартапер или учёный — неважно. Важно, чтобы за 60 секунд было понятно: зачем ты здесь и во что веришь.</p>
+        <img src="agro_person.jpg" alt="Кандидат — агробизнес" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;margin-top:auto;">
+      </div>
+
+      <div style="background:var(--card-dark);padding:48px 40px 0;position:relative;overflow:hidden;display:flex;flex-direction:column;">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:80px;color:rgba(200,168,75,0.1);line-height:1;margin-bottom:24px;">02</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--white);margin-bottom:8px;">Докажи потенциал</div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:24px;">Цифры. Идея. Разработка</div>
+        <p style="font-size:14px;color:var(--text-muted);line-height:1.7;margin-bottom:32px;">Работающий бизнес — назови выручку и рост. Стартап без выручки — опиши идею и на какой стадии ты сейчас. Учёный с разработкой — покажи, что уже есть. Главное: Forbes должен понять, зачем это рынку.</p>
+        <img src="woman_person.jpg" alt="Кандидат — одежда для детей с аутизмом" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;margin-top:auto;">
+      </div>
+
+      <div style="background:var(--card-dark);padding:48px 40px 0;position:relative;overflow:hidden;display:flex;flex-direction:column;">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:80px;color:rgba(200,168,75,0.1);line-height:1;margin-bottom:24px;">03</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--white);margin-bottom:8px;">Назови цель</div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:24px;">На что нужны деньги</div>
+        <p style="font-size:14px;color:var(--text-muted);line-height:1.7;margin-bottom:32px;">Что изменится, когда деньги появятся? Назови цель — на что пойдут инвестиции, если совет Forbes скажет да.</p>
+        <img src="cater_person.jpg" alt="Кандидат — производство катеров" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;margin-top:auto;">
+      </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="reveal casting-cta" style="background:var(--card-dark);border:1px solid rgba(200,168,75,0.3);padding:40px 48px;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;">
+      <div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--text-muted);margin-bottom:12px;">Как подать заявку</div>
+        <div style="font-size:18px;font-weight:600;color:var(--white);line-height:1.5;">Опубликуй видео у себя в аккаунте<br>и отметь Forbes в описании</div>
+      </div>
+      <div style="display:flex;gap:16px;flex-wrap:wrap;">
+        <div style="background:rgba(200,168,75,0.12);border:1px solid rgba(200,168,75,0.4);padding:12px 24px;">
+          <div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);">Хэштег</div>
+          <div style="font-size:16px;font-weight:600;color:var(--white);margin-top:4px;">#МиллионНаСалфетке</div>
+        </div>
+        <div style="background:rgba(200,168,75,0.12);border:1px solid rgba(200,168,75,0.4);padding:12px 24px;">
+          <div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);">Отметка</div>
+          <div style="font-size:16px;font-weight:600;color:var(--white);margin-top:4px;">@forbes.russia</div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
