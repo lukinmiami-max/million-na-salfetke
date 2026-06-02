@@ -122,6 +122,37 @@
     color: var(--white);
     opacity: 0.5;
   }
+  .nav-cities {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .nav-city-item {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-city-item:hover { color: var(--white); }
+
+  .nav-city-item.active { color: var(--gold); }
+
+  @media (max-width: 768px) {
+    .nav-cities { gap: 14px; }
+    .nav-city-item { font-size: 9px; letter-spacing: 2px; }
+  }
+
+  @media (max-width: 480px) {
+    .nav-title { display: none; }
+    .nav-divider { display: none; }
+    .nav-cities { gap: 10px; }
+    .nav-city-item { font-size: 8px; letter-spacing: 1px; }
+  }
 
   /* ── ГЕРОЙ ── */
   .hero {
@@ -1351,7 +1382,12 @@
     <div class="nav-divider"></div>
     <span class="nav-title">Миллион на салфетке</span>
   </div>
-  <span class="nav-city">Новосибирск 2026</span>
+  <div class="nav-cities">
+  <a href="/million-na-salfetke/" class="nav-city-item">Казань</a>
+  <span class="nav-city-item active">Новосибирск</span>
+  <a href="/million-na-salfetke/ekaterinburg/" class="nav-city-item">Екатеринбург</a>
+  <a href="/million-na-salfetke/vladivostok/" class="nav-city-item">Владивосток</a>
+</div>
 </nav>
 
 <!-- HERO -->
