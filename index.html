@@ -1375,6 +1375,8 @@
     .shark-info-grid { grid-template-columns: 1fr !important; }
     .shark-top-grid { grid-template-columns: 1fr !important; }
     .shark-investors-grid { grid-template-columns: 1fr 1fr !important; }
+    .casting-steps-grid { grid-template-columns: 1fr !important; }
+    .casting-cta { flex-direction: column !important; align-items: flex-start !important; }
   }
 </style>
 </head>
@@ -1453,7 +1455,7 @@
         </div>
         <div class="stat-item">
           <span class="stat-number">60"</span>
-          <span class="stat-desc">версия для Reels и Shorts — один момент, один исход</span>
+          <span class="stat-desc">60 секунд на видео-заявку: кто ты, что создаёшь и на что нужны инвестиции. Forbes смотрит каждую — лучшие попадают в шоу.</span>
         </div>
         <div class="stat-item">
           <span class="stat-number">4</span>
@@ -1461,6 +1463,66 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- КОРОТКИЙ ФОРМАТ: ОТБОР НАЧИНАЕТСЯ ЗДЕСЬ -->
+<section style="background:var(--dark);padding:100px 48px;">
+  <div style="max-width:1100px;margin:0 auto;">
+
+    <div class="reveal" style="margin-bottom:56px;">
+      <p class="label" style="color:var(--gold);letter-spacing:4px;margin-bottom:20px;">Короткий формат</p>
+      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,5vw,72px);letter-spacing:3px;color:var(--white);line-height:1;margin-bottom:24px;">Отбор начинается здесь</h2>
+      <p style="font-size:16px;color:var(--text-muted);line-height:1.75;max-width:640px;">До большого шоу Forbes объявляет кастинг. Предприниматели из города снимают 60-секундную видео-заявку по простой структуре, публикуют у себя с хэштегом и отмечают Forbes. Лучшие заявки выходят в аккаунте Forbes — это и есть первый шанс попасть на шоу.</p>
+    </div>
+
+    <!-- Три колонки: структура видео-заявки -->
+    <div class="reveal casting-steps-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border-dark);margin-bottom:32px;">
+
+      <div style="background:var(--card-dark);padding:48px 40px 0;position:relative;overflow:hidden;display:flex;flex-direction:column;">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:80px;color:rgba(200,168,75,0.1);line-height:1;margin-bottom:24px;">01</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--white);margin-bottom:8px;">60 секунд</div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:24px;">Кто ты</div>
+        <p style="font-size:14px;color:var(--text-muted);line-height:1.7;margin-bottom:32px;">Скажи, кто ты и что создаёшь. Предприниматель, стартапер или учёный — неважно. Важно, чтобы за 60 секунд было понятно: зачем ты здесь и во что веришь.</p>
+        <img src="agro_person.jpg" alt="Кандидат — агробизнес" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;margin-top:auto;">
+      </div>
+
+      <div style="background:var(--card-dark);padding:48px 40px 0;position:relative;overflow:hidden;display:flex;flex-direction:column;">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:80px;color:rgba(200,168,75,0.1);line-height:1;margin-bottom:24px;">02</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--white);margin-bottom:8px;">Докажи потенциал</div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:24px;">Цифры. Идея. Разработка</div>
+        <p style="font-size:14px;color:var(--text-muted);line-height:1.7;margin-bottom:32px;">Работающий бизнес — назови выручку и рост. Стартап без выручки — опиши идею и на какой стадии ты сейчас. Учёный с разработкой — покажи, что уже есть. Главное: Forbes должен понять, зачем это рынку.</p>
+        <img src="pruzhina_person.jpg" alt="Кандидат — производство пружин" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;margin-top:auto;">
+      </div>
+
+      <div style="background:var(--card-dark);padding:48px 40px 0;position:relative;overflow:hidden;display:flex;flex-direction:column;">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:80px;color:rgba(200,168,75,0.1);line-height:1;margin-bottom:24px;">03</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--white);margin-bottom:8px;">Назови цель</div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:24px;">На что нужны деньги</div>
+        <p style="font-size:14px;color:var(--text-muted);line-height:1.7;margin-bottom:32px;">Что изменится, когда деньги появятся? Назови цель — на что пойдут инвестиции, если совет Forbes скажет да.</p>
+        <img src="cater_person.jpg" alt="Кандидат — производство катеров" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;margin-top:auto;">
+      </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="reveal casting-cta" style="background:var(--card-dark);border:1px solid rgba(200,168,75,0.3);padding:40px 48px;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;">
+      <div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--text-muted);margin-bottom:12px;">Как подать заявку</div>
+        <div style="font-size:18px;font-weight:600;color:var(--white);line-height:1.5;">Опубликуй видео у себя в аккаунте<br>и отметь Forbes в описании</div>
+      </div>
+      <div style="display:flex;gap:16px;flex-wrap:wrap;">
+        <div style="background:rgba(200,168,75,0.12);border:1px solid rgba(200,168,75,0.4);padding:12px 24px;">
+          <div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);">Хэштег</div>
+          <div style="font-size:16px;font-weight:600;color:var(--white);margin-top:4px;">#МиллионНаСалфетке</div>
+        </div>
+        <div style="background:rgba(200,168,75,0.12);border:1px solid rgba(200,168,75,0.4);padding:12px 24px;">
+          <div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);">Отметка</div>
+          <div style="font-size:16px;font-weight:600;color:var(--white);margin-top:4px;">@forbes.russia</div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
