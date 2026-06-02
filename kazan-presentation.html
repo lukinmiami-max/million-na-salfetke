@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Миллион на салфетке — Forbes · Казань 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --black: #000000;
+    --white: #ffffff;
+    --green: #3DFF00;
+    --gray: #888888;
+    --gray-dark: #333333;
+    --gray-mid: #555555;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  body {
+    font-family: 'Manrope', sans-serif;
+    background: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  /* ── СЛАЙД ── */
+  .slide {
+    width: 100%;
+    max-width: 1280px;
+    aspect-ratio: 16 / 9;
+    background: var(--black);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 56px 72px;
+    border-bottom: 1px solid #222;
+    flex-shrink: 0;
+  }
+
+
+  .slide:last-child { border-bottom: none; }
+
+  /* ── МЕТКА (LABEL) ── */
+  .label {
+    font-family: 'Manrope', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--green);
+  }
+
+  /* ── ДЕКОР ── */
+  .corner-badge {
+    position: absolute;
+    top: 36px;
+    left: 72px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .corner-badge-forbes {
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--white);
+    text-transform: uppercase;
+  }
+
+  .corner-badge-div {
+    width: 1px;
+    height: 16px;
+    background: #444;
+  }
+
+  .corner-badge-sub {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gray);
+  }
+
+  .corner-right {
+    position: absolute;
+    top: 36px;
+    right: 72px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--green);
+  }
+
+  .slide-num {
+    position: absolute;
+    bottom: 32px;
+    right: 72px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: #333;
+    letter-spacing: 2px;
+  }
+
+  /* ── ТИПОГРАФИКА ── */
+  .display {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 0.9;
+    color: var(--white);
+  }
+
+  .h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(40px, 5.5vw, 72px);
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;
+    color: var(--white);
+  }
+
+  .h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(24px, 3vw, 40px);
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--white);
+  }
+
+  .body-text {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--gray);
+    font-weight: 400;
+  }
+
+  .green { color: var(--green); }
+  .white { color: var(--white); }
+
+  /* ── РАЗДЕЛИТЕЛЬ ── */
+  .rule {
+    width: 48px;
+    height: 2px;
+    background: var(--green);
+    margin-bottom: 24px;
+    flex-shrink: 0;
+  }
+
+  /* ═══════════════════════════
+     СЛАЙД 1: ОБЛОЖКА
+  ═══════════════════════════ */
+  .cover .cover-label {
+    margin-bottom: 32px;
+  }
+
+  .cover .cover-title {
+    font-size: clamp(72px, 10vw, 130px);
+    margin-bottom: 24px;
+    letter-spacing: -1px;
+  }
+
+  .cover .cover-city {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(18px, 2.5vw, 28px);
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--green);
+    letter-spacing: 6px;
+    margin-bottom: 0;
+  }
+
+  .cover-bg-text {
+    position: absolute;
+    right: -20px;
+    bottom: -40px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 280px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.03);
+    letter-spacing: -10px;
+    line-height: 1;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+
+  /* ═══════════════════════════
+     СЛАЙД 2: КОНЦЕПЦИЯ
+  ═══════════════════════════ */
+  .concept-slide {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+  }
+
+  .stat-block {
+    background: #0a0a0a;
+    border: 1px solid #1a1a1a;
+    padding: 24px 20px;
+  }
+
+  .stat-big {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(44px, 5vw, 64px);
+    font-weight: 700;
+    color: var(--green);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .stat-desc {
+    font-size: 12px;
+    color: var(--gray);
+    line-height: 1.5;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* ═══════════════════════════
+     СЛАЙД 3: СТАРТ ШОУ
+  ═══════════════════════════ */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+  }
+
+  .option-card {
+    background: #0a0a0a;
+    border: 1px solid #1e1e1e;
+    padding: 36px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .option-card.choice {
+    border-color: rgba(61, 255, 0, 0.25);
+  }
+
+  .option-badge {
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--green);
+    border: 1px solid rgba(61,255,0,0.3);
+    padding: 4px 10px;
+    align-self: flex-start;
+  }
+
+  .option-badge.choice {
+    background: rgba(61,255,0,0.1);
+  }
+
+  .option-letter {
+    font-family: 'Oswald', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--green);
+    line-height: 1;
+  }
+
+  .option-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--white);
+    text-transform: uppercase;
+  }
+
+  .option-body {
+    font-size: 13px;
+    color: var(--gray);
+    line-height: 1.7;
+  }
+
+  /* ═══════════════════════════
+     СЛАЙД 4: ХРОНОЛОГИЯ
+  ═══════════════════════════ */
+  .acts-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    margin-top: 24px;
+  }
+
+  .act-cell {
+    background: #080808;
+    border: 1px solid #1a1a1a;
+    padding: 20px 18px;
+  }
+
+  .act-cell.highlight {
+    border-color: rgba(61,255,0,0.2);
+  }
+
+  .act-num {
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--green);
+    opacity: 0.3;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+
+  .act-cell.highlight .act-num { opacity: 0.8; }
+
+  .act-text {
+    font-size: 12px;
+    color: var(--white);
+    line-height: 1.55;
+  }
+
+  /* ═══════════════════════════
+     СЛАЙД 5: МЕХАНИКА
+  ═══════════════════════════ */
+  .three-acts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-top: 28px;
+  }
+
+  .act-block {
+    background: #080808;
+    border: 1px solid #1a1a1a;
+    border-top: 2px solid var(--green);
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .act-block-num {
+    font-family: 'Oswald', sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    color: rgba(61,255,0,0.1);
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+
+  .act-block-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 4px;
+  }
+
+  .act-block-time {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 18px;
+  }
+
+  .act-block-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .act-block-list li {
+    font-size: 12px;
+    color: var(--gray);
+    line-height: 1.5;
+    padding-left: 14px;
+    position: relative;
+  }
+
+  .act-block-list li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--green);
+    font-size: 10px;
+  }
+
+  /* ═══════════════════════════
+     СЛАЙД 6: СОВЕТ FORBES
+  ═══════════════════════════ */
+  .council-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    margin-top: 28px;
+  }
+
+  .member-card {
+    background: #080808;
+    border: 1px solid #1a1a1a;
+    padding: 28px 22px;
+  }
+
+  .member-num-big {
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.04);
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+
+  .member-name-big {
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 6px;
+    line-height: 1.2;
+  }
+
+  .member-org-tag {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 12px;
+  }
+
+  .member-role-text {
+    font-size: 12px;
+    color: var(--gray);
+    line-height: 1.55;
+  }
+
+  /* ═══════════════════════════
+     СЛАЙДЫ 7-9: КАНДИДАТЫ
+  ═══════════════════════════ */
+  .candidates-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    margin-top: 24px;
+  }
+
+  .cand-card {
+    background: #080808;
+    border: 1px solid #1a1a1a;
+    padding: 20px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .cand-num {
+    font-family: 'Oswald', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--green);
+    opacity: 0.4;
+    line-height: 1;
+  }
+
+  .cand-name {
+    font-family: 'Oswald', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--white);
+    line-height: 1.1;
+  }
+
+  .cand-project {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 4px;
+  }
+
+  .cand-desc {
+    font-size: 11px;
+    color: var(--gray);
+    line-height: 1.55;
+    flex: 1;
+  }
+
+  .cand-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 6px;
+  }
+
+  .cand-tag {
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--green);
+    border: 1px solid rgba(61,255,0,0.25);
+    padding: 2px 6px;
+  }
+
+  /* ═══════════════════════════
+     СЛАЙД 10: ФОРМАТ
+  ═══════════════════════════ */
+  .format-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-top: 28px;
+  }
+
+  .format-card {
+    background: #080808;
+    border: 1px solid #1a1a1a;
+    padding: 36px 32px;
+  }
+
+  .format-icon {
+    font-size: 28px;
+    margin-bottom: 16px;
+    display: block;
+    color: var(--green);
+  }
+
+  .format-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 4px;
+  }
+
+  .format-sub {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 16px;
+  }
+
+  .format-body {
+    font-size: 13px;
+    color: var(--gray);
+    line-height: 1.7;
+  }
+
+  /* ═══════════════════════════
+     СЛАЙД 11: КОМАНДА И БЮДЖЕТ
+  ═══════════════════════════ */
+  .team-budget {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+    margin-top: 28px;
+  }
+
+  .team-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .team-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px 0;
+    border-bottom: 1px solid #111;
+  }
+
+  .team-row:last-child { border-bottom: none; }
+
+  .team-n {
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--green);
+    flex-shrink: 0;
+    width: 20px;
+  }
+
+  .team-role {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 2px;
+  }
+
+  .team-desc {
+    font-size: 11px;
+    color: var(--gray);
+    line-height: 1.5;
+  }
+
+  .budget-table {
+    background: #080808;
+    border: 1px solid #1a1a1a;
+    padding: 24px;
+  }
+
+  .budget-label {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 20px;
+  }
+
+  .b-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #111;
+    font-size: 12px;
+  }
+
+  .b-row:last-child { border-bottom: none; }
+
+  .b-name { color: var(--gray); }
+  .b-sum { color: var(--white); font-weight: 600; }
+
+  .b-row.total {
+    padding-top: 14px;
+    margin-top: 4px;
+    border-top: 1px solid var(--green);
+    border-bottom: none;
+  }
+
+  .b-row.total .b-name {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--green);
+  }
+
+  .b-row.total .b-sum {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--green);
+  }
+
+  /* ═══════════════════════════
+     СЛАЙД 12: СТАТУС
+  ═══════════════════════════ */
+  .status-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-top: 28px;
+  }
+
+  .status-col {
+    background: #080808;
+    border: 1px solid #1a1a1a;
+    padding: 28px 24px;
+  }
+
+  .status-col-title {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .status-col-title.done { color: #6db36d; }
+  .status-col-title.todo { color: var(--green); }
+
+  .status-items {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .s-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .s-item.done { color: rgba(255,255,255,0.7); }
+  .s-item.todo { color: var(--gray); }
+
+  .s-check {
+    width: 14px;
+    height: 14px;
+    border: 1px solid;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8px;
+    margin-top: 2px;
+  }
+
+  .s-item.done .s-check { border-color: #6db36d; color: #6db36d; }
+  .s-item.todo .s-check { border-color: rgba(61,255,0,0.3); color: transparent; }
+
+  /* ═══════════════════════════
+     СЛАЙД 13: ФИНАЛ
+  ═══════════════════════════ */
+  .final-slide {
+    justify-content: space-between;
+  }
+
+  .final-title {
+    font-size: clamp(60px, 8.5vw, 110px);
+    letter-spacing: -1px;
+  }
+
+  .final-bottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .final-contact {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gray);
+    line-height: 1.8;
+  }
+
+  .final-contact span { color: var(--green); }
+
+  .final-bg {
+    position: absolute;
+    right: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Oswald', sans-serif;
+    font-size: 320px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgba(61,255,0,0.025);
+    letter-spacing: -10px;
+    line-height: 0.85;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+
+  /* ═══════════════════════════
+     ВАЖНО — ДИСКЛЕЙМЕР
+  ═══════════════════════════ */
+  .disclaimer {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px 20px;
+    border: 1px solid rgba(61,255,0,0.3);
+    background: rgba(61,255,0,0.04);
+    margin-top: 16px;
+  }
+
+  .disclaimer-badge {
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--black);
+    background: var(--green);
+    padding: 4px 8px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .disclaimer-text {
+    font-size: 12px;
+    color: var(--white);
+    line-height: 1.6;
+    font-weight: 500;
+  }
+
+  /* ═══════════════════════════
+     ПЕЧАТЬ / PDF
+  ═══════════════════════════ */
+  @media print {
+    @page {
+      size: landscape;
+      margin: 0;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      background: #000;
+      display: block;
+    }
+
+    .slide {
+      width: 100vw;
+      height: 100vh;
+      aspect-ratio: unset;
+      max-width: none;
+      page-break-after: always;
+      break-after: page;
+      border: none;
+      padding: 48px 64px;
+    }
+
+    .slide:last-child {
+      page-break-after: avoid;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════
+     СЛАЙД 01: ОБЛОЖКА
+════════════════════════════════════════════════ -->
+<section class="slide cover">
+  <div class="corner-badge">
+    <span class="corner-badge-forbes">Forbes</span>
+    <div class="corner-badge-div"></div>
+    <span class="corner-badge-sub">Питч-шоу</span>
+  </div>
+  <span class="corner-right">Казань · 2026</span>
+
+  <div class="cover-label">
+    <span class="label">Пилотный выпуск · Пилот</span>
+  </div>
+  <div class="display cover-title">Миллион<br><span class="green">на салфетке</span></div>
+  <div class="cover-city">Казань · Forbes · 2026</div>
+
+  <div class="cover-bg-text">Forbes</div>
+  <div class="slide-num">01 / 13</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     СЛАЙД 02: КОНЦЕПЦИЯ
+════════════════════════════════════════════════ -->
+<section class="slide">
+  <div class="corner-badge">
+    <span class="corner-badge-forbes">Forbes</span>
+    <div class="corner-badge-div"></div>
+    <span class="corner-badge-sub">Миллион на салфетке</span>
+  </div>
+
+  <div class="rule"></div>
+  <span class="label" style="margin-bottom:16px;display:block;">Концепция</span>
+
+  <div class="concept-slide">
+    <div>
+      <div class="h1" style="margin-bottom:20px;">Простая идея,<br>которая<br><span class="green">меняет всё</span></div>
+      <p class="body-text">Короткое питч-шоу, где предприниматели из регионов России выходят перед советом Forbes с одной идеей — написанной на салфетке. Никаких презентаций. Только суть — и решение прямо здесь.</p>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-block">
+        <div class="stat-big">3</div>
+        <div class="stat-desc">Предпринимателя в каждом выпуске</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-big">1M+</div>
+        <div class="stat-desc">Рублей — минимум инвестиций</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-big">60"</div>
+        <div class="stat-desc">Reels & Shorts — один момент</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-big">4</div>
+        <div class="stat-desc">Члена совета Forbes решают</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide-num">02 / 13</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     СЛАЙД 03: СТАРТ ШОУ
+════════════════════════════════════════════════ -->
+<section class="slide">
+  <div class="corner-badge">
+    <span class="corner-badge-forbes">Forbes</span>
+    <div class="corner-badge-div"></div>
+    <span class="corner-badge-sub">Миллион на салфетке</span>
+  </div>
+
+  <div class="rule"></div>
+  <span class="label" style="margin-bottom:12px;display:block;">Формат открытия</span>
+  <div class="h1" style="margin-bottom:24px;">Старт шоу</div>
+
+  <div class="two-col">
+    <div class="option-card">
+      <div class="option-badge">Вариант А</div>
+      <div class="option-letter">А</div>
+      <div class="option-title">Спикер в кадре</div>
+      <p class="option-body">Ведущий или представитель Forbes выходит перед камерой и представляет шоу. Рассказывает о концепции, городе, трёх участниках. Создаёт личный контакт с аудиторией с первых секунд.</p>
+    </div>
+    <div class="option-card choice">
+      <div class="option-badge choice">Вариант Б · Выбор Forbes</div>
+      <div class="option-letter">Б</div>
+      <div class="option-title">Закадровый голос</div>
+      <p class="option-body">Закадровый голос объясняет формат шоу поверх визуального ряда — города, площадки, героев. Монтажный темп выше, входишь сразу в атмосферу без лишних слов в кадре.</p>
+    </div>
+  </div>
+
+  <div class="slide-num">03 / 13</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     СЛАЙД 04: ХРОНОЛОГИЯ 8 АКТОВ
+════════════════════════════════════════════════ -->
+<section class="slide">
+  <div class="corner-badge">
+    <span class="corner-badge-forbes">Forbes</span>
+    <div class="corner-badge-div"></div>
+    <span class="corner-badge-sub">Миллион на салфетке</span>
+  </div>
+
+  <div class="rule"></div>
+  <span class="label" style="display:block;">Хронология выпуска</span>
+  <div class="h1" style="margin-top:8px;">Структура шоу</div>
+
+  <div class="acts-grid" style="margin-top:20px;">
+    <div class="act-cell">
+      <div class="act-num">01</div>
+      <div class="act-text">Представление проекта — ведущий или закадровый голос открывает шоу</div>
+    </div>
+    <div class="act-cell">
+      <div class="act-num">02</div>
+      <div class="act-text">Представление трёх кандидатов — кто они, откуда, за чем пришли</div>
+    </div>
+    <div class="act-cell">
+      <div class="act-num">03</div>
+      <div class="act-text">Каждый кандидат пишет название проекта на салфетке и питчит идею совету</div>
+    </div>
+    <div class="act-cell">
+      <div class="act-num">04</div>
+      <div class="act-text">После питча кандидат кладёт свою салфетку на стол совета Forbes — и ждёт</div>
+    </div>
+    <div class="act-cell">
+      <div class="act-num">05</div>
+      <div class="act-text">Совет берёт паузу — 10 минут закрытого обсуждения без кандидатов</div>
+    </div>
+    <div class="act-cell">
+      <div class="act-num">06</div>
+      <div class="act-text">Если есть вопросы — совет возвращается и задаёт их кандидатам напрямую</div>
+    </div>
+    <div class="act-cell highlight">
+      <div class="act-num">07</div>
+      <div class="act-text">Вердикт: совет поднимает вверх салфетку победителя с надписью <strong style="color:var(--green)">«1 миллион»</strong></div>
+    </div>
+    <div class="act-cell highlight">
+      <div class="act-num">08</div>
+      <div class="act-text">Эмоции победителя, реакция тех, кто не получил инвестиции, и отклик зала</div>
+    </div>
+  </div>
+
+  <div class="disclaimer">
+    <span class="disclaimer-badge">Важно</span>
+    <span class="disclaimer-text">«1 миллион» — символ шоу, не фиксированная сумма. Реальный размер инвестиций определяется советом Forbes индивидуально и может быть значительно выше.</span>
+  </div>
+
+  <div class="slide-num">04 / 13</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     СЛАЙД 05: МЕХАНИКА — ТРИ АКТА
+════════════════════════════════════════════════ -->
+<section class="slide">
+  <div class="corner-badge">
+    <span class="corner-badge-forbes">Forbes</span>
+    <div class="corner-badge-div"></div>
+    <span class="corner-badge-sub">Миллион на салфетке</span>
+  </div>
+
+  <div class="rule"></div>
+  <span class="label" style="display:block;">Механика шоу</span>
+  <div class="h1" style="margin-top:8px;">Три акта.<br><span class="green">Один финал.</span> Никаких гарантий.</div>
+
+  <div class="three-acts">
+    <div class="act-block">
+      <div class="act-block-num">01</div>
+      <div class="act-block-title">Питчи</div>
+      <div class="act-block-time">~15 минут</div>
+      <ul class="act-block-list">
+        <li>Три предпринимателя по очереди</li>
+        <li>Каждый получает чистую салфетку</li>
+        <li>Пишет название своего проекта</li>
+        <li>4–5 минут питча + вопросы совета</li>
+        <li>После — садится обратно в зал</li>
+      </ul>
+    </div>
+    <div class="act-block">
+      <div class="act-block-num">02</div>
+      <div class="act-block-title">Ожидание</div>
+      <div class="act-block-time">~10 минут</div>
+      <ul class="act-block-list">
+        <li>Совет совещается</li>
+        <li>Все три героя ждут вместе в зале</li>
+        <li>Камера фиксирует эмоции и напряжение</li>
+        <li>Переглядывания, молчание, жесты</li>
+        <li>Главный драматический момент</li>
+      </ul>
+    </div>
+    <div class="act-block">
+      <div class="act-block-num">03</div>
+      <div class="act-block-title">Решение</div>
+      <div class="act-block-time">~5 минут</div>
+      <ul class="act-block-list">
+        <li>Совет объявляет решение по каждому</li>
+        <li>Одобренным — руководитель пишет сумму</li>
+        <li>Прямо на салфетке. Крупный план.</li>
+        <li>Лицо получившего — главная эмоция</li>
+        <li>Отказ без объяснений — тоже работает</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="slide-num">05 / 13</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     СЛАЙД 06: СОВЕТ FORBES
+════════════════════════════════════════════════ -->
+<section class="slide">
+  <div class="corner-badge">
+    <span class="corner-badge-forbes">Forbes</span>
+    <div class="corner-badge-div"></div>
+    <span class="corner-badge-sub">Миллион на салфетке</span>
+  </div>
+
+  <div class="rule"></div>
+  <span class="label" style="display:block;">Состав жюри</span>
+  <div class="h1" style="margin-top:8px;">Совет Forbes</div>
+
+  <div class="council-grid">
+    <div class="member-card">
+      <div class="member-num-big">01</div>
+      <div class="member-name-big">Дмитрий Озман</div>
+      <div class="member-org-tag">Forbes Russia</div>
+      <div class="member-role-text">Руководитель совета. Пишет сумму инвестиций на салфетке победителя.</div>
+    </div>
+    <div class="member-card">
+      <div class="member-num-big">02</div>
+      <div class="member-name-big">Никита Лапов</div>
+      <div class="member-org-tag">Forbes Russia</div>
+      <div class="member-role-text">Член совета. Представляет редакционную экспертизу Forbes.</div>
+    </div>
+    <div class="member-card">
+      <div class="member-num-big">03</div>
+      <div class="member-name-big">TBD</div>
+      <div class="member-org-tag">Татарстан</div>
+      <div class="member-role-text">Крупный предприниматель Татарстана. Локальный авторитет и знание рынка региона.</div>
+    </div>
+    <div class="member-card">
+      <div class="member-num-big">04</div>
+      <div class="member-name-big">TBD</div>
+      <div class="member-org-tag">Омбудсмен</div>
+      <div class="member-role-text">Бизнес-омбудсмен Республики Татарстан. Защитник бизнеса — между властью и предпринимателями.</div>
+    </div>
+  </div>
+
+  <div class="slide-num">06 / 13</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     СЛАЙД 07: КАНДИДАТЫ 01–04
+════════════════════════════════════════════════ -->
+<section class="slide">
+  <div class="corner-badge">
+    <span class="corner-badge-forbes">Forbes</span>
+    <div class="corner-badge-div"></div>
+    <span class="corner-badge-sub">Миллион на салфетке</span>
+  </div>
+  <span class="corner-right">Кастинг · Казань</span>
+
+  <div class="rule"></div>
+  <span class="label" style="display:block;">Герои выпуска</span>
+  <div class="h2" style="margin-top:6px;color:var(--gray);">Кандидаты 01 — 04</div>
+
+  <div class="candidates-grid">
+    <div class="cand-card">
+      <div class="cand-num">01</div>
+      <div class="cand-name">Кирилл Слепов</div>
+      <div class="cand-project">Searene Yachts</div>
+      <div class="cand-desc">Верфь стеклопластиковых катеров. Чистополь, Татарстан. Выручка 5 млн за катер, очередь 6+ месяцев, дилеры в 7 городах.</div>
+      <div class="cand-tags">
+        <span class="cand-tag">Equity</span>
+        <span class="cand-tag">Новые модели</span>
+        <span class="cand-tag">Расширение цеха</span>
+      </div>
+    </div>
+    <div class="cand-card">
+      <div class="cand-num">02</div>
+      <div class="cand-name">Рамиль Измайлов</div>
+      <div class="cand-project">Пружинный проект</div>
+      <div class="cand-desc">Завод пружин, 20+ отраслей. Набережные Челны. Выручка 823 млн руб., 37 млн пружин в год, 217 сотрудников, 6 000 клиентов.</div>
+      <div class="cand-tags">
+        <span class="cand-tag">Equity</span>
+        <span class="cand-tag">Автоматизация</span>
+        <span class="cand-tag">Кластер 9 га</span>
+      </div>
+    </div>
+    <div class="cand-card">
+      <div class="cand-num">03</div>
+      <div class="cand-name">Далия Гайнанова</div>
+      <div class="cand-project">GT Dress</div>
+      <div class="cand-desc">Адаптивная одежда для детей с ДЦП. Казань, с 2015. 30+ моделей. До 1 200 изделий в месяц, спрос превышает производство.</div>
+      <div class="cand-tags">
+        <span class="cand-tag">Расширение</span>
+        <span class="cand-tag">Маркетплейсы</span>
+        <span class="cand-tag">Федеральный охват</span>
+      </div>
+    </div>
+    <div class="cand-card">
+      <div class="cand-num">04</div>
+      <div class="cand-name">Алена Тимошенко</div>
+      <div class="cand-project">Chef's Dog</div>
+      <div class="cand-desc">Натуральные корма для животных без ГМО. Казань. Онлайн-продажи, зоомагазины, подписки. Простой b2c с высокой маржой.</div>
+      <div class="cand-tags">
+        <span class="cand-tag">Equity</span>
+        <span class="cand-tag">Расширение линейки</span>
+        <span class="cand-tag">Онлайн</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide-num">07 / 13</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     СЛАЙД 08: КАНДИДАТЫ 05–08
+════════════════════════════════════════════════ -->
+<section class="slide">
+  <div class="corner-badge">
+    <span class="corner-badge-forbes">Forbes</span>
+    <div class="corner-badge-div"></div>
+    <span class="corner-badge-sub">Миллион на салфетке</span>
+  </div>
+  <span class="corner-right">Кастинг · Казань</span>
+
+  <div class="rule"></div>
+  <span class="label" style="display:block;">Герои выпуска</span>
+  <div class="h2" style="margin-top:6px;color:var(--gray);">Кандидаты 05 — 08</div>
+
+  <div class="candidates-grid">
+    <div class="cand-card">
+      <div class="cand-num">05</div>
+      <div class="cand-name">Лилия Юсупова</div>
+      <div class="cand-project">КультТорг</div>
+      <div class="cand-desc">Фестивали разумного потребления. Казань. Своп-площадки, онлайн-компонент, сотни участников и партнёров регулярно.</div>
+      <div class="cand-tags">
+        <span class="cand-tag">Equity</span>
+        <span class="cand-tag">Новые города</span>
+        <span class="cand-tag">Франшиза</span>
+      </div>
+    </div>
+    <div class="cand-card">
+      <div class="cand-num">06</div>
+      <div class="cand-name">Ленар Шарафутдинов</div>
+      <div class="cand-project">SmartyKids</div>
+      <div class="cand-desc">Сеть детских центров развития + онлайн-платформа. Казань. Высокий повторяющийся доход: абонементы и подписки.</div>
+      <div class="cand-tags">
+        <span class="cand-tag">Equity</span>
+        <span class="cand-tag">Франшиза</span>
+        <span class="cand-tag">Онлайн-платформа</span>
+      </div>
+    </div>
+    <div class="cand-card">
+      <div class="cand-num">07</div>
+      <div class="cand-name">Дмитрий Девитт</div>
+      <div class="cand-project">InnoSpector</div>
+      <div class="cand-desc">Промышленный дрон для инспекции без GPS. Иннополис. SLAM-навигация до 1000 м, ИИ-распознавание 75+ типов дефектов.</div>
+      <div class="cand-tags">
+        <span class="cand-tag">Equity</span>
+        <span class="cand-tag">Нефтегаз</span>
+        <span class="cand-tag">Энергетика</span>
+      </div>
+    </div>
+    <div class="cand-card">
+      <div class="cand-num">08</div>
+      <div class="cand-name">Гульнара Галимова</div>
+      <div class="cand-project">ПэПэ</div>
+      <div class="cand-desc">Сеть кафе здорового питания. Казань. С 20 лет — с 12 до 60 млн оборота за 2 года. Уфа, планы на Сочи, Москву, СПб.</div>
+      <div class="cand-tags">
+        <span class="cand-tag">Франшиза</span>
+        <span class="cand-tag">Масштабирование</span>
+        <span class="cand-tag">Федеральный рынок</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide-num">08 / 13</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     СЛАЙД 09: КАНДИДАТЫ 09–13
+════════════════════════════════════════════════ -->
+<section class="slide">
+  <div class="corner-badge">
+    <span class="corner-badge-forbes">Forbes</span>
+    <div class="corner-badge-div"></div>
+    <span class="corner-badge-sub">Миллион на салфетке</span>
+  </div>
+  <span class="corner-right">Кастинг · Казань</span>
+
+  <div class="rule"></div>
+  <span class="label" style="display:block;">Герои выпуска</span>
+  <div class="h2" style="margin-top:6px;color:var(--gray);">Кандидаты 09 — 13</div>
+
+  <div class="candidates-grid" style="grid-template-columns:repeat(5,1fr);">
+    <div class="cand-card">
+      <div class="cand-num">09</div>
+      <div class="cand-name">Дмитрий Данилов</div>
+      <div class="cand-project">Умскул</div>
+      <div class="cand-desc">EdTech-платформа ЕГЭ. Оборот 2024 ~900 млн, прибыль >500 млн. VK купил 25% доли.</div>
+      <div class="cand-tags">
+        <span class="cand-tag">EdTech</span>
+        <span class="cand-tag">Международный</span>
+      </div>
+    </div>
+    <div class="cand-card">
+      <div class="cand-num">10</div>
+      <div class="cand-name">Айдар Минеев</div>
+      <div class="cand-project">MINEEVЪ</div>
+      <div class="cand-desc">Станкостроительный завод, Наб. Челны. Отечественные фрезерные станки. Чемпион WorldSkills 2019. 24 года.</div>
+      <div class="cand-tags">
+        <span class="cand-tag">Производство</span>
+        <span class="cand-tag">Импортозамещение</span>
+      </div>
+    </div>
+    <div class="cand-card">
+      <div class="cand-num">11</div>
+      <div class="cand-name">Кирилл Горшков</div>
+      <div class="cand-project">Utrip</div>
+      <div class="cand-desc">Посуточная аренда квартир. Казань. Стартовал в 18 лет с 10 тыс. руб. ~50 квартир, оборот 2024 — 150 млн руб.</div>
+      <div class="cand-tags">
+        <span class="cand-tag">PropTech</span>
+        <span class="cand-tag">Новые города</span>
+      </div>
+    </div>
+    <div class="cand-card">
+      <div class="cand-num">12</div>
+      <div class="cand-name">Денис Чегодаев</div>
+      <div class="cand-project">AISI X</div>
+      <div class="cand-desc">ИИ-диагностика заболеваний мозга. Разработан в Японии. Forbes 30 до 30. 29 лет, PhD по философии.</div>
+      <div class="cand-tags">
+        <span class="cand-tag">MedTech / AI</span>
+        <span class="cand-tag">Выход на РФ</span>
+      </div>
+    </div>
+    <div class="cand-card">
+      <div class="cand-num">13</div>
+      <div class="cand-name">Шамиль Зиннуров</div>
+      <div class="cand-project">Масловка</div>
+      <div class="cand-desc">Экоотель-глэмпинг, Камское море. Загрузка 85%. Ночь от 11 тыс. руб. Ресторан, бани, бассейн, теннис, зоопарк.</div>
+      <div class="cand-tags">
+        <span class="cand-tag">Туризм</span>
+        <span class="cand-tag">Расширение</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide-num">09 / 13</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     СЛАЙД 10: ФОРМАТ ДИСТРИБУЦИИ
+════════════════════════════════════════════════ -->
+<section class="slide">
+  <div class="corner-badge">
+    <span class="corner-badge-forbes">Forbes</span>
+    <div class="corner-badge-div"></div>
+    <span class="corner-badge-sub">Миллион на салфетке</span>
+  </div>
+
+  <div class="rule"></div>
+  <span class="label" style="display:block;">Формат дистрибуции</span>
+  <div class="h1" style="margin-top:8px;">Снимаем один раз —<br><span class="green">выходим везде</span></div>
+
+  <div class="format-grid">
+    <div class="format-card">
+      <span class="format-icon">▶</span>
+      <div class="format-title">Основной выпуск</div>
+      <div class="format-sub">YouTube · 25–30 минут</div>
+      <p class="format-body">Три питча, совещание, объявление решений. Полный нарратив с эмоцией ожидания. Флагманский формат шоу — здесь живёт драма.</p>
+    </div>
+    <div class="format-card">
+      <span class="format-icon">↯</span>
+      <div class="format-title">Короткий формат</div>
+      <div class="format-sub">Reels / Shorts · ~60 секунд</div>
+      <p class="format-body">Один момент — один питч — один драматический исход. Нарезки: ритуал салфетки, острые вопросы, рука пишет сумму, лицо победителя.</p>
+    </div>
+  </div>
+
+  <div class="slide-num">10 / 13</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     СЛАЙД 11: КОМАНДА И БЮДЖЕТ
+════════════════════════════════════════════════ -->
+<section class="slide">
+  <div class="corner-badge">
+    <span class="corner-badge-forbes">Forbes</span>
+    <div class="corner-badge-div"></div>
+    <span class="corner-badge-sub">Миллион на салфетке</span>
+  </div>
+
+  <div class="rule"></div>
+  <span class="label" style="display:block;">Команда и бюджет</span>
+  <div class="h1" style="margin-top:8px;">Минимальная команда.<br><span class="green">Максимальный результат.</span></div>
+
+  <div class="team-budget">
+    <div class="team-rows">
+      <div class="team-row">
+        <span class="team-n">01</span>
+        <div>
+          <div class="team-role">Режиссёр-оператор</div>
+          <div class="team-desc">Съёмка, кадр, управление процессом на площадке</div>
+        </div>
+      </div>
+      <div class="team-row">
+        <span class="team-n">02</span>
+        <div>
+          <div class="team-role">Второй оператор</div>
+          <div class="team-desc">Крупные планы лиц, реакции, детали — руки, салфетка</div>
+        </div>
+      </div>
+      <div class="team-row">
+        <span class="team-n">03</span>
+        <div>
+          <div class="team-role">Монтажёр</div>
+          <div class="team-desc">Полный выпуск + нарезка Reels и Shorts (удалённо)</div>
+        </div>
+      </div>
+      <div class="team-row">
+        <span class="team-n">04</span>
+        <div>
+          <div class="team-role">Продюсер</div>
+          <div class="team-desc">Кастинг, Forbes, локация, организация съёмочного дня. Команда группы №36 Школы Продюсирования Николая Картозия.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="budget-table">
+      <div class="budget-label">Бюджет пилота</div>
+      <div class="b-row">
+        <span class="b-name">Режиссёр-оператор</span>
+        <span class="b-sum">30–50 тыс. ₽</span>
+      </div>
+      <div class="b-row">
+        <span class="b-name">Второй оператор</span>
+        <span class="b-sum">15–25 тыс. ₽</span>
+      </div>
+      <div class="b-row">
+        <span class="b-name">Аренда зала IT-парк</span>
+        <span class="b-sum">уточнить</span>
+      </div>
+      <div class="b-row">
+        <span class="b-name">Свет и оборудование</span>
+        <span class="b-sum">10–15 тыс. ₽</span>
+      </div>
+      <div class="b-row">
+        <span class="b-name">Монтаж выпуска + 5 Reels</span>
+        <span class="b-sum">30–50 тыс. ₽</span>
+      </div>
+      <div class="b-row total">
+        <span class="b-name">Итого</span>
+        <span class="b-sum">~100–150 тыс. ₽</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide-num">11 / 13</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     СЛАЙД 12: СТАТУС ПРОЕКТА
+════════════════════════════════════════════════ -->
+<section class="slide">
+  <div class="corner-badge">
+    <span class="corner-badge-forbes">Forbes</span>
+    <div class="corner-badge-div"></div>
+    <span class="corner-badge-sub">Миллион на салфетке</span>
+  </div>
+
+  <div class="rule"></div>
+  <span class="label" style="display:block;">Текущий статус</span>
+  <div class="h1" style="margin-top:8px;">Что сделано.<br><span class="green">Что впереди.</span></div>
+
+  <div class="status-cols">
+    <div class="status-col">
+      <div class="status-col-title done">Готово</div>
+      <ul class="status-items">
+        <li class="s-item done"><span class="s-check">✓</span>Концепция утверждена Forbes</li>
+        <li class="s-item done"><span class="s-check">✓</span>Формат выпуска определён</li>
+        <li class="s-item done"><span class="s-check">✓</span>Состав совета Forbes определён</li>
+        <li class="s-item done"><span class="s-check">✓</span>Пилотный город — Казань</li>
+        <li class="s-item done"><span class="s-check">✓</span>Локация: IT-парк Казань, ул. Петербургская, 52</li>
+        <li class="s-item done"><span class="s-check">✓</span>Шорт-лист предпринимателей для пилота</li>
+      </ul>
+    </div>
+    <div class="status-col">
+      <div class="status-col-title todo">В работе</div>
+      <ul class="status-items">
+        <li class="s-item todo"><span class="s-check"></span>Кастинг участников (3 предпринимателя)</li>
+        <li class="s-item todo"><span class="s-check"></span>Сценарий эпизода</li>
+        <li class="s-item todo"><span class="s-check"></span>Бронирование зала в IT-парке</li>
+        <li class="s-item todo"><span class="s-check"></span>Бизнес-омбудсмен Татарстана — согласование</li>
+        <li class="s-item todo"><span class="s-check"></span>Кандидатура предпринимателя Казани в совет</li>
+        <li class="s-item todo"><span class="s-check"></span>Дата съёмок пилота</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="slide-num">12 / 13</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     СЛАЙД 13: ФИНАЛ
+════════════════════════════════════════════════ -->
+<section class="slide final-slide">
+  <div class="corner-badge">
+    <span class="corner-badge-forbes">Forbes</span>
+    <div class="corner-badge-div"></div>
+    <span class="corner-badge-sub">Питч-шоу</span>
+  </div>
+
+  <div class="final-bg">Forbes</div>
+
+  <div>
+    <div class="rule"></div>
+    <div class="display final-title">Миллион<br><span class="green">на салфетке</span></div>
+  </div>
+
+  <div class="final-bottom">
+    <div class="final-contact">
+      <span>Казань · 2026 · Пилот</span><br>
+      IT-парк Казань · ул. Петербургская, 52<br>
+      Команда группы №36<br>
+      Школы Продюсирования Николая Картозия
+    </div>
+    <div style="text-align:right;">
+      <div style="font-family:'Oswald',sans-serif;font-size:48px;font-weight:700;color:var(--green);line-height:1;">Forbes</div>
+      <div style="font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gray);margin-top:4px;">Питч-шоу · Реальные инвестиции</div>
+    </div>
+  </div>
+
+  <div class="slide-num">13 / 13</div>
+</section>
+
+</body>
+</html>

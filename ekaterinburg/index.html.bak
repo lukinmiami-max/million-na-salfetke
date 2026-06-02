@@ -3,19 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Миллион на салфетке Forbes — Владивосток</title>
-<meta name="description" content="Питч-шоу Forbes. Три предпринимателя. Один совет. Реальные инвестиции от 1 000 000 рублей. Владивосток, 2026.">
+<title>Миллион на салфетке Forbes — Екатеринбург</title>
+<meta name="description" content="Питч-шоу Forbes. Три предпринимателя. Один совет. Реальные инвестиции от 1 000 000 рублей. Екатеринбург, 2026.">
 <meta property="og:title" content="Миллион на салфетке — Forbes">
-<meta property="og:description" content="Питч-шоу Forbes. Три предпринимателя. Один совет. Реальные инвестиции от 1 000 000 рублей. Владивосток, 2026.">
-<meta property="og:image" content="https://lukinmiami-max.github.io/million-na-salfetke/vladivostok/og-vladivostok-2026.jpg">
+<meta property="og:description" content="Питч-шоу Forbes. Три предпринимателя. Один совет. Реальные инвестиции от 1 000 000 рублей. Екатеринбург, 2026.">
+<meta property="og:image" content="https://lukinmiami-max.github.io/million-na-salfetke/ekaterinburg/og-novosibirsk-2026.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="1200">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://lukinmiami-max.github.io/million-na-salfetke/vladivostok/">
+<meta property="og:url" content="https://lukinmiami-max.github.io/million-na-salfetke/ekaterinburg/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Миллион на салфетке — Forbes">
-<meta name="twitter:description" content="Питч-шоу Forbes. Три предпринимателя. Один совет. Реальные инвестиции от 1 000 000 рублей. Владивосток, 2026.">
-<meta name="twitter:image" content="https://lukinmiami-max.github.io/million-na-salfetke/vladivostok/og-vladivostok-2026.jpg">
+<meta name="twitter:description" content="Питч-шоу Forbes. Три предпринимателя. Один совет. Реальные инвестиции от 1 000 000 рублей. Екатеринбург, 2026.">
+<meta name="twitter:image" content="https://lukinmiami-max.github.io/million-na-salfetke/ekaterinburg/og-novosibirsk-2026.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -723,6 +723,7 @@
     background: var(--gold-dim);
   }
 
+
   .candidate-source {
     display: inline-block;
     margin-top: 16px;
@@ -738,7 +739,6 @@
   }
   .candidate-source:hover { background: var(--gold); color: #0a0a0a; }
   .candidate-source::before { content: '↗ '; }
-
   .candidate-photo {
     width: 100%;
     aspect-ratio: 9 / 16;
@@ -1177,6 +1177,7 @@
 
   /* ── АДАПТИВ 600px (мобильный) ── */
   @media (max-width: 600px) {
+    /* Навигация — на мобильном статичная, не фиксированная */
     nav {
       position: relative;
       padding: 14px 16px;
@@ -1186,6 +1187,7 @@
     .nav-city { display: block; opacity: 1; font-size: 13px; }
     .nav-forbes { font-size: 20px; }
 
+    /* Герой на мобильном — изображение сверху, контент снизу */
     .hero {
       min-height: 0;
       display: block;
@@ -1215,6 +1217,7 @@
     .hero-line { margin-bottom: 14px; }
     .hero-label { margin-bottom: 12px; }
 
+    /* Мета-блок: сетка 2 колонки, без вертикальных разделителей */
     .hero-meta {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -1225,6 +1228,7 @@
     .hero-meta-value { font-size: 13px; }
     .hero-meta-key { font-size: 9px; }
 
+    /* Секции */
     .concept, .mechanics, .napkin-moment, .council, .casting,
     .format, .production, .status, .footer { padding: 56px 16px; }
 
@@ -1233,32 +1237,42 @@
 
     .council-members { grid-template-columns: 1fr; }
 
+    /* Акты шоу */
     .act { padding: 32px 24px; }
     .act-number { font-size: 56px; }
 
+    /* Кандидаты */
     .candidates { grid-template-columns: 1fr; }
     .candidate { padding: 0; }
 
+    /* Члены совета */
     .member { padding: 28px 20px; }
 
+    /* Статус */
     .status-col { padding: 28px 20px; }
 
+    /* Бюджет */
     .budget-box { padding: 28px 20px; }
 
+    /* Команда */
     .team-item { gap: 12px; }
 
+    /* Шаги салфетки */
     .napkin-steps { flex-direction: column; align-items: center; }
     .napkin-step { max-width: 280px; padding: 16px 8px; }
     .napkin-final { padding: 28px 20px; }
 
+    /* Формат */
     .format-card { padding: 32px 20px; }
     .format-header { flex-direction: column; align-items: flex-start; gap: 28px; }
     .format-napkin { width: 180px; }
 
+    /* Футер */
     .footer-inner { flex-direction: column; align-items: flex-start; gap: 24px; }
     .footer-right { text-align: left; }
     .footer-title { font-size: 40px; }
 
+    /* Скролл-индикатор */
     .hero-scroll { position: static; margin-top: 24px; align-self: flex-end; }
   }
 
@@ -1322,9 +1336,6 @@
   @media (max-width:640px) {
     .show-opts { grid-template-columns:1fr; }
     .timeline-grid { grid-template-columns:repeat(2,1fr); }
-    .casting-steps-grid { grid-template-columns: 1fr !important; }
-    .casting-cta { flex-direction: column !important; align-items: flex-start !important; }
-    .napkin-stories-grid { grid-template-columns: 1fr !important; }
   }
 </style>
 </head>
@@ -1337,18 +1348,18 @@
     <div class="nav-divider"></div>
     <span class="nav-title">Миллион на салфетке</span>
   </div>
-  <span class="nav-city">Владивосток 2026</span>
+  <span class="nav-city">Екатеринбург 2026</span>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
   <picture>
-    <source media="(max-width: 600px)" srcset="../mobile-hero-new-2.jpg">
-    <img class="hero-img" src="../hero-new-2.jpg" alt="Миллион на салфетке — питч-шоу Forbes · Владивосток">
+    <source media="(max-width: 600px)" srcset="hero-new-mobile.jpg">
+    <img class="hero-img" src="hero-new-ekaterinburg.jpg" alt="Миллион на салфетке — питч-шоу Forbes · Екатеринбург">
   </picture>
   <div class="hero-content">
     <div class="hero-line"></div>
-    <p class="label hero-label">Питч-шоу Forbes · Владивосток · 2026</p>
+    <p class="label hero-label">Питч-шоу Forbes · Екатеринбург · 2026</p>
     <div class="hero-meta">
       <div class="hero-meta-item">
         <span class="hero-meta-value">3 предпринимателя</span>
@@ -1366,7 +1377,7 @@
       </div>
       <div class="hero-meta-sep"></div>
       <div class="hero-meta-item">
-        <span class="hero-meta-value">Технопарк «Русский» ДВФУ</span>
+        <span class="hero-meta-value">Екатеринбург</span>
         <span class="hero-meta-key">Локация пилота</span>
       </div>
     </div>
@@ -1385,7 +1396,8 @@
         <span class="label label-light">Концепция</span>
       </div>
       <h2 class="concept-headline">Простая идея,<br>которая меняет<br>всё</h2>
-      <p class="concept-body">Питч-шоу Forbes для тех, у кого есть идея и смелость её назвать. Каждый выпуск — новый город, три участника из региона: предприниматели, стартаперы, учёные. Один шанс перед советом Forbes. Инвестиции реальные. Отказ тоже.</p>
+      <p class="concept-body">Короткое питч-шоу, где предприниматели из регионов России выходят перед советом Forbes с одной идеей — написанной на салфетке.</p>
+      <p class="concept-body">Никаких презентаций. Никакой подготовленной речи. Только суть — и решение прямо здесь.</p>
       <div class="concept-quote">
         <p>Великие бизнесы начинались на салфетке в кафе. Мы возвращаем это к истокам.</p>
       </div>
@@ -1394,7 +1406,7 @@
       <div class="stat-row">
         <div class="stat-item">
           <span class="stat-number">3</span>
-          <span class="stat-desc">участника в каждом выпуске борются за инвестиции</span>
+          <span class="stat-desc">предпринимателя в каждом выпуске борются за инвестиции</span>
         </div>
         <div class="stat-item">
           <span class="stat-number">1M+</span>
@@ -1402,115 +1414,14 @@
         </div>
         <div class="stat-item">
           <span class="stat-number">60"</span>
-          <span class="stat-desc">60 секунд на видео-заявку: кто ты, что создаёшь и на что нужны инвестиции. Forbes смотрит каждую — лучшие попадают в шоу.</span>
+          <span class="stat-desc">версия для Reels и Shorts — один момент, один исход</span>
         </div>
         <div class="stat-item">
           <span class="stat-number">4</span>
-          <span class="stat-desc">инвестора в совете — каждый делает оффер или говорит «Я пас»</span>
+          <span class="stat-desc">члена совета Forbes принимают решение коллегиально</span>
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- БИЗНЕСЫ НА САЛФЕТКЕ -->
-<section style="background:var(--black);padding:100px 48px;">
-  <div style="max-width:1100px;margin:0 auto;">
-
-    <div class="reveal" style="margin-bottom:64px;">
-      <p class="label" style="color:var(--gold);letter-spacing:4px;margin-bottom:20px;">Идея меняет всё</p>
-      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,5vw,72px);letter-spacing:3px;color:var(--white);line-height:1;margin-bottom:24px;">Великие бизнесы начинались на салфетке</h2>
-      <p style="font-size:16px;color:var(--text-muted);line-height:1.75;max-width:600px;">Не в офисе. Не в PowerPoint. За столиком в баре, в аэропорту, на студенческой лекции. Одна идея — и всё изменилось.</p>
-    </div>
-
-    <div class="reveal napkin-stories-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:var(--border-dark);">
-
-      <div style="background:var(--card-dark);padding:48px 40px;border-top:2px solid var(--gold);">
-        <div style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--gold);line-height:1;margin-bottom:16px;">Southwest Airlines</div>
-        <div style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--text-muted);margin-bottom:24px;">1966 · Бар в Сан-Антонио</div>
-        <p style="font-size:14px;color:var(--text-muted);line-height:1.7;">Херб Келлехер и Роллин Кинг нарисовали маршруты будущей авиакомпании на коктейльной салфетке. Треугольник между тремя городами Техаса. Сегодня — крупнейший лоукостер США.</p>
-      </div>
-
-      <div style="background:var(--card-dark);padding:48px 40px;border-top:2px solid rgba(200,168,75,0.3);">
-        <div style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--gold);line-height:1;margin-bottom:16px;">Lionel Messi</div>
-        <div style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--text-muted);margin-bottom:24px;">2000 · За обедом в Барселоне</div>
-        <p style="font-size:14px;color:var(--text-muted);line-height:1.7;">Директор «Барселоны» Карлес Рексач подписал контракт с 13-летним Месси прямо на бумажной салфетке за обедом — семья устала ждать официального решения клуба. В 2024 году эта салфетка продана на аукционе Bonhams за $968 000.</p>
-      </div>
-
-      <div style="background:var(--card-dark);padding:48px 40px;border-top:2px solid rgba(200,168,75,0.3);">
-        <div style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--gold);line-height:1;margin-bottom:16px;">Compaq</div>
-        <div style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--text-muted);margin-bottom:24px;">1981 · Ресторан в Техасе</div>
-        <p style="font-size:14px;color:var(--text-muted);line-height:1.7;">Род Кэньон и двое партнёров набросали схему первого IBM-совместимого компьютера на салфетке за ужином. Через несколько лет Compaq стал одним из крупнейших производителей ПК в мире.</p>
-      </div>
-
-      <div style="background:var(--card-dark);padding:48px 40px;border-top:2px solid rgba(200,168,75,0.3);">
-        <div style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--gold);line-height:1;margin-bottom:16px;">Pixar</div>
-        <div style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--text-muted);margin-bottom:24px;">1994 · Кафе Hidden City, Калифорния</div>
-        <p style="font-size:14px;color:var(--text-muted);line-height:1.7;">Джон Лассетер, Эндрю Стэнтон и Пит Доктер набросали на салфетках за обедом концепции четырёх фильмов: «Жизнь жуков», «Корпорация монстров», «В поисках Немо» и «ВАЛЛ-И». Суммарные сборы этих фильмов — больше $3 млрд.</p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- КОРОТКИЙ ФОРМАТ: ОТБОР НАЧИНАЕТСЯ ЗДЕСЬ -->
-<section style="background:var(--dark);padding:100px 48px;">
-  <div style="max-width:1100px;margin:0 auto;">
-
-    <div class="reveal" style="margin-bottom:56px;">
-      <p class="label" style="color:var(--gold);letter-spacing:4px;margin-bottom:20px;">Короткий формат</p>
-      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,5vw,72px);letter-spacing:3px;color:var(--white);line-height:1;margin-bottom:24px;">Отбор начинается здесь</h2>
-      <p style="font-size:16px;color:var(--text-muted);line-height:1.75;max-width:640px;">До большого шоу Forbes объявляет кастинг. Предприниматели из регионов снимают 60-секундную видео-заявку по простой структуре, публикуют у себя с хэштегом и отмечают Forbes. Лучшие заявки выходят в аккаунте Forbes — это и есть первый шанс попасть на шоу.</p>
-    </div>
-
-    <!-- Три колонки: структура видео-заявки -->
-    <div class="reveal casting-steps-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border-dark);margin-bottom:32px;">
-
-      <div style="background:var(--card-dark);padding:48px 40px 0;position:relative;overflow:hidden;display:flex;flex-direction:column;">
-        <div style="font-family:'Bebas Neue',sans-serif;font-size:80px;color:rgba(200,168,75,0.1);line-height:1;margin-bottom:24px;">01</div>
-        <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--white);margin-bottom:8px;">60 секунд</div>
-        <div style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:24px;">Кто ты</div>
-        <p style="font-size:14px;color:var(--text-muted);line-height:1.7;margin-bottom:32px;">Скажи, кто ты и что создаёшь. Предприниматель, стартапер или учёный — неважно. Важно, чтобы за 60 секунд было понятно: зачем ты здесь и во что веришь.</p>
-        <img src="../agro_person.jpg" alt="Кандидат — агробизнес" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;margin-top:auto;">
-      </div>
-
-      <div style="background:var(--card-dark);padding:48px 40px 0;position:relative;overflow:hidden;display:flex;flex-direction:column;">
-        <div style="font-family:'Bebas Neue',sans-serif;font-size:80px;color:rgba(200,168,75,0.1);line-height:1;margin-bottom:24px;">02</div>
-        <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--white);margin-bottom:8px;">Докажи потенциал</div>
-        <div style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:24px;">Цифры. Идея. Разработка</div>
-        <p style="font-size:14px;color:var(--text-muted);line-height:1.7;margin-bottom:32px;">Работающий бизнес — назови выручку и рост. Стартап без выручки — опиши идею и на какой стадии ты сейчас. Учёный с разработкой — покажи, что уже есть. Главное: Forbes должен понять, зачем это рынку.</p>
-        <img src="../woman_person.jpg" alt="Кандидат — одежда для детей с аутизмом" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;margin-top:auto;">
-      </div>
-
-      <div style="background:var(--card-dark);padding:48px 40px 0;position:relative;overflow:hidden;display:flex;flex-direction:column;">
-        <div style="font-family:'Bebas Neue',sans-serif;font-size:80px;color:rgba(200,168,75,0.1);line-height:1;margin-bottom:24px;">03</div>
-        <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--white);margin-bottom:8px;">Назови цель</div>
-        <div style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:24px;">На что нужны деньги</div>
-        <p style="font-size:14px;color:var(--text-muted);line-height:1.7;margin-bottom:32px;">Что изменится, когда деньги появятся? Назови цель — на что пойдут инвестиции, если совет Forbes скажет да.</p>
-        <img src="../cater_person.jpg" alt="Кандидат — производство катеров" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;margin-top:auto;">
-      </div>
-
-    </div>
-
-    <!-- CTA -->
-    <div class="reveal casting-cta" style="background:var(--card-dark);border:1px solid rgba(200,168,75,0.3);padding:40px 48px;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;">
-      <div>
-        <div style="font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--text-muted);margin-bottom:12px;">Как подать заявку</div>
-        <div style="font-size:18px;font-weight:600;color:var(--white);line-height:1.5;">Опубликуй видео у себя в аккаунте<br>и отметь Forbes в описании</div>
-      </div>
-      <div style="display:flex;gap:16px;flex-wrap:wrap;">
-        <div style="background:rgba(200,168,75,0.12);border:1px solid rgba(200,168,75,0.4);padding:12px 24px;">
-          <div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);">Хэштег</div>
-          <div style="font-size:16px;font-weight:600;color:var(--white);margin-top:4px;">#МиллионНаСалфетке</div>
-        </div>
-        <div style="background:rgba(200,168,75,0.12);border:1px solid rgba(200,168,75,0.4);padding:12px 24px;">
-          <div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);">Отметка</div>
-          <div style="font-size:16px;font-weight:600;color:var(--white);margin-top:4px;">@forbes.russia</div>
-        </div>
-      </div>
-    </div>
-
   </div>
 </section>
 
@@ -1589,96 +1500,6 @@
       </div>
     </div>
 
-    <!-- ВСТУПЛЕНИЕ -->
-    <div class="reveal" style="border-top:1px solid var(--border-dark);padding-top:48px;margin-bottom:64px;">
-      <div style="font-size:10px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:32px;">Вступление · ~5 минут</div>
-      <div class="intro-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;">
-
-        <div style="background:var(--dark);border:1px solid var(--border-dark);padding:24px 20px;">
-          <div style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--gold);opacity:0.25;line-height:1;margin-bottom:12px;">01</div>
-          <div style="font-size:13px;color:var(--white);line-height:1.6;">Представление шоу, формата и правил. Ведущий или закадровый голос открывает выпуск.</div>
-          <img src="../dmitry-ozman.jpg" alt="Дмитрий Озман — ведущий" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;margin-top:20px;">
-        </div>
-
-        <div style="background:var(--dark);border:1px solid var(--border-dark);padding:24px 20px;">
-          <div style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--gold);opacity:0.25;line-height:1;margin-bottom:12px;">02</div>
-          <div style="font-size:13px;color:var(--white);line-height:1.6;">Представление совета Forbes — ведущий или закадровый голос коротко рассказывает о каждом инвесторе.</div>
-          <img src="../forbes-council.jpg" alt="Совет Forbes" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;margin-top:20px;">
-        </div>
-
-        <div style="background:var(--dark);border:1px solid var(--border-dark);padding:24px 20px;">
-          <div style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--gold);opacity:0.25;line-height:1;margin-bottom:12px;">03</div>
-          <div style="font-size:13px;color:var(--white);line-height:1.6;">Представление трёх предпринимателей. Каждый получает чистую салфетку и пишет на ней название своего проекта.</div>
-          <img src="../candidate-writes-napkin.jpg" alt="Кандидат пишет на салфетке" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;margin-top:20px;">
-        </div>
-
-      </div>
-    </div>
-
-    <!-- СХЕМА ОДНОГО ПИТЧА -->
-    <div class="reveal" style="border-top:1px solid var(--border-dark);padding-top:48px;">
-      <div style="font-size:10px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Схема одного питча · ~10–15 минут · повторяется трижды</div>
-      <div style="font-size:14px;color:var(--text-muted);margin-bottom:32px;line-height:1.7;">Каждый предприниматель проходит полный цикл — от питча до решения — прежде чем слово берёт следующий.</div>
-
-      <div class="pitch-grid-top" style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-bottom:2px;">
-
-        <div style="background:var(--dark);border:1px solid var(--border-dark);padding:24px 20px;display:flex;flex-direction:column;">
-          <div style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--gold);opacity:0.25;line-height:1;margin-bottom:12px;">01</div>
-          <div style="font-size:13px;color:var(--white);line-height:1.6;min-height:64px;">Предприниматель питчит проект — 5–10 минут. Называет сумму инвестиций и долю, которую готов отдать.</div>
-          <img src="../candidate-pitches.jpg" alt="Кандидат питчит идею" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;margin-top:auto;padding-top:20px;">
-        </div>
-
-        <div style="background:var(--dark);border:1px solid var(--border-dark);padding:24px 20px;display:flex;flex-direction:column;">
-          <div style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--gold);opacity:0.25;line-height:1;margin-bottom:12px;">02</div>
-          <div style="font-size:13px;color:var(--white);line-height:1.6;min-height:64px;">Инвесторы по очереди задают вопросы в микрофон и называют свои условия. Каждый делает оффер или говорит: «Я пас».</div>
-          <img src="../investors-questions.jpg" alt="Инвестор задаёт вопрос" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;margin-top:auto;padding-top:20px;">
-        </div>
-
-        <div style="background:var(--dark);border:1px solid var(--border-dark);padding:24px 20px;display:flex;flex-direction:column;">
-          <div style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--gold);opacity:0.25;line-height:1;margin-bottom:12px;">03</div>
-          <div style="font-size:13px;color:var(--white);line-height:1.6;min-height:64px;">Торг. Предприниматель и заинтересованные инвесторы договариваются о сумме и доле. Инвестор может выйти из переговоров в любой момент.</div>
-          <img src="../negotiations.jpg" alt="Переговоры" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;margin-top:auto;padding-top:20px;">
-        </div>
-
-      </div>
-      <div class="pitch-grid-bottom" style="display:grid;grid-template-columns:repeat(2,1fr);gap:2px;">
-
-        <div style="background:var(--dark);border:1px solid rgba(200,168,75,0.4);padding:24px 20px;display:flex;flex-direction:column;">
-          <div style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--gold);opacity:0.6;line-height:1;margin-bottom:12px;">04</div>
-          <div style="font-size:13px;color:var(--white);line-height:1.6;min-height:64px;">Момент выбора. Предприниматель называет одного инвестора — или уходит ни с чем, если ни один оффер не устроил.</div>
-          <img src="../moment-of-choice.jpg" alt="Момент выбора" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;margin-top:auto;padding-top:20px;">
-        </div>
-
-        <div style="background:var(--dark);border:1px solid rgba(200,168,75,0.4);padding:24px 20px;display:flex;flex-direction:column;">
-          <div style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--gold);opacity:0.6;line-height:1;margin-bottom:12px;">05</div>
-          <div style="font-size:13px;color:var(--white);line-height:1.6;min-height:64px;">Передача салфетки. Предприниматель отдаёт салфетку с названием проекта выбранному инвестору. Инвестор пишет итоговую сумму и долю — <strong style="color:var(--gold);">сделка оформлена</strong>.</div>
-          <img src="../final-frame.jpg" alt="Финальный кадр" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;margin-top:auto;padding-top:20px;">
-        </div>
-
-      </div>
-
-      <!-- Возможные исходы -->
-      <div class="outcomes-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:32px;">
-        <div style="background:rgba(109,179,109,0.08);border-top:2px solid #6db36d;padding:20px 24px;">
-          <div style="font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#6db36d;margin-bottom:10px;">Исход 1 · Сделка</div>
-          <div style="font-size:13px;color:rgba(255,255,255,0.7);line-height:1.6;">Предприниматель и инвестор договорились. Салфетка передана, сумма написана.</div>
-        </div>
-        <div style="background:rgba(200,168,75,0.04);border-top:2px solid rgba(200,168,75,0.4);padding:20px 24px;">
-          <div style="font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:10px;">Исход 2 · Разрыв</div>
-          <div style="font-size:13px;color:rgba(255,255,255,0.5);line-height:1.6;">Оффер был, но условия не устроили. Предприниматель отказался от всех предложений.</div>
-        </div>
-        <div style="background:rgba(180,80,80,0.06);border-top:2px solid rgba(180,80,80,0.5);padding:20px 24px;">
-          <div style="font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#e06060;margin-bottom:10px;">Исход 3 · Отказ</div>
-          <div style="font-size:13px;color:rgba(255,255,255,0.5);line-height:1.6;">Никто не сделал оффер. Все сказали «Я пас». Предприниматель уходит ни с чем.</div>
-        </div>
-      </div>
-
-      <div style="margin-top:24px;padding:24px 32px;border:1px solid rgba(200,168,75,0.5);background:rgba(200,168,75,0.07);display:flex;align-items:flex-start;gap:20px;">
-        <span style="font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--black);background:var(--gold);padding:5px 10px;white-space:nowrap;flex-shrink:0;margin-top:2px;">Важно</span>
-        <span style="font-size:15px;font-weight:500;color:var(--white);line-height:1.7;">«1 миллион» — символ шоу, не фиксированная сумма. Реальный размер инвестиций определяется по итогам переговоров каждого питча.</span>
-      </div>
-    </div>
-
   </div>
 </section>
 
@@ -1695,8 +1516,8 @@
     <div class="acts reveal">
       <div class="act">
         <span class="act-number">01</span>
-        <div class="act-title">Вступление</div>
-        <div class="act-time">~5 минут</div>
+        <div class="act-title">Питчи</div>
+        <div class="act-time">~15 минут</div>
         <ul class="act-list">
           <li>Три предпринимателя по очереди</li>
           <li>Каждый получает чистую салфетку</li>
@@ -1707,8 +1528,8 @@
       </div>
       <div class="act">
         <span class="act-number">02</span>
-        <div class="act-title">Три питча</div>
-        <div class="act-time">×3 · ~10–15 мин каждый</div>
+        <div class="act-title">Ожидание</div>
+        <div class="act-time">~10 минут</div>
         <ul class="act-list">
           <li>Совет совещается</li>
           <li>Все три героя ждут вместе в зале</li>
@@ -1719,7 +1540,7 @@
       </div>
       <div class="act">
         <span class="act-number">03</span>
-        <div class="act-title">Итог</div>
+        <div class="act-title">Решение</div>
         <div class="act-time">~5 минут</div>
         <ul class="act-list">
           <li>Совет объявляет решение по каждому</li>
@@ -1767,149 +1588,8 @@
       </div>
     </div>
     <div class="napkin-final reveal">
-      <img class="napkin-final-img" src="../napkin-3.png" alt="Салфетка с суммой инвестиций">
-      <p class="napkin-final-text">«Простая идея → переговоры → рука пишет сумму на салфетке»</p>
-    </div>
-  </div>
-</section>
-
-<!-- РЕФЕРЕНС: SHARK TANK -->
-<section style="background:var(--off-white);color:var(--black);padding:100px 48px;">
-  <div style="max-width:1100px;margin:0 auto;">
-
-    <div class="reveal" style="margin-bottom:64px;">
-      <span class="label label-light" style="display:block;margin-bottom:20px;">Мировой референс</span>
-      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,4.5vw,56px);font-weight:300;line-height:1.05;letter-spacing:1px;color:var(--black);margin-bottom:24px;">Формат,<br>который работает</h2>
-      <p style="font-size:16px;line-height:1.75;color:var(--text-body);max-width:640px;">Shark Tank — один из самых успешных форматов бизнес-реалити в мире. «Миллион на салфетке» строится на той же механике, адаптированной под Forbes и российский контекст.</p>
-      <p style="font-size:16px;line-height:1.75;color:var(--text-body);max-width:640px;margin-top:16px;">Но у нас есть то, чего нет у Shark Tank: <strong style="color:var(--black);">визуальный хук — салфетка.</strong> Рука пишет сумму прямо сейчас, прямо в кадре. Один кадр — и всё понятно без слов. Это сильнее любой сделки на словах. Салфетка даёт шоу мгновенную узнаваемость — зритель запоминает её с первых секунд и возвращается снова.</p>
-    </div>
-
-    <!-- Слот для фото Shark Tank -->
-    <div class="reveal" style="margin-bottom:64px;">
-      <img src="../shark-tank-2.jpg" alt="Shark Tank" style="width:100%;aspect-ratio:16/9;object-fit:cover;object-position:center top;display:block;">
-    </div>
-
-    <!-- Таблица параллелей -->
-    <div class="reveal" style="margin-bottom:64px;">
-      <div style="font-size:10px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--text-muted);margin-bottom:24px;">Shark Tank ↔ Миллион на салфетке</div>
-      <div style="border:1px solid var(--border-light);overflow:hidden;">
-        <div class="shark-compare-header" style="display:grid;grid-template-columns:1fr 1fr;background:var(--black);">
-          <div style="padding:14px 24px;font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);">Shark Tank</div>
-          <div style="padding:14px 24px;font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);border-left:1px solid var(--border-dark);">Миллион на салфетке</div>
-        </div>
-        <div class="shark-compare-row" style="display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--border-light);">
-          <div style="padding:14px 24px;font-size:14px;color:var(--text-body);">«Акулы» — постоянные инвесторы</div>
-          <div style="padding:14px 24px;font-size:14px;color:var(--text-body);border-left:1px solid var(--border-light);">Совет Forbes — 5 участников. В каждом городе свои инвесторы.</div>
-        </div>
-        <div class="shark-compare-row" style="display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--border-light);background:rgba(0,0,0,0.02);">
-          <div style="padding:14px 24px;font-size:14px;color:var(--text-body);">Питч + запрос суммы и доли</div>
-          <div style="padding:14px 24px;font-size:14px;color:var(--text-body);border-left:1px solid var(--border-light);">Тот же формат</div>
-        </div>
-        <div class="shark-compare-row" style="display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--border-light);">
-          <div style="padding:14px 24px;font-size:14px;color:var(--text-body);">Акулы делают офферы или выходят</div>
-          <div style="padding:14px 24px;font-size:14px;color:var(--text-body);border-left:1px solid var(--border-light);">Инвесторы делают офферы или «Я пас»</div>
-        </div>
-        <div class="shark-compare-row" style="display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--border-light);background:rgba(0,0,0,0.02);">
-          <div style="padding:14px 24px;font-size:14px;color:var(--text-body);">Предприниматель выбирает акулу</div>
-          <div style="padding:14px 24px;font-size:14px;color:var(--text-body);border-left:1px solid var(--border-light);">Предприниматель выбирает инвестора</div>
-        </div>
-        <div class="shark-compare-row" style="display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--border-light);">
-          <div style="padding:14px 24px;font-size:14px;color:var(--text-body);">Сделка обсуждается на месте</div>
-          <div style="padding:14px 24px;font-size:14px;color:var(--text-body);border-left:1px solid var(--border-light);">Инвестор пишет условия на салфетке</div>
-        </div>
-        <div class="shark-compare-row" style="display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--border-light);background:rgba(0,0,0,0.02);">
-          <div style="padding:14px 24px;font-size:14px;color:var(--text-body);">Можно уйти без сделки</div>
-          <div style="padding:14px 24px;font-size:14px;color:var(--text-body);border-left:1px solid var(--border-light);">Можно уйти ни с чем — дополнительная драма</div>
-        </div>
-        <div class="shark-compare-row" style="display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--border-light);">
-          <div style="padding:14px 24px;font-size:14px;color:var(--text-body);">Студийные съёмки · 40–60 мин</div>
-          <div style="padding:14px 24px;font-size:14px;color:var(--text-body);border-left:1px solid var(--border-light);">Студийные съёмки · 40–60 мин</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Полный разбор -->
-    <div class="reveal">
-      <div style="font-size:10px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--text-muted);margin-bottom:40px;">Детальный разбор Shark Tank</div>
-
-      <div class="shark-top-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--border-light);margin-bottom:2px;">
-        <div style="background:var(--white);padding:36px 32px;">
-          <div style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">Хуки</div>
-          <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
-            <li style="font-size:14px;color:var(--text-body);line-height:1.6;padding-left:16px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">—</span>Эмоциональная вовлечённость</li>
-            <li style="font-size:14px;color:var(--text-body);line-height:1.6;padding-left:16px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">—</span>Конфликт и напряжённость</li>
-            <li style="font-size:14px;color:var(--text-body);line-height:1.6;padding-left:16px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">—</span>Неопределённость</li>
-            <li style="font-size:14px;color:var(--text-body);line-height:1.6;padding-left:16px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">—</span>Динамика переговоров</li>
-          </ul>
-        </div>
-        <div style="background:var(--white);padding:36px 32px;">
-          <div style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">Технические параметры</div>
-          <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
-            <li style="font-size:14px;color:var(--text-body);line-height:1.6;padding-left:16px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">—</span>Съёмка в студии</li>
-            <li style="font-size:14px;color:var(--text-body);line-height:1.6;padding-left:16px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">—</span>Хронометраж эпизода: 40–60 минут</li>
-            <li style="font-size:14px;color:var(--text-body);line-height:1.6;padding-left:16px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">—</span>Несколько предпринимателей в каждом эпизоде</li>
-            <li style="font-size:14px;color:var(--text-body);line-height:1.6;padding-left:16px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">—</span>Постоянные инвесторы (акулы) — 6 человек</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="shark-info-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border-light);margin-bottom:2px;">
-        <div style="background:var(--white);padding:36px 32px;">
-          <div style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">Структура эпизода</div>
-          <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;">
-            <li style="font-size:13px;color:var(--text-body);line-height:1.6;padding-left:14px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">1.</span>Введение — шоу и инвесторы</li>
-            <li style="font-size:13px;color:var(--text-body);line-height:1.6;padding-left:14px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">2.</span>Представление предпринимателей</li>
-            <li style="font-size:13px;color:var(--text-body);line-height:1.6;padding-left:14px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">3.</span>Запрос инвестиций (сумма + доля)</li>
-            <li style="font-size:13px;color:var(--text-body);line-height:1.6;padding-left:14px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">4.</span>Демонстрация продукта</li>
-            <li style="font-size:13px;color:var(--text-body);line-height:1.6;padding-left:14px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">5.</span>Вопросы и ответы</li>
-            <li style="font-size:13px;color:var(--text-body);line-height:1.6;padding-left:14px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">6.</span>Обсуждение и переговоры</li>
-            <li style="font-size:13px;color:var(--text-body);line-height:1.6;padding-left:14px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">7.</span>Заключение сделок</li>
-            <li style="font-size:13px;color:var(--text-body);line-height:1.6;padding-left:14px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">8.</span>Эпилог — результаты после шоу</li>
-          </ul>
-        </div>
-        <div style="background:var(--white);padding:36px 32px;">
-          <div style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">Тайминг внутри эпизода</div>
-          <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;">
-            <li style="font-size:13px;color:var(--text-body);line-height:1.6;display:flex;justify-content:space-between;gap:8px;padding-bottom:8px;border-bottom:1px solid var(--border-light);">
-              <span>Введение + знакомство</span><span style="color:var(--gold);font-weight:600;white-space:nowrap;">2–3 мин</span>
-            </li>
-            <li style="font-size:13px;color:var(--text-body);line-height:1.6;display:flex;justify-content:space-between;gap:8px;padding-bottom:8px;border-bottom:1px solid var(--border-light);">
-              <span>Презентация бизнес-идеи</span><span style="color:var(--gold);font-weight:600;white-space:nowrap;">5–10 мин</span>
-            </li>
-            <li style="font-size:13px;color:var(--text-body);line-height:1.6;display:flex;justify-content:space-between;gap:8px;padding-bottom:8px;border-bottom:1px solid var(--border-light);">
-              <span>Вопросы и обсуждение</span><span style="color:var(--gold);font-weight:600;white-space:nowrap;">10–15 мин</span>
-            </li>
-            <li style="font-size:13px;color:var(--text-body);line-height:1.6;display:flex;justify-content:space-between;gap:8px;">
-              <span>Сделка или отказ</span><span style="color:var(--gold);font-weight:600;white-space:nowrap;">2–3 мин</span>
-            </li>
-          </ul>
-        </div>
-        <div style="background:var(--white);padding:36px 32px;">
-          <div style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">Форматные элементы</div>
-          <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;">
-            <li style="font-size:13px;color:var(--text-body);line-height:1.6;padding-left:14px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">—</span>Структурированное представление</li>
-            <li style="font-size:13px;color:var(--text-body);line-height:1.6;padding-left:14px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">—</span>Визуальные элементы и демонстрация</li>
-            <li style="font-size:13px;color:var(--text-body);line-height:1.6;padding-left:14px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">—</span>Разнообразие форматов бизнеса</li>
-            <li style="font-size:13px;color:var(--text-body);line-height:1.6;padding-left:14px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">—</span>Акцент на экспертности инвесторов</li>
-            <li style="font-size:13px;color:var(--text-body);line-height:1.6;padding-left:14px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">—</span>Эпилог — жизнь после шоу</li>
-            <li style="font-size:13px;color:var(--text-body);line-height:1.6;padding-left:14px;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">—</span>Интерактивность — обсуждение в соцсетях</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Инвесторы Shark Tank -->
-      <div style="background:var(--white);padding:36px 32px;border:1px solid var(--border-light);">
-        <div style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:24px;">Постоянные инвесторы («акулы»)</div>
-        <div class="shark-investors-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px 32px;">
-          <div><div style="font-size:14px;font-weight:700;color:var(--black);margin-bottom:4px;">Марк Кьюбан</div><div style="font-size:12px;color:var(--text-muted);">Предприниматель, владелец «Даллас Маверикс»</div></div>
-          <div><div style="font-size:14px;font-weight:700;color:var(--black);margin-bottom:4px;">Лори Грейнер</div><div style="font-size:12px;color:var(--text-muted);">Изобретательница, потребительские товары</div></div>
-          <div><div style="font-size:14px;font-weight:700;color:var(--black);margin-bottom:4px;">Роберт Херявек</div><div style="font-size:12px;color:var(--text-muted);">Предприниматель в сфере технологий</div></div>
-          <div><div style="font-size:14px;font-weight:700;color:var(--black);margin-bottom:4px;">Деймон Джон</div><div style="font-size:12px;color:var(--text-muted);">Основатель FUBU, эксперт в маркетинге</div></div>
-          <div><div style="font-size:14px;font-weight:700;color:var(--black);margin-bottom:4px;">Барбара Коркоран</div><div style="font-size:12px;color:var(--text-muted);">Инвестор, специалист по недвижимости</div></div>
-          <div><div style="font-size:14px;font-weight:700;color:var(--black);margin-bottom:4px;">Кевин О'Лири</div><div style="font-size:12px;color:var(--text-muted);">«Mr. Wonderful» — прямолинейный инвестор</div></div>
-        </div>
-      </div>
-
+      <img class="napkin-final-img" src="салфетка 3.png" alt="Салфетка с суммой инвестиций">
+      <p class="napkin-final-text">«Простая идея → быстрое решение → реальные деньги»</p>
     </div>
   </div>
 </section>
@@ -1937,14 +1617,14 @@
       <div class="member">
         <div class="member-num">03</div>
         <div class="member-name">TBD</div>
-        <div class="member-org">Приморский край</div>
-        <div class="member-role">Крупный предприниматель Приморского края. Локальный авторитет и знание рынка региона.</div>
+        <div class="member-org">Новосибирская область</div>
+        <div class="member-role">Крупный предприниматель Новосибирской области. Локальный авторитет и знание рынка региона.</div>
       </div>
       <div class="member">
         <div class="member-num">04</div>
         <div class="member-name">TBD</div>
         <div class="member-org">Омбудсмен</div>
-        <div class="member-role">Бизнес-омбудсмен Приморского края. Защитник бизнеса — между властью и предпринимателями.</div>
+        <div class="member-role">Бизнес-омбудсмен Новосибирской области. Защитник бизнеса — между властью и предпринимателями.</div>
       </div>
     </div>
   </div>
@@ -1955,10 +1635,10 @@
   <div class="casting-inner">
     <div class="casting-header reveal">
       <div>
-        <span class="label" style="display:block;margin-bottom:20px;">Кастинг · Пилот · Владивосток</span>
+        <span class="label" style="display:block;margin-bottom:20px;">Кастинг · Пилот · Екатеринбург</span>
         <h2 class="casting-headline">Герои<br>первого выпуска</h2>
       </div>
-      <p class="casting-note">Критерии отбора: интересная история, нестандартная идея, реальные цифры. Фокус пилота — Владивосток.</p>
+      <p class="casting-note">Критерии отбора: интересная история, нестандартная идея, реальные цифры. Фокус пилота — Екатеринбург.</p>
     </div>
     <div class="candidates reveal">
       <div class="candidate">
@@ -1966,11 +1646,17 @@
         <div class="candidate-body">
           <span class="candidate-priority">#01 кандидат</span>
           <div class="candidate-rank">01</div>
-          <div class="candidate-name">—</div>
-          <div class="candidate-project">—</div>
-          <p class="candidate-desc"></p>
-          <p class="candidate-why"></p>
-          <div class="candidate-invest-tags"></div>
+          <div class="candidate-name">Наталья Локшина</div>
+          <div class="candidate-project">UU</div>
+          <p class="candidate-desc">Сеть фотостудий автопортрета без фотографа. Вложили 300 000 руб. — выручка уже ~100 млн руб., прибыль 70 млн руб. Более 1 500 запросов на франшизу. B2B-продукт Peep — мобильная фотостудия с AI-обработкой для мероприятий.</p>
+          <p class="candidate-why">Пара из Екатеринбурга сделала минималистичный продукт с нулевой операционкой — нет фотографа, нет лишних затрат. Forbes «30 до 30» — 2024. Инвестиции нужны на масштабирование франшизы и развитие Peep.</p>
+          <div class="candidate-invest-tags">
+            <span class="candidate-invest-tag">Franchise</span>
+            <span class="candidate-invest-tag">AI</span>
+            <span class="candidate-invest-tag">B2C</span>
+            <span class="candidate-invest-tag">Масштабирование</span>
+          </div>
+          <a class="candidate-source" href="https://www.forbes.ru/svoi-biznes/484952-kak-para-iz-ekaterinburga-zarabotala-6-mln-rublej-pribyli-na-fotostudii-bez-fotografa" target="_blank" rel="noopener">Forbes · «Как пара из Екатеринбурга заработала на фотостудии без фотографа»</a>
         </div>
       </div>
       <div class="candidate">
@@ -1978,11 +1664,17 @@
         <div class="candidate-body">
           <span class="candidate-priority">#02 кандидат</span>
           <div class="candidate-rank">02</div>
-          <div class="candidate-name">—</div>
-          <div class="candidate-project">—</div>
-          <p class="candidate-desc"></p>
-          <p class="candidate-why"></p>
-          <div class="candidate-invest-tags"></div>
+          <div class="candidate-name">Полина Шарова</div>
+          <div class="candidate-project">Гермес-Урал</div>
+          <p class="candidate-desc">Промышленная группа — котельное оборудование и металлообработка. После ухода Viessmann из России локализовала немецкие технологии на Урале. Инвестиции 150 млн руб., рост выручки +60%, новый цех 1 300 м². Победитель «Предприниматель года — 2024» Екатеринбург.</p>
+          <p class="candidate-why">Лондонская школа бизнеса → уральский завод. Вернулась в Россию и заменила немцев собственным производством. «Молодой промышленник года» — всероссийская премия. Инвестиции нужны на модернизацию и экспортную экспансию.</p>
+          <div class="candidate-invest-tags">
+            <span class="candidate-invest-tag">Производство</span>
+            <span class="candidate-invest-tag">Импортозамещение</span>
+            <span class="candidate-invest-tag">Металлообработка</span>
+            <span class="candidate-invest-tag">B2B</span>
+          </div>
+          <a class="candidate-source" href="https://xn----7sbafhecece0aa7aimoxhcrd3cwp.xn--p1ai/person/sharova-polina/" target="_blank" rel="noopener">«Предприниматель года» · Профиль Полины Шаровой</a>
         </div>
       </div>
       <div class="candidate">
@@ -1990,11 +1682,17 @@
         <div class="candidate-body">
           <span class="candidate-priority">#03 кандидат</span>
           <div class="candidate-rank">03</div>
-          <div class="candidate-name">—</div>
-          <div class="candidate-project">—</div>
-          <p class="candidate-desc"></p>
-          <p class="candidate-why"></p>
-          <div class="candidate-invest-tags"></div>
+          <div class="candidate-name">Алексей Лежнин</div>
+          <div class="candidate-project">LIGA Group</div>
+          <p class="candidate-desc">Производство интерактивного оборудования, планшетов, ноутбуков и моноблоков. Выручка 2023 — 161,8 млн руб., рост +300%. В марте 2025 анонсировал завод 7 000 м² в индустриальном парке «Космос» — инвестиции 100 млн руб., до 180 тыс. устройств в год.</p>
+          <p class="candidate-why">Начинал в 2013 году в 20 м² с видео-зеркал, вырос до собственного завода. Инвестиции нужны прямо сейчас — конкретная сумма, конкретный объект. Самый чёткий питч шоу: импортозамещение в IT + реальное производство.</p>
+          <div class="candidate-invest-tags">
+            <span class="candidate-invest-tag">IT-производство</span>
+            <span class="candidate-invest-tag">Импортозамещение</span>
+            <span class="candidate-invest-tag">Завод</span>
+            <span class="candidate-invest-tag">B2B</span>
+          </div>
+          <a class="candidate-source" href="https://ekb.rbc.ru/ekb/freenews/67dd372f9a7947f650f46c5d" target="_blank" rel="noopener">РБК · «К 2027 году в Екатеринбурге откроют завод по производству ноутбуков»</a>
         </div>
       </div>
       <div class="candidate">
@@ -2002,11 +1700,17 @@
         <div class="candidate-body">
           <span class="candidate-priority">#04 кандидат</span>
           <div class="candidate-rank">04</div>
-          <div class="candidate-name">—</div>
-          <div class="candidate-project">—</div>
-          <p class="candidate-desc"></p>
-          <p class="candidate-why"></p>
-          <div class="candidate-invest-tags"></div>
+          <div class="candidate-name">Андрей Лодкин</div>
+          <div class="candidate-project">Foodface</div>
+          <p class="candidate-desc">Производство бумажной одноразовой посуды и упаковки для фастфуда и ритейла. Цех 2 700 м², более 100 видов продукции. Поставки в Россию, Казахстан и Беларусь. Вёл переговоры о поставках с «Вкусно — и точка».</p>
+          <p class="candidate-why">С нуля построил производство в 2017 году — без инвесторов, на собственные деньги. Рост даже в пандемию. После ухода иностранных конкурентов — окно возможностей. Инвестиции нужны на новые линии и логистику под федеральные сети.</p>
+          <div class="candidate-invest-tags">
+            <span class="candidate-invest-tag">Производство</span>
+            <span class="candidate-invest-tag">FMCG</span>
+            <span class="candidate-invest-tag">B2B</span>
+            <span class="candidate-invest-tag">Масштабирование</span>
+          </div>
+          <a class="candidate-source" href="https://biz360.ru/materials/biznes-iz-kartona-kak-na-urale-zarabatyvayut-na-odnorazovoy-posude/" target="_blank" rel="noopener">Biz360 · «Бизнес из картона: как на Урале зарабатывают на одноразовой посуде»</a>
         </div>
       </div>
       <div class="candidate">
@@ -2014,11 +1718,17 @@
         <div class="candidate-body">
           <span class="candidate-priority">#05 кандидат</span>
           <div class="candidate-rank">05</div>
-          <div class="candidate-name">—</div>
-          <div class="candidate-project">—</div>
-          <p class="candidate-desc"></p>
-          <p class="candidate-why"></p>
-          <div class="candidate-invest-tags"></div>
+          <div class="candidate-name">Павел Блохин</div>
+          <div class="candidate-project">Реиннольц</div>
+          <p class="candidate-desc">Производство промышленных теплообменников и систем водоочистки. Выручка 2025 — 1 млрд руб., EBITDA 32%. 17 патентов. Контрактный портфель 1,5 млрд руб. В декабре 2025 разместил облигации на Мосбирже на 250 млн руб.</p>
+          <p class="candidate-why">История «из гаража в биржу» — начинал с небольшого производства, вырос до публичной компании с экспортом в 15+ стран. Инвестиции нужны на расширение с 100 до 350–400 единиц оборудования в год и выход в Саудовскую Аравию, Северную Африку, АСЕАН.</p>
+          <div class="candidate-invest-tags">
+            <span class="candidate-invest-tag">Производство</span>
+            <span class="candidate-invest-tag">Экспорт</span>
+            <span class="candidate-invest-tag">B2B</span>
+            <span class="candidate-invest-tag">Импортозамещение</span>
+          </div>
+          <a class="candidate-source" href="https://www.kommersant.ru/doc/8293490" target="_blank" rel="noopener">Коммерсантъ · Победитель «Инвестиционный прорыв — 2025»</a>
         </div>
       </div>
       <div class="candidate">
@@ -2026,11 +1736,17 @@
         <div class="candidate-body">
           <span class="candidate-priority">#06 кандидат</span>
           <div class="candidate-rank">06</div>
-          <div class="candidate-name">—</div>
-          <div class="candidate-project">—</div>
-          <p class="candidate-desc"></p>
-          <p class="candidate-why"></p>
-          <div class="candidate-invest-tags"></div>
+          <div class="candidate-name">Антон Чекутов</div>
+          <div class="candidate-project">Asia st 71</div>
+          <p class="candidate-desc">Стритвир-бренд из Екатеринбурга. 6 магазинов в Екатеринбурге, Москве и Санкт-Петербурге. Коллаборации с Paramount, Кино, Lotus Music. Выручка 2024 — 410 млн руб.</p>
+          <p class="candidate-why">Пара из Екатеринбурга создала модный бренд без венчурных денег. Следующий шаг — собственное производство (сейчас закупают в Гонконге и Шанхае) и магазин в Дубае. Инвестиции нужны на фабрику и выход в e-commerce ОАЭ.</p>
+          <div class="candidate-invest-tags">
+            <span class="candidate-invest-tag">Fashion</span>
+            <span class="candidate-invest-tag">D2C</span>
+            <span class="candidate-invest-tag">Производство</span>
+            <span class="candidate-invest-tag">Экспорт</span>
+          </div>
+          <a class="candidate-source" href="https://www.forbes.ru/svoi-biznes/523836-v-storonu-balenciaga-kak-para-iz-ekaterinburga-zarabatyvaet-na-modnom-stritvire" target="_blank" rel="noopener">Forbes · «В сторону Balenciaga»: пара из Екатеринбурга на стритвире</a>
         </div>
       </div>
       <div class="candidate">
@@ -2038,11 +1754,17 @@
         <div class="candidate-body">
           <span class="candidate-priority">#07 кандидат</span>
           <div class="candidate-rank">07</div>
-          <div class="candidate-name">—</div>
-          <div class="candidate-project">—</div>
-          <p class="candidate-desc"></p>
-          <p class="candidate-why"></p>
-          <div class="candidate-invest-tags"></div>
+          <div class="candidate-name">Евгений Маслак</div>
+          <div class="candidate-project">Esil Power Systems</div>
+          <p class="candidate-desc">Производство источников бесперебойного питания для телекоммуникаций, нефтегаза и энергетики. Основана в 2021 году в Екатеринбурге. Поставщик импортозамещающей продукции для АЭС. Резидент индустриального кластера.</p>
+          <p class="candidate-why">Стартап в стратегической отрасли — ИБП для атомной промышленности после ухода западных поставщиков. Инвестиции нужны на строительство завода в кластере «Демидовский» под Сысертью — 256 млн руб. Конкретный объект, конкретная сумма.</p>
+          <div class="candidate-invest-tags">
+            <span class="candidate-invest-tag">Производство</span>
+            <span class="candidate-invest-tag">Энергетика</span>
+            <span class="candidate-invest-tag">Импортозамещение</span>
+            <span class="candidate-invest-tag">B2B</span>
+          </div>
+          <a class="candidate-source" href="https://www.kommersant.ru/doc/6211412" target="_blank" rel="noopener">Коммерсантъ · Esil Power Systems — завод под Сысертью</a>
         </div>
       </div>
       <div class="candidate">
@@ -2050,11 +1772,17 @@
         <div class="candidate-body">
           <span class="candidate-priority">#08 кандидат</span>
           <div class="candidate-rank">08</div>
-          <div class="candidate-name">—</div>
-          <div class="candidate-project">—</div>
-          <p class="candidate-desc"></p>
-          <p class="candidate-why"></p>
-          <div class="candidate-invest-tags"></div>
+          <div class="candidate-name">Виктор Уткин</div>
+          <div class="candidate-project">Dragonfly</div>
+          <p class="candidate-desc">Производство экипировки и одежды для экстремального спорта — 250+ моделей, ~200 000 изделий в год. Бренд продавался в США, Европе, Прибалтике. Работают со всеми горнолыжными курортами России, нефтяниками, корпоративным сегментом. Новый цех в Нижнем Тагиле.</p>
+          <p class="candidate-why">Основатели построили уральского лидера экстрим-одежды без венчурных денег. Реализуют инвестпроект по расширению производства — заявлено 200+ млн руб. Инвестиции нужны на федеральную розничную сеть и выход на международный рынок.</p>
+          <div class="candidate-invest-tags">
+            <span class="candidate-invest-tag">Производство</span>
+            <span class="candidate-invest-tag">Fashion</span>
+            <span class="candidate-invest-tag">Спорт</span>
+            <span class="candidate-invest-tag">Масштабирование</span>
+          </div>
+          <a class="candidate-source" href="https://www.forbes.ru/karera-i-svoy-biznes/388693-uralskiy-ekstrim-kak-biznesmeny-iz-ekaterinburga-sozdali-lidera-na-rynke" target="_blank" rel="noopener">Forbes · «Уральский экстрим»: как бизнесмены создали лидера рынка</a>
         </div>
       </div>
       <div class="candidate">
@@ -2062,11 +1790,17 @@
         <div class="candidate-body">
           <span class="candidate-priority">#09 кандидат</span>
           <div class="candidate-rank">09</div>
-          <div class="candidate-name">—</div>
-          <div class="candidate-project">—</div>
-          <p class="candidate-desc"></p>
-          <p class="candidate-why"></p>
-          <div class="candidate-invest-tags"></div>
+          <div class="candidate-name">Леонид Стариков</div>
+          <div class="candidate-project">Недремлющее Oko</div>
+          <p class="candidate-desc">IT-компания: система видеонаблюдения с ИИ-аналитикой — нейросети заменяют живую охрану. Выручка 2023 — 210 млн руб. Клиенты — жилые комплексы, стройплощадки, промышленные предприятия. Создали первый в России виномат на базе собственных технологий.</p>
+          <p class="candidate-why">Предприниматель из Екатеринбурга строит AI-охрану без охранников. Номинант «Предприниматель года — 2024». Инвестиции нужны на масштабирование платформы VMS за пределы Урала и выход в промышленный сегмент.</p>
+          <div class="candidate-invest-tags">
+            <span class="candidate-invest-tag">AI Security</span>
+            <span class="candidate-invest-tag">B2B</span>
+            <span class="candidate-invest-tag">SaaS</span>
+            <span class="candidate-invest-tag">Масштабирование</span>
+          </div>
+          <a class="candidate-source" href="https://ekb.plus.rbc.ru/news/604711b37a8aa914b9cf0a9c" target="_blank" rel="noopener">РБК+ Екатеринбург · Леонид Стариков об охране без охраны</a>
         </div>
       </div>
       <div class="candidate">
@@ -2074,11 +1808,17 @@
         <div class="candidate-body">
           <span class="candidate-priority">#10 кандидат</span>
           <div class="candidate-rank">10</div>
-          <div class="candidate-name">—</div>
-          <div class="candidate-project">—</div>
-          <p class="candidate-desc"></p>
-          <p class="candidate-why"></p>
-          <div class="candidate-invest-tags"></div>
+          <div class="candidate-name">Илья Сотонин</div>
+          <div class="candidate-project">Coowners</div>
+          <p class="candidate-desc">FinTech-платформа для инвестиций в рестораны через цифровые финансовые активы (ЦФА). Минимальный порог — 5 000 руб., доходность — 20% годовых. Партнёры-верификаторы: «Точка» и «Атомайз». ЦФА размещаются через приложение Т-Инвестиций. За первые 2 дня — 4 млн руб. от частных инвесторов.</p>
+          <p class="candidate-why">Предприниматель создал инфраструктуру для малого бизнеса, который хочет привлечь деньги от своих клиентов. Платформа в стадии запуска и масштабирования — следующий шаг фитнес, салоны, спа. Сам активно ищет раунд на развитие.</p>
+          <div class="candidate-invest-tags">
+            <span class="candidate-invest-tag">FinTech</span>
+            <span class="candidate-invest-tag">ЦФА</span>
+            <span class="candidate-invest-tag">SaaS</span>
+            <span class="candidate-invest-tag">Масштабирование</span>
+          </div>
+          <a class="candidate-source" href="https://ekb.rbc.ru/ekb/freenews/68523ab09a79471d6338953f" target="_blank" rel="noopener">РБК Екатеринбург · Coowners — инвестиции в рестораны через ЦФА · 2025</a>
         </div>
       </div>
       <div class="candidate">
@@ -2086,11 +1826,17 @@
         <div class="candidate-body">
           <span class="candidate-priority">#11 кандидат</span>
           <div class="candidate-rank">11</div>
-          <div class="candidate-name">—</div>
-          <div class="candidate-project">—</div>
-          <p class="candidate-desc"></p>
-          <p class="candidate-why"></p>
-          <div class="candidate-invest-tags"></div>
+          <div class="candidate-name">Татьяна Бугаева</div>
+          <div class="candidate-project">A2/ASKELL</div>
+          <p class="candidate-desc">Производство стеклянных магнитно-маркерных досок и интерактивных презентационных досок ASKELL VIDEO с LED-подсветкой маркера. Рост выручки 180% за 3 года. Экспорт в Турцию, Казахстан, Узбекистан и Беларусь. Участник ИННОПРОМ 2023 и 2024.</p>
+          <p class="candidate-why">Нишевый продукт без конкурентов в России. Собственное производство, международный спрос — но нужен капитал для масштабирования экспорта и запуска нового продуктового ряда. Победитель номинации «Прорыв года» на «Предприниматель года — 2024» Екатеринбург.</p>
+          <div class="candidate-invest-tags">
+            <span class="candidate-invest-tag">Производство</span>
+            <span class="candidate-invest-tag">EdTech</span>
+            <span class="candidate-invest-tag">Экспорт</span>
+            <span class="candidate-invest-tag">B2B</span>
+          </div>
+          <a class="candidate-source" href="https://xn----7sbafhecece0aa7aimoxhcrd3cwp.xn--p1ai/pobediteli-i-nominanty-2024/" target="_blank" rel="noopener">Предприниматель года 2024 · A2/ASKELL — победитель «Прорыв года»</a>
         </div>
       </div>
       <div class="candidate">
@@ -2098,11 +1844,17 @@
         <div class="candidate-body">
           <span class="candidate-priority">#12 кандидат</span>
           <div class="candidate-rank">12</div>
-          <div class="candidate-name">—</div>
-          <div class="candidate-project">—</div>
-          <p class="candidate-desc"></p>
-          <p class="candidate-why"></p>
-          <div class="candidate-invest-tags"></div>
+          <div class="candidate-name">Татьяна Каркачева</div>
+          <div class="candidate-project">Уральская пчелка</div>
+          <p class="candidate-desc">Экокомплекс с пасекой на 70 ульев (до 4 тонн мёда в год) и агротуризмом — экскурсии, мастер-классы, выходные туры. Победитель конкурса «Коммерсантъ года — 2025» в номинации «Пищевое производство и сельское хозяйство». Шесть лет работы, два гранта «Уральские каникулы».</p>
+          <p class="candidate-why">История с характером: выиграла суд с «Газпромом», который хотел снести пасеку. Самый нестандартный питч выпуска — не IT, не производство, а живой продукт с землёй. Инвестиции нужны на строительство магазина и визит-центра, открытие филиалов.</p>
+          <div class="candidate-invest-tags">
+            <span class="candidate-invest-tag">АгроТех</span>
+            <span class="candidate-invest-tag">Экотуризм</span>
+            <span class="candidate-invest-tag">FMCG</span>
+            <span class="candidate-invest-tag">Масштабирование</span>
+          </div>
+          <a class="candidate-source" href="https://www.kommersant.ru/doc/8211700" target="_blank" rel="noopener">Коммерсантъ · Победитель «Коммерсантъ года — 2025»</a>
         </div>
       </div>
     </div>
@@ -2118,7 +1870,7 @@
         <span class="label" style="display:block;margin-bottom:20px;">Формат дистрибуции</span>
         <h2 class="format-headline">Снимаем один раз —<br>выходим везде</h2>
       </div>
-      <img class="format-napkin" src="../napkin-3.png" alt="Салфетка с миллионом">
+      <img class="format-napkin" src="салфетка 3.png" alt="Салфетка с миллионом">
     </div>
     <div class="format-grid reveal">
       <div class="format-card">
@@ -2156,7 +1908,7 @@
               <span class="budget-item-sum">15–25 тыс. ₽</span>
             </div>
             <div class="budget-row">
-              <span class="budget-item-name">Аренда зала Технопарк «Русский»</span>
+              <span class="budget-item-name">Аренда зала IT-парк</span>
               <span class="budget-item-sum">уточнить</span>
             </div>
             <div class="budget-row">
@@ -2207,7 +1959,7 @@
         </div>
         <div style="margin-top:40px;padding:24px;background:var(--warm-gray);">
           <p class="label label-light" style="margin-bottom:16px;display:block;">Оборудование</p>
-          <p style="font-size:13px;color:var(--text-body);line-height:1.7;">Петличные микрофоны — минимум 6 шт (4 совет + 3 героя) · 2 камеры (основная + вторая) · Свет — 2–3 прибора (аренда во Владивостоке)</p>
+          <p style="font-size:13px;color:var(--text-body);line-height:1.7;">Петличные микрофоны — минимум 6 шт (4 совет + 3 героя) · 2 камеры (основная + вторая) · Свет — 2–3 прибора (аренда в Екатеринбурге)</p>
         </div>
       </div>
     </div>
@@ -2228,21 +1980,21 @@
           <li class="status-item done"><span class="status-check">✓</span>Концепция утверждена Forbes</li>
           <li class="status-item done"><span class="status-check">✓</span>Формат выпуска определён</li>
           <li class="status-item done"><span class="status-check">✓</span>Состав совета Forbes определён</li>
-          <li class="status-item done"><span class="status-check">✓</span>Город — Владивосток</li>
-          <li class="status-item done"><span class="status-check">✓</span>Локация: Технопарк «Русский» ДВФУ · о. Русский, п. Аякс, 10</li>
+          <li class="status-item done"><span class="status-check">✓</span>Пилотный город — Екатеринбург</li>
+          <li class="status-item done"><span class="status-check">✓</span>Локация: Екатеринбург, пр. Академика Лаврентьева, 6</li>
+          <li class="status-item done"><span class="status-check">✓</span>Шорт-лист предпринимателей для пилота</li>
         </ul>
       </div>
       <div class="status-col">
         <div class="status-col-title todo">В работе</div>
         <ul class="status-list">
           <li class="status-item todo"><span class="status-check"></span>Кастинг участников (3 предпринимателя)</li>
-          <li class="status-item todo"><span class="status-check"></span>Шорт-лист кандидатов Владивостока</li>
           <li class="status-item todo"><span class="status-check"></span>Сценарий эпизода</li>
-          <li class="status-item todo"><span class="status-check"></span>Бронирование зала в Технопарке «Русский»</li>
-          <li class="status-item todo"><span class="status-check"></span>Бизнес-омбудсмен Приморского края — согласование</li>
-          <li class="status-item todo"><span class="status-check"></span>Кандидатура предпринимателя Приморья в совет</li>
+          <li class="status-item todo"><span class="status-check"></span>Бронирование зала в IT-парке</li>
+          <li class="status-item todo"><span class="status-check"></span>Бизнес-омбудсмен Свердловской области — согласование</li>
+          <li class="status-item todo"><span class="status-check"></span>Кандидатура предпринимателя Екатеринбурга в совет</li>
           <li class="status-item todo"><span class="status-check"></span>Команда производства</li>
-          <li class="status-item todo"><span class="status-check"></span>Дата съёмок</li>
+          <li class="status-item todo"><span class="status-check"></span>Дата съёмок пилота</li>
         </ul>
       </div>
     </div>
@@ -2254,10 +2006,10 @@
   <div class="footer-inner">
     <div>
       <div class="footer-title">Миллион<br><span style="color:var(--gold);">на салфетке</span></div>
-      <div class="footer-sub">Forbes · Питч-шоу · Владивосток · Пилот 2026</div>
+      <div class="footer-sub">Forbes · Питч-шоу · Екатеринбург · Пилот 2026</div>
     </div>
     <div class="footer-right">
-      <div class="footer-location">Технопарк «Русский» ДВФУ · о. Русский, п. Аякс, 10</div>
+      <div class="footer-location">Екатеринбург · пр. Академика Лаврентьева, 6</div>
       <div class="footer-contact">Команда группы №36 Школы Продюсирования Николая Картозия</div>
     </div>
   </div>
@@ -2278,6 +2030,7 @@
 
   reveals.forEach(el => observer.observe(el));
 
+  // Fallback: ensure everything is visible after 800ms regardless
   setTimeout(() => {
     reveals.forEach(el => el.classList.add('visible'));
   }, 800);
