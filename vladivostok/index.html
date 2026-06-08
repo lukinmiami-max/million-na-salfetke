@@ -2399,5 +2399,41 @@
   }, 800);
 </script>
 
+<!-- SCROLL TO TOP -->
+<style>
+  #scrollTop {
+    position: fixed;
+    bottom: 80px;
+    right: 16px;
+    width: 44px;
+    height: 44px;
+    background: #c8a84b;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    opacity: 0.92;
+  }
+  @media (min-width: 769px) {
+    #scrollTop { bottom: 32px; right: 32px; }
+  }
+</style>
+<button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Наверх">
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+    <path d="M10 15V5M10 5L5 10M10 5L15 10" stroke="#0a0a0a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</button>
+<script>
+  (function(){
+    var btn = document.getElementById('scrollTop');
+    window.addEventListener('scroll', function(){
+      btn.style.display = window.scrollY > 400 ? 'flex' : 'none';
+    }, {passive:true});
+  })();
+</script>
 </body>
 </html>
